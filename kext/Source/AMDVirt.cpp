@@ -9,7 +9,7 @@
 
 #define super IOService
 
-#define AMDVIRT_VERSION "0.7.9"
+#define AMDVIRT_VERSION "0.1.0"
 
 OSDefineMetaClassAndStructors(com_liamhnam_AMDVirt, IOService)
 

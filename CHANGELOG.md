@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0 (unreleased)
 
 - Renamed throughout: `AMDVirt.kext` (`com.liamhnam.AMDVirt`), IOKit classes `com_liamhnam_AMDVirt*`, tools `amdvirt` and `amdvirt-info`,
   boot-args `amdvirt_*` and `-amdvirtoff` (the old `rhv_*` boot-args are no longer read).
