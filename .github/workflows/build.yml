@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-15-intel
+    steps:
+      - uses: actions/checkout@v7
+      - name: Unit tests
+        run: make test
+      - name: Kext
+        run: make kext
+      - name: Tools
+        run: make tools
+      - uses: actions/upload-artifact@v7
+        with:
+          name: AMDVirt-${{ github.sha }}
+          path: |
+            build/AMDVirt.kext
+            build/amdvirt-info
