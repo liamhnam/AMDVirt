@@ -1,5 +1,8 @@
 # Architecture
 
+> AMDVirt 0.1.0 uses only front end A (the kext answers Hypervisor.framework directly). The userland shim (B) and all app patching
+> were removed; they are described below for history.
+
 ## Layers
 
 ```

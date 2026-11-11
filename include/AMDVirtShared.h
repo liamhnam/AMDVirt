@@ -1,7 +1,7 @@
 /*
  * AMDVirtShared.h
  *
- * ABI shared between the kext, the userland shim and the tools.
+ * ABI shared between the kext and the tools.
  * Plain C, no kernel/userland-only includes, so both sides can use it.
  *
  * Bump AMDVIRT_ABI_VERSION whenever a struct or selector below changes.

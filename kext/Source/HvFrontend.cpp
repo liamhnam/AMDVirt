@@ -13,7 +13,6 @@
 
 #include "HvFrontend.hpp"
 #include "SVM.hpp"
-#include "HvPatch.hpp"
 #include "HvMsrs.hpp"
 #include "HvSlots.hpp"
 #include "AMDVirt.hpp"
@@ -404,7 +403,6 @@ kern_return_t tVmCreate(void *target, uint64_t arg)
         return kHvError;
     }
     hv_set_task_target(vm);
-    amdvirt::hv::patch::fixCurrentClient();              /* before the client's own CPU checks, which come after hv_vm_create */
     return kHvOk;
 }
 
@@ -765,7 +763,7 @@ const uint32_t kRunFields[AMDVIRT_RUN_NFIELDS] = {
 #undef AMDVIRT_X
 };
 
-/* Parallels' monitor answers CPUID from the AMD host. The same post-processing the shim does (shim/hv_shim.c, cpuid_hide_hypervisor), applied to the
+/* Parallels' monitor answers CPUID from the AMD host. This post-processing is applied to the
  * registers the monitor wrote, on the way back into the guest:
  *  - the hypervisor bit and the Hyper-V leaves are hidden: Windows then never sets up the hypercall page, which Parallels fills with the Intel
  *    VMCALL (a #UD on AMD, and a triple fault at the very start of the Windows kernel);

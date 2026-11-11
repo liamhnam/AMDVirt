@@ -1,19 +1,18 @@
-# Top-level build. Run on the Ryzentosh (needs Xcode command line tools).
+# Top-level build (needs the Xcode Command Line Tools).
 #
-#   make test     host-side unit tests, works on any OS with a C compiler
-#   make tools    build/amdvirt-info, build/amdvirt-guest-test, build/amdvirt-map-test, build/amdvirt-vmx-test, build/amdvirt-long-test, build/hvf-smoke, build/hvf-ro-map-test
-#   make shim     build/libamdvirt.dylib
-#   make kext     build/AMDVirt.kext   (see kext/Makefile, best effort)
-#   make all      tools + shim + kext
+#   make test     unit tests, userland only
+#   make kext     build/AMDVirt.kext
+#   make tools    build/amdvirt-info and the test programs (amdvirt-*-test, hvf-smoke, hvf-ro-map-test)
+#   make all      kext + tools
 #   make clean
 
 BUILD := build
 CC    ?= cc
 CXX   ?= c++
 
-.PHONY: all test tools shim hijack hijack-patchonly kext clean
+.PHONY: all test tools kext clean
 
-all: tools shim kext
+all: kext tools
 
 $(BUILD):
 	mkdir -p $(BUILD)
@@ -33,15 +32,10 @@ test: | $(BUILD)
 	$(BUILD)/fpu_state_test
 	$(CXX) -std=c++17 -Wall -Wextra -Werror -fsanitize=address,undefined -g -o $(BUILD)/msr_map_test tests/msr_map_test.cpp
 	$(BUILD)/msr_map_test
-	$(CC) -Wall -Wextra -Werror -fsanitize=address,undefined -g -o $(BUILD)/patch_test tests/patch_test.c shim/amdvirt_patch.c
-	$(BUILD)/patch_test
-	$(CC) -arch x86_64 -Wall -Wextra -Werror -Wno-nullability-completeness -fsanitize=address,undefined -g -o $(BUILD)/shim_core_test tests/shim_core_test.c shim/amdvirt_core.c -framework Hypervisor
-	$(BUILD)/shim_core_test
 
 tools: | $(BUILD)
 	$(CC) -arch x86_64 -Wall -Wextra -O2 -o $(BUILD)/amdvirt-info tools/amdvirt-info/main.c \
 		-framework IOKit -framework CoreFoundation
-	$(CC) -arch x86_64 -Wall -Wextra -O2 -o $(BUILD)/amdvirt-patchcheck tools/amdvirt-patchcheck/main.c shim/amdvirt_patch.c
 	$(CC) -arch x86_64 -Wall -Wextra -O2 -o $(BUILD)/amdvirt-guest-test tools/amdvirt-guest-test/main.c \
 		-framework IOKit -framework CoreFoundation
 	$(CC) -arch x86_64 -Wall -Wextra -O2 -o $(BUILD)/amdvirt-map-test tools/amdvirt-map-test/main.c \
@@ -57,33 +51,6 @@ tools: | $(BUILD)
 	codesign -s - --force --entitlements tools/hvf-ro-map-test/hypervisor.entitlements $(BUILD)/hvf-ro-map-test
 	# the kext, like AppleHV, lets only processes with the hypervisor entitlement create a VM
 	codesign -s - --force --entitlements tools/hvf-ro-map-test/hypervisor.entitlements $(BUILD)/hvf-smoke
-
-SHIM_SRC := shim/hv_shim.c shim/amdvirt_core.c shim/amdvirt_iokit.c shim/amdvirt_patch.c
-
-shim: | $(BUILD)
-	$(CC) -arch x86_64 -Wall -Wextra -Wno-deprecated-declarations -Wno-nullability-completeness -O2 -dynamiclib \
-		-o $(BUILD)/libamdvirt.dylib $(SHIM_SRC) -framework Hypervisor -framework IOKit -framework CoreFoundation
-
-# The shim as a stand-in for one of Parallels' own libraries (see shim/hijack.c and scripts/parallels-shim.sh).
-# HIJACK_NAME is the library's file name, HIJACK_ORIG a copy of the real one with its install name changed to where the
-# real one will be found at run time (only the linker reads it).
-HIJACK_NAME ?= libPrlXmlModel.1.dylib
-HIJACK_ORIG ?= $(BUILD)/hijack-link/$(HIJACK_NAME)
-HIJACK_ORIG_RUNTIME ?= @loader_path/libPrlXmlModel.1.orig.dylib
-
-hijack: | $(BUILD)
-	@test -f "$(HIJACK_ORIG)" || { echo "run scripts/parallels-shim.sh prepare first (it makes $(HIJACK_ORIG))"; exit 1; }
-	$(CC) -arch x86_64 -Wall -Wextra -Wno-deprecated-declarations -Wno-nullability-completeness -O2 -dynamiclib -DAMDVIRT_HIJACK \
-		-install_name @rpath/$(HIJACK_NAME) -Wl,-reexport_library,$(HIJACK_ORIG) \
-		-o $(BUILD)/$(HIJACK_NAME) $(SHIM_SRC) shim/hijack.c -framework Hypervisor -framework IOKit -framework CoreFoundation
-
-# Native mode (amdvirt_hv=1): the same stand-in library, but it patches Parallels' vendor check and arms its keyboard (it wraps only hv_vcpu_run and hv_vcpu_run_until)
-# (shim/hijack_patchonly.c). Needs the same build/hijack-link copy of the real library.
-hijack-patchonly: | $(BUILD)
-	@test -f "$(HIJACK_ORIG)" || { echo "run scripts/parallels-shim.sh prepare first (it makes $(HIJACK_ORIG))"; exit 1; }
-	$(CC) -arch x86_64 -Wall -Wextra -O2 -dynamiclib \
-		-install_name @rpath/$(HIJACK_NAME) -Wl,-reexport_library,$(HIJACK_ORIG) \
-		-o $(BUILD)/$(HIJACK_NAME) shim/hijack_patchonly.c shim/amdvirt_patch.c
 
 kext:
 	$(MAKE) -C kext

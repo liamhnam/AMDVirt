@@ -4,10 +4,7 @@
  * It does what QEMU's HVF accelerator does, in the same order: create a VM, map memory, create a vCPU, read the VMX
  * capabilities and build the execution controls from them, set up a real-mode machine through VMCS fields and
  * registers, then run it and handle exits by reading the VMCS exit reason. On a real Intel Mac the same binary runs
- * against Apple's framework; on this Ryzen it runs through the AMDVirt shim:
- *
- *     sudo env DYLD_INSERT_LIBRARIES=build/libamdvirt.dylib ./build/hvf-smoke
- *     (or: scripts/run-with-shim.sh ./build/hvf-smoke)
+ * against Apple's framework; on a Ryzen with AMDVirt loaded it runs unchanged: ./build/hvf-smoke
  *
  * It checks: the VMX capability path, controls, registers, MSRs, FPU state, serial output through I/O exits, CPUID,
  * HLT, an EPT violation handled by mapping memory, hv_vcpu_interrupt from another thread, and error codes.
@@ -151,7 +148,7 @@ int main(void)
 {
     hv_return_t r = hv_vm_create(HV_VM_DEFAULT);
     if (r != HV_SUCCESS) {
-        fprintf(stderr, "hv_vm_create failed: %#x. On a Ryzen run this through the shim (scripts/run-with-shim.sh).\n", (unsigned)r);
+        fprintf(stderr, "hv_vm_create failed: %#x. Is AMDVirt loaded and kern.hv_support 1?\n", (unsigned)r);
         return 1;
     }
     printf("hv_vm_create ok\n");

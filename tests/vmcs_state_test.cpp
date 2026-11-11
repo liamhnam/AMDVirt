@@ -6,7 +6,7 @@
 #include <string.h>
 
 #include "../kext/Source/VmcsState.hpp"
-#include "../shim/amdvirt_fields.h"
+#include "../include/amdvirt_fields.h"
 
 using namespace amdvirt::vmx;
 using namespace amdvirt::vmcb;
@@ -359,8 +359,8 @@ void testExtensionsAndMsrs()
     CHECK(rd(f, 0x4408) == 0x80000b0e && rd(f, 0x440a) == 0x14);
 }
 
-/* The shim decides up front which VMCS writes the kernel will refuse (it buffers them); it must agree with VmcsState
- * on every possible encoding. */
+/* include/amdvirt_fields.h says up front which VMCS writes the kernel refuses; it must agree with VmcsState on every
+ * possible encoding. */
 void testShimFieldTable()
 {
     Fixture f;

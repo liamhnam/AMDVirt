@@ -11,4 +11,6 @@
 - Per-vCPU ASID with FlushByAsid.
 - SVM and the `Hypervisor.framework` front end are on by default; `kern.hv_support` is set at boot. No boot-args are needed.
 - `hv_vm_create` requires the `com.apple.security.hypervisor` entitlement.
+- Removed all app patching: the in-kernel client patcher (Parallels, HyperKit), the userland shim and its DYLD stand-ins,
+  the Parallels/Docker Desktop install scripts, the manager app and the old release bundle.
 - Documentation: new README and install guide; notes from earlier versions moved to `docs/legacy/`.

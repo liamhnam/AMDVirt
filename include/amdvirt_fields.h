@@ -1,10 +1,8 @@
 /*
  * amdvirt_fields.h - which VMCS encodings the kernel accepts and which of them it will not let a client write.
  *
- * The shim buffers VMCS writes and sends them with the next run, but Hypervisor.framework reports a bad field or a
- * read-only field from the write call itself, so the shim has to know the answer up front. It uses the same generated
- * field list as the kext (kext/Source/VmcsFields.def); tests/vmx_map_test.cpp checks every one of the 65536 encodings
- * against the kext's own tables, so the two cannot drift apart unnoticed.
+ * Built from the same generated field list as the kext (kext/Source/VmcsFields.def); tests/vmx_map_test.cpp checks every
+ * one of the 65536 encodings against the kext's own tables, so the two cannot drift apart unnoticed.
  */
 #ifndef AMDVIRT_FIELDS_H
 #define AMDVIRT_FIELDS_H
