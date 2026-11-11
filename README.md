@@ -69,7 +69,8 @@ None are required. For troubleshooting:
 ## Known issues
 
 - A guest that restarts itself can hang in its firmware. Stop and start the VM.
-- Linux guests may report a small TSC skew between CPUs.
+- Linux guests may mark the TSC unstable and use HPET instead (slower timekeeping): the host's TSCs drift apart between cores
+  while the Mac runs, which a guest sees when its vCPUs move between cores. Docker Desktop is not affected (it sets `tsc=reliable`).
 - Not tested yet: sleep and wake with a VM running, long runs, Windows with many vCPUs, other Ryzen generations.
 
 ## Troubleshooting

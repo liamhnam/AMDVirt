@@ -25,6 +25,7 @@ November 2026.
 | Guest writes to the TSC (Windows at boot) | ✅ kept as a guest offset, the host clock is unchanged |
 | MSRs a client makes native (QEMU: STAR…TSC_AUX, TSC, SYSENTER, FS/GS base) | ✅ all swapped by VMRUN/VMLOAD or by the kext; other MSRs are refused and stay trapped |
 | `hv_vm_destroy` while 4 threads map/protect/unmap (`hvf-race-test`, 220 rounds) | ✅ no crash, calls after the destroy are refused |
+| Linux guest TSC (Lima) | ❌ "TSC warped" (≈2000–2700 cycles), the guest uses HPET; a one-time per-core correction did not help, the host skew changes at run time |
 | A guest that reboots itself (Lima, repeated) | ❌ can hang in its firmware after a reboot |
 | Sleep and wake with a VM running | ⏳ |
 | Runs of many hours | ⏳ |
