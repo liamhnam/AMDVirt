@@ -135,6 +135,14 @@ const uint64_t kCaps[17] = {
 /* VMs that exist. The kernel calls the callbacks WITHOUT a NULL check for every thread and task that has a target, so while this is above 0 the
  * callbacks must stay registered: unregistering is refused. */
 volatile SInt32 gLiveVms = 0;
+/*
+ * The VMs that traps may still reach. A trap gets its VM from the calling task (hv_get_task_target) and its vCPU from the calling thread; neither
+ * pointer is guaranteed to be alive (hv_vm_destroy on another thread, a thread that kept its vCPU target through exec()). A trap therefore
+ * looks its VM up here under gLiveLock and holds it (busy) while it runs; a pointer that is not listed is never dereferenced.
+ */
+constexpr unsigned kMaxLiveVms = 64;
+IOLock *gLiveLock = nullptr;
+struct HvVm *gLive[kMaxLiveVms];
 
 /* The TPR shadow (VMX control bit 21) is offered to every VM except HyperKit's: it lets Windows change its CR8 without a VM exit, which is most of the exits of
  * a Windows boot (Parallels boots in about 19 s instead of 90, VirtualBox's Windows Setup runs at all). On by default since 0.7.3; the boot-arg
@@ -186,6 +194,9 @@ struct HvVm {
     uint64_t caps[17];                         /* the VMX capability words this VM's client was shown (HV_VMX_CAP_*), also what thread trap 12 answers from */
     HvVcpu *vcpu[kMaxVcpus];
     uint32_t nVcpus;
+    task_t   owner;                            /* the task that created it: traps from any other task (a thread that went through exec()) are refused */
+    volatile SInt32 busy;                      /* traps running on this VM right now (enterVm/leaveVm): the VM is freed only when it is 0 */
+    bool     dying;                            /* hv_vm_destroy has started: no new vCPU may join */
 };
 
 inline uint32_t roundPage(uint32_t v) { return (v + 0xfffu) & ~0xfffu; }
@@ -276,6 +287,62 @@ void vmFree(HvVm *vm)
         IOLockFree(vm->lock);
     IOFree(vm, sizeof(HvVm));
     OSDecrementAtomic(&gLiveVms);
+}
+
+/* The live-VM registry (see gLive). */
+bool liveAdd(HvVm *vm)
+{
+    IOLockLock(gLiveLock);
+    for (unsigned i = 0; i < kMaxLiveVms; i++) {
+        if (!gLive[i]) {
+            gLive[i] = vm;
+            IOLockUnlock(gLiveLock);
+            return true;
+        }
+    }
+    IOLockUnlock(gLiveLock);
+    return false;
+}
+
+/* Takes `vm` out of the registry: no trap can enter it from now on. */
+void liveRemove(HvVm *vm)
+{
+    IOLockLock(gLiveLock);
+    for (unsigned i = 0; i < kMaxLiveVms; i++)
+        if (gLive[i] == vm)
+            gLive[i] = nullptr;
+    IOLockUnlock(gLiveLock);
+}
+
+/* The calling task's VM, held until leaveVm; nullptr when the task has none, or one that is not (or no longer) alive, or not its own. */
+HvVm *enterVm()
+{
+    HvVm *vm = static_cast<HvVm *>(hv_get_task_target());
+    if (!vm || !gLiveLock)
+        return nullptr;
+    IOLockLock(gLiveLock);
+    bool listed = false;
+    for (unsigned i = 0; i < kMaxLiveVms && !listed; i++)
+        listed = gLive[i] == vm;
+    if (listed && vm->owner == current_task())
+        OSIncrementAtomic(&vm->busy);
+    else
+        vm = nullptr;
+    IOLockUnlock(gLiveLock);
+    return vm;
+}
+
+void leaveVm(HvVm *vm) { OSDecrementAtomic(&vm->busy); }
+
+/* Is `v` one of `vm`'s vCPUs? `v` itself is not dereferenced, it may be a stale thread target. */
+bool vcpuIsMember(HvVm *vm, const void *v)
+{
+    bool found = false;
+    IOLockLock(vm->lock);
+    for (unsigned id = 0; id < kMaxVcpus && !found; id++)
+        found = vm->vcpu[id] == v;
+    IOLockUnlock(vm->lock);
+    return v && found;
 }
 
 /* Allocates the three areas, maps them into the calling task, fills the interface block. */
@@ -402,6 +469,11 @@ kern_return_t tVmCreate(void *target, uint64_t arg)
         vmFree(vm);
         return kHvError;
     }
+    vm->owner = current_task();
+    if (!liveAdd(vm)) {
+        vmFree(vm);
+        return kHvNoRes;
+    }
     hv_set_task_target(vm);
     return kHvOk;
 }
@@ -409,16 +481,25 @@ kern_return_t tVmCreate(void *target, uint64_t arg)
 kern_return_t tVmDestroy(void *target, uint64_t arg)
 {
     note(HV_TASK_TRAP, 1, arg);
-    HvVm *vm = static_cast<HvVm *>(target);
+    (void)target;
+    HvVm *vm = enterVm();
     if (!vm)
         return kHvNoDev;
     IOLockLock(vm->lock);
-    unsigned n = vm->nVcpus;
+    const unsigned n = vm->nVcpus;
+    if (!n)
+        vm->dying = true;                            /* no vCPU may join from here on (tVcpuCreate checks it under the same lock) */
     IOLockUnlock(vm->lock);
-    if (n)
+    if (n) {
+        leaveVm(vm);
         return kHvBusy;
+    }
     const bool logIt = !vm->hyperkit;
+    liveRemove(vm);                                  /* no new trap can enter it */
     hv_set_task_target(nullptr);
+    leaveVm(vm);
+    while (vm->busy)                                 /* a hv_vm_map/unmap/protect on another thread finishes first */
+        IOSleep(1);
     vmFree(vm);
     if (logIt) {                                   /* the entry is in the trap log; this shows that the teardown came back (a hung exit has no such line) */
         static volatile SInt32 doneLogged;
@@ -465,7 +546,7 @@ kern_return_t tVcpuCreate(void *target, uint64_t arg)
     unsigned id = 0;
     while (id < kMaxVcpus && vm->vcpu[id])
         id++;
-    if (id == kMaxVcpus) {
+    if (id == kMaxVcpus || vm->dying) {
         IOLockUnlock(vm->lock);
         v->cpu->release();
         IOFree(v, sizeof(HvVcpu));
@@ -1343,7 +1424,12 @@ kern_return_t tVcpuInterrupt(void *target, uint64_t arg)
 void cbNoopVcpu(void *) {}
 void cbNoopVolatile(void *, int) {}
 void cbNoop(void) {}
-void cbTaskDestroy(void *vm) { vmFree(static_cast<HvVm *>(vm)); }
+void cbTaskDestroy(void *vm)
+{
+    /* The task has no threads left, so no trap is inside this VM; a thread that left through exec() traps against its new task. */
+    liveRemove(static_cast<HvVm *>(vm));
+    vmFree(static_cast<HvVm *>(vm));
+}
 
 /* IOReturn of the existing VM code -> the codes the framework expects (same table as the shim). */
 kern_return_t hvFromIo(IOReturn r)
@@ -1445,13 +1531,46 @@ kern_return_t stub(void *target, uint64_t arg)
     return gMode >= 2 ? KERN_SUCCESS : kHvUnsupported;
 }
 
+/* Every trap that uses a VM or vCPU runs through one of these: the VM is looked up and held (enterVm), and a thread's vCPU must still be
+ * one of that VM's own. A stale target (the VM destroyed by another thread, a thread that kept its vCPU through exec()) gets HV_NO_DEVICE. */
+template <hv_trap_t F>
+kern_return_t taskGuarded(void *, uint64_t arg)
+{
+    HvVm *vm = enterVm();
+    if (!vm)
+        return kHvNoDev;
+    kern_return_t r = F(vm, arg);
+    leaveVm(vm);
+    return r;
+}
+
+template <hv_trap_t F>
+kern_return_t threadGuarded(void *target, uint64_t arg)
+{
+    HvVm *vm = enterVm();
+    if (!vm)
+        return kHvNoDev;
+    if (!vcpuIsMember(vm, target)) {
+        leaveVm(vm);
+        return kHvNoDev;
+    }
+    kern_return_t r = F(target, arg);
+    leaveVm(vm);
+    return r;
+}
+
 #define S(T, I) stub<T, I>
+#define TG(f) taskGuarded<f>
+#define VG(f) threadGuarded<f>
 /* Task traps: 0 vm_create, 1 vm_destroy, 4 vm_map, 5 vm_unmap, 6 vm_protect, 7 vm_sync_tsc, 12 vcpu_create, 13 vcpu_interrupt are real; the rest is logged and answered per mode. */
-const hv_trap_t kTaskTable[kTraps] = {tVmCreate, tVmDestroy, S(0, 2), S(0, 3), tVmMap, tVmUnmap, tVmProtect, tVmSyncTsc, S(0, 8), S(0, 9),
-                                      S(0, 10), S(0, 11), tVcpuCreate, tVcpuInterrupt, S(0, 14), S(0, 15)};
+const hv_trap_t kTaskTable[kTraps] = {tVmCreate, tVmDestroy, S(0, 2), S(0, 3), TG(tVmMap), TG(tVmUnmap), TG(tVmProtect), TG(tVmSyncTsc),
+                                      S(0, 8), S(0, 9), S(0, 10), S(0, 11), TG(tVcpuCreate), TG(tVcpuInterrupt), S(0, 14), S(0, 15)};
 /* Thread traps: 0 run, 1 run_until (the deadline is not honoured yet), 2 invalidate_tlb, 3/4 managed MSRs on/off, 10 set_msr_access, 5 vcpu_destroy, 7 read slot, 11 sync special regs, 12 capability of a writable slot are real. */
-const hv_trap_t kThreadTable[kTraps] = {tVcpuRun, tVcpuRun, tInvalidateTlb, tEnableManaged, tDisableManaged, tVcpuDestroy, S(1, 6), tReadSlot, S(1, 8),
-                                        tSetApicAddress, tSetMsrAccess, tSyncSpecial, tCapWrite, S(1, 13), S(1, 14), S(1, 15)};
+const hv_trap_t kThreadTable[kTraps] = {VG(tVcpuRun), VG(tVcpuRun), VG(tInvalidateTlb), VG(tEnableManaged), VG(tDisableManaged), VG(tVcpuDestroy),
+                                        S(1, 6), VG(tReadSlot), S(1, 8), VG(tSetApicAddress), VG(tSetMsrAccess), VG(tSyncSpecial), VG(tCapWrite),
+                                        S(1, 13), S(1, 14), S(1, 15)};
+#undef VG
+#undef TG
 #undef S
 
 } // namespace
@@ -1822,6 +1941,8 @@ void start(com_liamhnam_AMDVirt *service)
     gSvc = service;
     if (!gDbgLock)
         gDbgLock = IOLockAlloc();
+    if (!gLiveLock)
+        gLiveLock = IOLockAlloc();
     uint32_t tprArg = 1;
     if (PE_parse_boot_argn("amdvirt_tpr_shadow", &tprArg, sizeof(tprArg)))
         gTprShadow = tprArg ? 1 : 0;

@@ -2,7 +2,7 @@
 #
 #   make test     unit tests, userland only
 #   make kext     build/AMDVirt.kext
-#   make tools    build/amdvirt-info and the test programs (amdvirt-*-test, hvf-smoke, hvf-ro-map-test)
+#   make tools    build/amdvirt-info and the test programs (amdvirt-*-test, hvf-smoke, hvf-ro-map-test, hvf-race-test)
 #   make all      kext + tools
 #   make clean
 
@@ -51,6 +51,9 @@ tools: | $(BUILD)
 	codesign -s - --force --entitlements tools/hvf-ro-map-test/hypervisor.entitlements $(BUILD)/hvf-ro-map-test
 	# the kext, like AppleHV, lets only processes with the hypervisor entitlement create a VM
 	codesign -s - --force --entitlements tools/hvf-ro-map-test/hypervisor.entitlements $(BUILD)/hvf-smoke
+	$(CC) -arch x86_64 -Wall -Wextra -Wno-nullability-completeness -O2 -o $(BUILD)/hvf-race-test tools/hvf-race-test/main.c \
+		-framework Hypervisor
+	codesign -s - --force --entitlements tools/hvf-ro-map-test/hypervisor.entitlements $(BUILD)/hvf-race-test
 
 kext:
 	$(MAKE) -C kext
