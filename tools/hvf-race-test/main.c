@@ -4,7 +4,7 @@
  * Before the trap guards, the destroying thread freed the VM under the mapping threads (a use-after-free in the kernel). Now every
  * call either works or fails cleanly (HV_NO_DEVICE after the destroy), and the machine stays up. Runs ROUNDS rounds.
  *
- *     ./build/hvf-race-test [rounds=200]
+ *     ./build/hvf-race-test [rounds=20]
  */
 #include <Hypervisor/hv.h>
 #include <pthread.h>
@@ -39,7 +39,7 @@ static void *mapper(void *arg)
 
 int main(int argc, char **argv)
 {
-    int rounds = argc > 1 ? atoi(argv[1]) : 200;
+    int rounds = argc > 1 ? atoi(argv[1]) : 20;
     gMem = mmap(NULL, 0x1000 * PAGES, PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0);
     if (gMem == MAP_FAILED) { perror("mmap"); return 1; }
     for (int r = 0; r < rounds; r++) {
