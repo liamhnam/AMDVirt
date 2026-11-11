@@ -19,7 +19,7 @@ framework on top of AMD-V (SVM), so the apps run **unmodified**, with no boot-ar
 
 - **Works like a real Mac:** install Docker Desktop, UTM or Lima as usual; nothing is patched, wrapped or pinned to a version.
 - **Zero configuration:** add the kext to OpenCore; `kern.hv_support` is on at every boot without boot-args or launch daemons.
-- **Host protection:** a guest cannot change the host's clock, and only apps signed with the
+- **Host protection:** a guest cannot change the host's clock or CPU registers, and only apps signed with the
   `com.apple.security.hypervisor` entitlement can create VMs, as on a real Mac.
 
 ## Requirements

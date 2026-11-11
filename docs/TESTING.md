@@ -23,6 +23,7 @@ November 2026.
 | Entitlement | ✅ a client without `com.apple.security.hypervisor` gets `HV_DENIED`; signed clients run |
 | Guest TSC set by the client (`hv_vcpu_set_tsc_relative`, `hv_vcpu_write_msr`), on one and two vCPUs | ✅ |
 | Guest writes to the TSC (Windows at boot) | ✅ kept as a guest offset, the host clock is unchanged |
+| MSRs a client makes native (QEMU: STAR…TSC_AUX, TSC, SYSENTER, FS/GS base) | ✅ all swapped by VMRUN/VMLOAD or by the kext; other MSRs are refused and stay trapped |
 | A guest that reboots itself (Lima, repeated) | ❌ can hang in its firmware after a reboot |
 | Sleep and wake with a VM running | ⏳ |
 | Runs of many hours | ⏳ |
