@@ -65,6 +65,8 @@ None are required. For troubleshooting:
 | `amdvirt_entitlement=0` | allow VMs from apps without the hypervisor entitlement |
 | `amdvirt_loglevel=N` | kernel log level, 1 (errors) to 5 (trace); default 3 |
 | `amdvirt_selftest=1` | verify the SVM state of every core after enabling and after wake |
+| `amdvirt_pin_limit_mb=N` | at most N MiB of guest memory pinned at a time, all VMs together (default: half the RAM) |
+| `amdvirt_lazypin=0` | pin a VM's whole memory when it is mapped, as before 0.1.0 |
 
 ## Known issues
 

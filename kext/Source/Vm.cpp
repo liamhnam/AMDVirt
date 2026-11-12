@@ -1,4 +1,5 @@
 #include <IOKit/IOLib.h>
+#include <pexpert/pexpert.h>
 
 #include "KernelDecls.hpp"
 #include "MsrMap.hpp"
@@ -14,6 +15,8 @@ OSDefineMetaClassAndStructors(com_liamhnam_AMDVirtVmShared, OSObject)
 
 using namespace amdvirt;
 using namespace amdvirt::vmcb;
+
+extern "C" int sysctlbyname(const char *name, void *oldp, size_t *oldlenp, void *newp, size_t newlen);
 
 /* SvmRun.S addresses these by hand. */
 static_assert(offsetof(GuestGprs, rbx) == 0, "GuestGprs layout");
@@ -75,6 +78,51 @@ void nptFreeMem(void *, void *p, size_t n)
 
 const amdvirt::npt::Allocator kNptAllocator = { nullptr, nptAllocPage, nptFreePage, nptAllocMem,
                                             nptFreeMem };
+
+/*
+ * Guest memory pinning. Every pinned page is wired and cannot be paged out, so all VMs together may pin at most
+ * gPinLimitPages (default: half the Mac's RAM, boot-arg amdvirt_pin_limit_mb). With lazy pinning (default, boot-arg
+ * amdvirt_lazypin=0 turns it off) hv_vm_map only records the range and the guest's first touch pins a kChunk block;
+ * over the limit, blocks the guests have not touched lately are unpinned again (reclaim).
+ */
+volatile SInt64 gPinnedPages;
+uint64_t        gPinLimitPages;
+int             gLazyPin = -1;
+constexpr uint64_t kChunk      = 2ull << 20;
+constexpr size_t   kMaxRegions = 1024;
+
+uint64_t pinLimitPages()
+{
+    if (!gPinLimitPages) {
+        uint64_t mem = 0;
+        size_t len = sizeof(mem);
+        if (sysctlbyname("hw.memsize", &mem, &len, nullptr, 0) != 0 || !mem)
+            mem = 8ull << 30;
+        uint32_t mb = 0;
+        uint64_t lim = mem / 2;
+        if (PE_parse_boot_argn("amdvirt_pin_limit_mb", &mb, sizeof(mb)) && mb)
+            lim = (uint64_t)mb << 20;
+        gPinLimitPages = lim / 4096;
+        AMDVIRT_INFO("guest memory: at most %llu MiB pinned at a time (RAM %llu MiB)", (unsigned long long)(lim >> 20),
+                     (unsigned long long)(mem >> 20));
+    }
+    return gPinLimitPages;
+}
+
+bool lazyPin()
+{
+    if (gLazyPin < 0) {
+        uint32_t v = 1;
+        PE_parse_boot_argn("amdvirt_lazypin", &v, sizeof(v));
+        gLazyPin = v ? 1 : 0;
+    }
+    return gLazyPin != 0;
+}
+
+bool overPinLimit(uint64_t morePages)
+{
+    return (uint64_t)gPinnedPages + morePages > pinLimitPages();
+}
 
 void setSeg(Seg &s, uint16_t selector, uint64_t base, uint32_t limit, uint16_t attrib)
 {
@@ -173,9 +221,15 @@ bool com_liamhnam_AMDVirtVmShared::init()
     bzero(fVcpus, sizeof(fVcpus));
     fRam = nullptr;
     fPagesMapped = 0;
+    fChunks = nullptr;
+    fNChunks = fChunkCap = fClock = 0;
     fRw = IORWLockAlloc();
     fRegLock = IOLockAlloc();
-    return fRw && fRegLock;
+    fFaultLock = IOLockAlloc();
+    fRegionStore = (amdvirt::regions::Region *)IOMalloc(kMaxRegions * sizeof(amdvirt::regions::Region));
+    if (fRegionStore)
+        fRegions.attach(fRegionStore, kMaxRegions);
+    return fRw && fRegLock && fFaultLock && fRegionStore;
 }
 
 void com_liamhnam_AMDVirtVmShared::free()
@@ -190,6 +244,18 @@ void com_liamhnam_AMDVirtVmShared::free()
     }
     /* Unpins every buffer that is still mapped, then returns the tables. */
     fNpt.shutdown(&releaseOwner, this);
+    if (fChunks) {
+        IOFree(fChunks, fChunkCap * sizeof(Backing *));
+        fChunks = nullptr;
+    }
+    if (fRegionStore) {
+        IOFree(fRegionStore, kMaxRegions * sizeof(amdvirt::regions::Region));
+        fRegionStore = nullptr;
+    }
+    if (fFaultLock) {
+        IOLockFree(fFaultLock);
+        fFaultLock = nullptr;
+    }
     if (fRam) {
         fRam->release();
         fRam = nullptr;
@@ -269,6 +335,9 @@ void com_liamhnam_AMDVirtVmShared::dropPage(Backing *b)
 {
     if (--b->live != 0)
         return;
+    if (b->vm)
+        b->vm->removeChunk(b);
+    OSAddAtomic64(-(SInt64)b->pages, &gPinnedPages);
     b->md->complete(b->dir);
     b->md->release();
     IOFree(b, sizeof(*b));
@@ -313,6 +382,11 @@ IOReturn com_liamhnam_AMDVirtVmShared::mapDescriptorLocked(IOMemoryDescriptor *m
         }
     }
 
+    if (overPinLimit(size / 4096)) {
+        AMDVIRT_WARN("VM map: pinning %llu MiB more would pass the limit of %llu MiB pinned guest memory", (unsigned long long)(size >> 20),
+                     (unsigned long long)(pinLimitPages() >> 8));
+        return kIOReturnNoMemory;
+    }
     IODirection dir = kIODirectionInOut;
     IOReturn rc = md->prepare(dir);
     if (rc != kIOReturnSuccess) {
@@ -338,9 +412,13 @@ IOReturn com_liamhnam_AMDVirtVmShared::mapDescriptorLocked(IOMemoryDescriptor *m
         return kIOReturnNoMemory;
     }
     md->retain();
-    b->md   = md;
-    b->live = 1;          /* the builder's own reference, dropped below */
-    b->dir  = dir;
+    b->md    = md;
+    b->live  = 1;         /* the builder's own reference, dropped below */
+    b->dir   = dir;
+    b->pages = size / 4096;
+    b->vm    = nullptr;
+    b->gpa   = gpa;
+    OSAddAtomic64((SInt64)b->pages, &gPinnedPages);
 
     uint64_t done = 0;    /* bytes of the range that are mapped so far */
     amdvirt::npt::Status st = fNpt.mapRange(gpa, size, perm, b, &mdSegment, md, &done);
@@ -383,6 +461,28 @@ IOReturn com_liamhnam_AMDVirtVmShared::map(task_t task, uint64_t uva, uint64_t g
         size > amdvirt::npt::kGpaLimit - gpa || uva + size < uva)
         return kIOReturnBadArgument;
 
+    if (lazyPin() && task == fOwner) {
+        /* Only recorded: the guest's first touch of a page pins the block around it (faultIn). */
+        IOReturn rc = kIOReturnSuccess;
+        IOLockLock(fFaultLock);
+        for (uint64_t off = 0; off < size && rc == kIOReturnSuccess; off += 4096)
+            if (fNpt.isMapped(gpa + off))
+                rc = kIOReturnBusy;
+        if (rc == kIOReturnSuccess && !fRegions.add(gpa, size, uva, perm))
+            rc = fRegions.covers(gpa, 4096) || fRegions.count() < kMaxRegions ? kIOReturnBusy : kIOReturnNoResources;
+        IOLockUnlock(fFaultLock);
+        if (rc == kIOReturnSuccess) {
+            AMDVIRT_STAT_INC(vmMaps);
+            AMDVIRT_DBG("VM map (lazy): uva 0x%llx -> gpa 0x%llx, %llu KiB, perm %u", (unsigned long long)uva,
+                        (unsigned long long)gpa, (unsigned long long)(size / 1024), perm);
+        } else {
+            AMDVIRT_STAT_INC(vmMapFailures);
+            AMDVIRT_WARN("VM map failed (0x%x): gpa 0x%llx size 0x%llx overlaps a mapping", rc, (unsigned long long)gpa,
+                         (unsigned long long)size);
+        }
+        return rc;
+    }
+
     IOMemoryDescriptor *md = IOMemoryDescriptor::withAddressRange(uva, size, kIODirectionInOut, task);
     if (!md)
         return kIOReturnVMError;   /* typically an unmapped or non-writable range */
@@ -414,8 +514,11 @@ IOReturn com_liamhnam_AMDVirtVmShared::readPhys(uint64_t gpa, void *dst, size_t 
         const size_t inPage = 4096 - (size_t)(gpa & 0xFFF);
         const size_t n = len < inPage ? len : inPage;
         uint64_t hpa = 0;
-        if (!fNpt.lookup(gpa & ~(uint64_t)0xFFF, &hpa, nullptr)) {
-            rc = kIOReturnNotFound;
+        IOLockLock(fFaultLock);
+        const bool have = fNpt.lookup(gpa & ~(uint64_t)0xFFF, &hpa, nullptr) != nullptr;
+        IOLockUnlock(fFaultLock);
+        if (!have) {
+            rc = kIOReturnNotFound;   /* also a page of a lazily mapped range that the guest has not touched yet */
             break;
         }
         IOMemoryDescriptor *md = IOMemoryDescriptor::withAddressRange(hpa + (gpa & 0xFFF), n, kIODirectionIn | kIOMemoryTypePhysical64, nullptr);
@@ -443,6 +546,7 @@ IOReturn com_liamhnam_AMDVirtVmShared::unmap(uint64_t gpa, uint64_t size)
 
     kickAll();
     IORWLockWrite(fRw);
+    IOLockLock(fFaultLock);
     for (uint64_t off = 0; off < size; off += 4096) {
         void *owner = fNpt.unmap(gpa + off);
         if (owner) {
@@ -451,7 +555,12 @@ IOReturn com_liamhnam_AMDVirtVmShared::unmap(uint64_t gpa, uint64_t size)
             dropPage(static_cast<Backing *>(owner));
         }
     }
+    const bool removed = fRegions.remove(gpa, size);
+    IOLockUnlock(fFaultLock);
     IORWLockUnlock(fRw);   /* the TLB is flushed on every VMRUN, see run() */
+    if (!removed)
+        AMDVIRT_WARN("VM unmap: the range list is full, gpa 0x%llx size 0x%llx stays recorded", (unsigned long long)gpa,
+                     (unsigned long long)size);
 
     AMDVIRT_STAT_INC(vmUnmaps);
     return kIOReturnSuccess;
@@ -466,22 +575,212 @@ IOReturn com_liamhnam_AMDVirtVmShared::protect(uint64_t gpa, uint64_t size, uint
 
     kickAll();
     IORWLockWrite(fRw);
+    IOLockLock(fFaultLock);
     IOReturn rc = kIOReturnSuccess;
     for (uint64_t off = 0; off < size; off += 4096) {
-        if (!fNpt.isMapped(gpa + off)) {
+        if (!fNpt.isMapped(gpa + off) && !fRegions.find(gpa + off)) {
             rc = kIOReturnNotFound;   /* check everything first so a failure changes nothing */
             break;
         }
     }
+    if (rc == kIOReturnSuccess && !fRegions.protect(gpa, size, perm))
+        rc = kIOReturnNoResources;
     if (rc == kIOReturnSuccess) {
         for (uint64_t off = 0; off < size; off += 4096)
-            fNpt.protect(gpa + off, perm);
+            if (fNpt.isMapped(gpa + off))
+                fNpt.protect(gpa + off, perm);
         AMDVIRT_STAT_INC(vmProtects);
     }
+    IOLockUnlock(fFaultLock);
     IORWLockUnlock(fRw);
     return rc;
 }
 
+
+/* ---- lazy pinning ---- */
+
+void com_liamhnam_AMDVirtVmShared::removeChunk(Backing *b)
+{
+    for (uint32_t i = 0; i < fNChunks; i++) {
+        if (fChunks[i] == b) {
+            fChunks[i] = fChunks[--fNChunks];
+            return;
+        }
+    }
+}
+
+/*
+ * A nested page fault on a page that is not present. If a recorded range holds it, pins the kChunk block around it (only the pages of that
+ * block that are not mapped yet) and enters them into the page tables. Called with fRw held for reading; fFaultLock serialises it against
+ * other vCPUs of this VM. Adding entries needs no TLB flush and no kick: a not-present entry is never cached.
+ */
+com_liamhnam_AMDVirtVmShared::FaultResult com_liamhnam_AMDVirtVmShared::faultIn(uint64_t gpa)
+{
+    gpa &= ~(uint64_t)0xFFF;
+    FaultResult res = FAULT_NOT_OURS;
+    IOLockLock(fFaultLock);
+    uint32_t have = 0;
+    if (fNpt.lookup(gpa, nullptr, &have)) {
+        /* Another vCPU mapped it meanwhile (run again), or the client mapped it without rights (its own fault to handle). */
+        res = (have & amdvirt::npt::PERM_R) ? FAULT_MAPPED : FAULT_NOT_OURS;
+        IOLockUnlock(fFaultLock);
+        return res;
+    }
+    uint64_t start = 0, end = 0;
+    const amdvirt::regions::Region *r = nullptr;
+    if (!fRegions.chunkFor(gpa, kChunk, &start, &end, &r) || !(r->perm & amdvirt::npt::PERM_R)) {
+        IOLockUnlock(fFaultLock);
+        return FAULT_NOT_OURS;
+    }
+    const uint64_t pages = (end - start) / 4096;
+    if (overPinLimit(pages)) {
+        IOLockUnlock(fFaultLock);
+        return FAULT_OVER_LIMIT;
+    }
+    uint32_t perm = r->perm;
+    IOMemoryDescriptor *md = IOMemoryDescriptor::withAddressRange(r->uva + (start - r->gpa), end - start, kIODirectionInOut, fOwner);
+    IODirection dir = kIODirectionInOut;
+    IOReturn rc = md ? md->prepare(dir) : kIOReturnNoMemory;
+    if (md && rc != kIOReturnSuccess) {
+        dir = kIODirectionOut;          /* read-only memory of the client (a firmware image): pin for reading, the guest may not write it */
+        rc  = md->prepare(dir);
+        perm &= ~(uint32_t)amdvirt::npt::PERM_W;
+    }
+    Backing *b = rc == kIOReturnSuccess ? (Backing *)IOMalloc(sizeof(Backing)) : nullptr;
+    if (!b) {
+        if (md) {
+            if (rc == kIOReturnSuccess)
+                md->complete(dir);
+            md->release();
+        }
+        static volatile SInt32 failLogged;
+        if (OSIncrementAtomic(&failLogged) < 20)
+            AMDVIRT_WARN("VM fault: cannot pin gpa 0x%llx..0x%llx of the client (0x%x)", (unsigned long long)start,
+                         (unsigned long long)end, rc);
+        IOLockUnlock(fFaultLock);
+        return FAULT_NOT_OURS;          /* the client sees the nested page fault */
+    }
+    b->md = md;                         /* md's own reference is the backing's */
+    b->live = 1;
+    b->dir = dir;
+    b->pages = pages;
+    b->vm = this;
+    b->gpa = start;
+    OSAddAtomic64((SInt64)pages, &gPinnedPages);
+    for (uint64_t off = 0; off < end - start; off += 4096) {
+        if (fNpt.isMapped(start + off))
+            continue;
+        IOByteCount seg = 0;
+        const addr64_t pa = md->getPhysicalSegment(off, &seg, kIOMemoryMapperNone);
+        if (!pa || fNpt.map(start + off, pa & ~(addr64_t)0xFFF, perm, b) != amdvirt::npt::OK)
+            continue;                   /* that page faults again and is reported to the client */
+        b->live++;
+        fPagesMapped++;
+        AMDVIRT_STAT_ADD(vmPagesMapped, 1);
+    }
+    if (b->live > 1) {
+        if (fNChunks == fChunkCap) {
+            const uint32_t cap = fChunkCap ? fChunkCap * 2 : 256;
+            Backing **n = (Backing **)IOMalloc(cap * sizeof(Backing *));
+            if (n) {
+                if (fChunks) {
+                    bcopy(fChunks, n, fNChunks * sizeof(Backing *));
+                    IOFree(fChunks, fChunkCap * sizeof(Backing *));
+                }
+                fChunks = n;
+                fChunkCap = cap;
+            }
+        }
+        if (fNChunks < fChunkCap)
+            fChunks[fNChunks++] = b;
+        else
+            b->vm = nullptr;            /* cannot be tracked for eviction; stays pinned until unmapped */
+    }
+    /* Only when the faulting page itself is in now: otherwise the guest would fault on it forever. */
+    res = fNpt.isMapped(gpa) ? FAULT_MAPPED : FAULT_NOT_OURS;
+    dropPage(b);                        /* the builder's reference */
+    IOLockUnlock(fFaultLock);
+    return res;
+}
+
+/* Clock over the lazily pinned blocks: a block the guest used since the last pass gets a second chance (its accessed bits are cleared). */
+uint64_t com_liamhnam_AMDVirtVmShared::evictLocked(uint64_t want)
+{
+    uint64_t freed = 0;
+    uint32_t steps = fNChunks * 2 + 1;
+    while (freed < want && fNChunks && steps--) {
+        if (fClock >= fNChunks)
+            fClock = 0;
+        Backing *b = fChunks[fClock];
+        const uint64_t base = b->gpa, len = b->pages * 4096;
+        bool used = false;
+        for (uint64_t off = 0; off < len; off += 4096) {
+            void *owner = fNpt.lookup(base + off, nullptr, nullptr);
+            if (owner == b && fNpt.testClearAccessed(base + off))
+                used = true;
+        }
+        if (used) {
+            fClock++;
+            continue;
+        }
+        const uint64_t pages = b->pages;
+        for (uint64_t off = 0; off < len; off += 4096) {
+            if (fNpt.lookup(base + off, nullptr, nullptr) != b)
+                continue;
+            fNpt.unmap(base + off);
+            fPagesMapped--;
+            AMDVIRT_STAT_ADD(vmPagesMapped, -1);
+            dropPage(b);                /* the last page unpins it and takes it out of fChunks (the slot gets another block) */
+        }
+        freed += pages;
+    }
+    return freed;
+}
+
+uint64_t com_liamhnam_AMDVirtVmShared::evict(uint64_t want)
+{
+    kickAll();
+    IORWLockWrite(fRw);
+    IOLockLock(fFaultLock);
+    const uint64_t freed = evictLocked(want);
+    IOLockUnlock(fFaultLock);
+    IORWLockUnlock(fRw);       /* every VMRUN flushes the guest's TLB, so the removed pages are gone for it */
+    return freed;
+}
+
+bool com_liamhnam_AMDVirtVmShared::reclaim(com_liamhnam_AMDVirtVmShared *self, uint64_t pages)
+{
+    /* Room for the block plus a margin, so the next faults do not come back here at once. */
+    const uint64_t want = pages + kChunk / 4096 * 8;
+    if (!overPinLimit(pages))
+        return true;
+    self->evict(want);
+    if (!overPinLimit(pages))
+        return true;
+    IOLock *reg = sharedLock();
+    com_liamhnam_AMDVirtVmShared *others[sizeof(gShared) / sizeof(gShared[0])];
+    unsigned n = 0;
+    IOLockLock(reg);
+    for (unsigned i = 0; i < sizeof(gShared) / sizeof(gShared[0]); i++) {
+        if (gShared[i] && gShared[i] != self) {
+            gShared[i]->retain();
+            others[n++] = gShared[i];
+        }
+    }
+    IOLockUnlock(reg);
+    for (unsigned i = 0; i < n; i++) {
+        if (overPinLimit(pages) )
+            others[i]->evict(want);
+        others[i]->release();
+    }
+    if (!overPinLimit(pages))
+        return true;
+    static volatile SInt32 logged;
+    if (OSIncrementAtomic(&logged) < 20)
+        AMDVIRT_WARN("guest memory: %lld MiB pinned, limit %llu MiB, nothing left to unpin", (long long)(gPinnedPages >> 8),
+                     (unsigned long long)(pinLimitPages() >> 8));
+    return false;
+}
 
 /* ---- one vCPU ---- */
 
@@ -893,8 +1192,17 @@ IOReturn com_liamhnam_AMDVirtVm::run(bool skipInstruction, AMDVirtExit *out)
 
     bool rescanned  = false;          /* CPUs that came online after the kext started: look for them once per run */
     bool needRescan = false;
+    uint64_t reclaimPages = 0;        /* a fault could not pin its block: unpin others first (outside the page-table lock) */
 
     for (;;) {
+        if (reclaimPages) {
+            const uint64_t n = reclaimPages;
+            reclaimPages = 0;
+            if (!com_liamhnam_AMDVirtVmShared::reclaim(fShared, n)) {
+                rc = kIOReturnNoMemory;   /* the client stops this VM; the Mac keeps its memory */
+                break;
+            }
+        }
         if (needRescan) {             /* outside the page-table lock and with interrupts on: it runs a rendezvous and may allocate */
             needRescan = false;
             svm::rescan();
@@ -1164,6 +1472,27 @@ IOReturn com_liamhnam_AMDVirtVm::run(bool skipInstruction, AMDVirtExit *out)
                 continue;
             }
         }
+
+        /* A guest page of a recorded range that is not pinned yet: pin its block and go on (lazy pinning, see faultIn). */
+        if (code == EXIT_NPF && !(v->control.exitInfo1 & 1)) {
+            const auto fr = fShared->faultIn(v->control.exitInfo2);
+            if (fr != com_liamhnam_AMDVirtVmShared::FAULT_NOT_OURS) {
+                if (v->control.exitIntInfo & (1u << 31)) {      /* an event whose delivery touched the page goes in again */
+                    v->control.eventInj    = v->control.exitIntInfo;
+                    v->control.eventInjErr = v->control.exitIntInfoErr;
+                }
+                if (fr == com_liamhnam_AMDVirtVmShared::FAULT_OVER_LIMIT) {
+                    reclaimPages = kChunk / 4096;
+                    continue;
+                }
+                if (mach_absolute_time() >= deadline && !injectionWaiting()) {
+                    timeslice = true;
+                    takePendingEvent();
+                    break;
+                }
+                continue;
+            }
+        }
         break;
     }
 
@@ -1195,7 +1524,9 @@ IOReturn com_liamhnam_AMDVirtVm::run(bool skipInstruction, AMDVirtExit *out)
                 uint32_t perm = 0;
                 if (code == EXIT_NPF) {
                     IORWLockRead(fShared->rw());
+                    IOLockLock(fShared->faultLock());
                     fShared->npt().lookup(v->control.exitInfo2 & ~(uint64_t)0xFFF, nullptr, &perm);
+                    IOLockUnlock(fShared->faultLock());
                     IORWLockUnlock(fShared->rw());
                 }
                 if (!fVmcs.recordExit(perm)) {

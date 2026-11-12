@@ -11,6 +11,9 @@
 - Per-vCPU ASID with FlushByAsid.
 - SVM and the `Hypervisor.framework` front end are on by default; `kern.hv_support` is set at boot. No boot-args are needed.
 - `hv_vm_create` requires the `com.apple.security.hypervisor` entitlement.
+- Guest memory is pinned lazily: `hv_vm_map` only records the range, the guest's first touch pins the 2 MiB block around the page.
+  All VMs together pin at most half the RAM (`amdvirt_pin_limit_mb`); over that, blocks the guests have not used lately are unpinned
+  (clock over the NPT accessed bits). Before, every VM wired all its memory and two large VMs could freeze the Mac.
 - Traps hold their VM while they run and refuse stale targets: `hv_vm_destroy` racing `hv_vm_map`/`unmap`/`protect` on other threads,
   or a thread that kept its vCPU through `exec()`, no longer touch freed memory (new test: `tools/hvf-race-test`).
 - Removed all app patching: the in-kernel client patcher (Parallels, HyperKit), the userland shim and its DYLD stand-ins,

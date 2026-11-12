@@ -25,6 +25,7 @@
 #include "../../include/AMDVirtShared.h"
 #include "FpuState.hpp"
 #include "Npt.hpp"
+#include "GuestRegions.hpp"
 #include "VmcsState.hpp"
 #include "PhysMem.hpp"
 #include "VMCB.hpp"
@@ -77,12 +78,28 @@ public:
         IOMemoryDescriptor *md;
         uint64_t            live;
         IODirection         dir;      /* what prepare() was called with: complete() must use the same */
+        uint64_t            pages;    /* pages pinned by prepare(), counted in the global pin total */
+        com_liamhnam_AMDVirtVmShared *vm;   /* set for a lazily pinned chunk (in fChunks), else nullptr */
+        uint64_t            gpa;      /* lazily pinned chunk: where it starts in guest physical memory */
     };
+
+    /*
+     * Lazy pinning (see Vm.cpp): hv_vm_map only records the range; the guest's first touch of a page is a nested page fault that
+     * pins the 2 MiB block around it. faultIn() runs on a vCPU thread with the page tables held for reading.
+     */
+    enum FaultResult { FAULT_NOT_OURS, FAULT_MAPPED, FAULT_OVER_LIMIT };
+    FaultResult faultIn(uint64_t gpa);
+    /* Over the global pin limit: unpins blocks the guests have not used lately, this VM first. Holds no lock of any VM on entry. */
+    static bool reclaim(com_liamhnam_AMDVirtVmShared *self, uint64_t pages);
+    IOLock     *faultLock() const { return fFaultLock; }
 
 private:
     bool     setup(uint32_t flags, task_t owner);
     IOReturn mapDescriptorLocked(IOMemoryDescriptor *md, uint64_t gpa, uint64_t size, uint32_t perm);
     static void dropPage(Backing *b);
+    uint64_t evictLocked(uint64_t want);     /* fRw held for writing */
+    uint64_t evict(uint64_t want);
+    void     removeChunk(Backing *b);
     static void releaseOwner(void *ctx, void *owner);
 
     uint64_t                  fId;
@@ -93,6 +110,13 @@ private:
     IOBufferMemoryDescriptor *fRam;
     amdvirt::npt::Table           fNpt;
     uint64_t                  fPagesMapped;
+    IOLock                   *fFaultLock;     /* the region list, the chunk list and NPT changes made under fRw held for reading */
+    amdvirt::regions::Region *fRegionStore;
+    amdvirt::regions::List    fRegions;
+    Backing                 **fChunks;        /* lazily pinned blocks, for eviction */
+    uint32_t                  fNChunks;
+    uint32_t                  fChunkCap;
+    uint32_t                  fClock;         /* eviction hand */
 };
 
 class com_liamhnam_AMDVirtVm : public OSObject {

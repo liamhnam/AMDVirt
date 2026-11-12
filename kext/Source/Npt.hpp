@@ -37,6 +37,7 @@ const uint64_t kGpaLimit = 1ull << 48;   /* 4-level walk */
 const uint64_t E_P         = 1ull << 0;
 const uint64_t E_RW        = 1ull << 1;
 const uint64_t E_US        = 1ull << 2;
+const uint64_t E_A         = 1ull << 5;   /* set by the CPU when the nested walk uses the entry */
 const uint64_t E_NX        = 1ull << 63;
 const uint64_t E_ADDR_MASK = 0x000FFFFFFFFFF000ull;
 
@@ -253,6 +254,18 @@ public:
     }
 
     bool isMapped(uint64_t gpa) const { return lookup(gpa, nullptr, nullptr) != nullptr; }
+
+    /* Was the mapped page at `gpa` used since the last call? Clears the accessed bit. False when not mapped. */
+    bool testClearAccessed(uint64_t gpa)
+    {
+        Node *path[4];
+        unsigned idx[4];
+        Node *leaf = walk(gpa, path, idx);
+        if (!leaf || !leaf->slot[idx[3]])
+            return false;
+        uint64_t *e = &leaf->table[idx[3]];
+        return (__atomic_fetch_and(e, ~E_A, __ATOMIC_SEQ_CST) & E_A) != 0;   /* the CPU sets A atomically too */
+    }
 
     /*
      * Drops everything. `release` is called once per still-mapped page with its

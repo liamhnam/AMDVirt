@@ -482,6 +482,33 @@ void testMapRangeFailureAccounting()
 
 } // namespace
 
+/* What the hardware does when the guest uses a page: sets the accessed bit of its leaf entry. */
+void hwTouch(uint64_t rootPa, uint64_t gpa)
+{
+    uint64_t table = rootPa;
+    for (int lvl = 4; lvl > 1; lvl--)
+        table = ((uint64_t *)(uintptr_t)table)[indexAt(gpa, lvl)] & E_ADDR_MASK;
+    ((uint64_t *)(uintptr_t)table)[indexAt(gpa, 1)] |= E_A;
+}
+
+void testAccessedBit()
+{
+    Fake f;
+    {
+        Table t(allocatorFor(&f));
+        CHECK(t.init());
+        CHECK(t.map(0x200000, 0x5000, PERM_R | PERM_W, OWN1) == OK);
+        CHECK(!t.testClearAccessed(0x200000));            /* not used yet */
+        CHECK(!t.testClearAccessed(0x201000));            /* not mapped */
+        hwTouch(t.rootPa(), 0x200000);
+        CHECK(t.testClearAccessed(0x200000));             /* used once ... */
+        CHECK(!t.testClearAccessed(0x200000));            /* ... and cleared */
+        uint64_t hpa = 0; uint32_t perm = 0;
+        CHECK(t.lookup(0x200000, &hpa, &perm) == OWN1 && hpa == 0x5000 && perm == (PERM_R | PERM_W));   /* rest of the entry intact */
+    }
+    CHECK(f.pagesLive == 0 && f.memLive == 0);
+}
+
 int main()
 {
     testEncoding();
@@ -494,6 +521,7 @@ int main()
     testMapRange();
     testMapRangeRandom();
     testMapRangeFailureAccounting();
+    testAccessedBit();
     if (fails) {
         printf("npt_test: %d FAILED\n", fails);
         return 1;
