@@ -1,0 +1,141 @@
+VM=Windows duration=180s kill-threshold=1.5s  log=/Users/liamhnam/Downloads/dev/ryzenhv-native/test-images/safe-Windows-061428.log
+  0s latency=0.043s load1=14.27 qemu_cpu=112%
+  1s latency=0.052s load1=14.27 qemu_cpu=106%
+  3s latency=0.050s load1=14.27 qemu_cpu=239%
+  4s latency=0.041s load1=14.57 qemu_cpu=280%
+  5s latency=0.047s load1=14.57 qemu_cpu=279%
+  7s latency=0.042s load1=14.57 qemu_cpu=280%
+  8s latency=0.049s load1=14.68 qemu_cpu=280%
+  9s latency=0.043s load1=14.68 qemu_cpu=279%
+ 11s latency=0.053s load1=14.68 qemu_cpu=280%
+ 12s latency=0.043s load1=14.68 qemu_cpu=279%
+ 13s latency=0.048s load1=14.39 qemu_cpu=280%
+ 14s latency=0.049s load1=14.39 qemu_cpu=285%
+ 16s latency=0.047s load1=14.39 qemu_cpu=276%
+ 17s latency=0.058s load1=14.39 qemu_cpu=124%
+ 18s latency=0.053s load1=13.64 qemu_cpu=122%
+ 20s latency=0.045s load1=13.64 qemu_cpu=36%
+ 21s latency=0.045s load1=13.64 qemu_cpu=118%
+ 22s latency=0.044s load1=13.64 qemu_cpu=164%
+ 24s latency=0.043s load1=12.87 qemu_cpu=192%
+ 25s latency=0.047s load1=12.87 qemu_cpu=140%
+ 26s latency=0.039s load1=12.87 qemu_cpu=39%
+ 28s latency=0.040s load1=12.87 qemu_cpu=116%
+ 29s latency=0.043s load1=12.24 qemu_cpu=118%
+ 30s latency=0.041s load1=12.24 qemu_cpu=215%
+ 32s latency=0.047s load1=12.24 qemu_cpu=296%
+ 33s latency=0.051s load1=11.90 qemu_cpu=296%
+ 34s latency=0.056s load1=11.90 qemu_cpu=296%
+ 36s latency=0.040s load1=11.90 qemu_cpu=302%
+ 37s latency=0.040s load1=11.90 qemu_cpu=291%
+ 38s latency=0.044s load1=11.26 qemu_cpu=223%
+ 40s latency=0.044s load1=11.26 qemu_cpu=223%
+ 41s latency=0.047s load1=11.26 qemu_cpu=222%
+ 42s latency=0.042s load1=11.26 qemu_cpu=274%
+ 44s latency=0.045s load1=10.92 qemu_cpu=298%
+ 45s latency=0.049s load1=10.92 qemu_cpu=235%
+ 46s latency=0.042s load1=10.92 qemu_cpu=222%
+ 48s latency=0.042s load1=10.92 qemu_cpu=286%
+ 49s latency=0.037s load1=10.37 qemu_cpu=286%
+ 50s latency=0.039s load1=10.37 qemu_cpu=226%
+ 52s latency=0.058s load1=10.37 qemu_cpu=207%
+ 53s latency=0.042s load1=9.70 qemu_cpu=222%
+ 54s latency=0.039s load1=9.70 qemu_cpu=223%
+ 56s latency=0.039s load1=9.70 qemu_cpu=226%
+ 57s latency=0.042s load1=9.70 qemu_cpu=225%
+ 58s latency=0.038s load1=9.08 qemu_cpu=223%
+ 59s latency=0.054s load1=9.08 qemu_cpu=224%
+ 61s latency=0.040s load1=9.08 qemu_cpu=224%
+ 62s latency=0.040s load1=9.08 qemu_cpu=224%
+ 63s latency=0.043s load1=8.83 qemu_cpu=226%
+ 65s latency=0.039s load1=8.83 qemu_cpu=225%
+ 66s latency=0.041s load1=8.83 qemu_cpu=221%
+ 67s latency=0.042s load1=8.83 qemu_cpu=222%
+ 68s latency=0.040s load1=8.93 qemu_cpu=224%
+ 70s latency=0.037s load1=8.93 qemu_cpu=225%
+ 71s latency=0.041s load1=8.93 qemu_cpu=226%
+ 72s latency=0.037s load1=8.93 qemu_cpu=223%
+ 74s latency=0.050s load1=8.37 qemu_cpu=184%
+ 75s latency=0.041s load1=8.37 qemu_cpu=222%
+ 76s latency=0.038s load1=8.37 qemu_cpu=224%
+ 77s latency=0.042s load1=8.37 qemu_cpu=225%
+ 79s latency=0.051s load1=8.02 qemu_cpu=228%
+ 80s latency=0.041s load1=8.02 qemu_cpu=223%
+ 81s latency=0.037s load1=8.02 qemu_cpu=221%
+ 83s latency=0.041s load1=8.02 qemu_cpu=224%
+ 84s latency=0.042s load1=8.34 qemu_cpu=239%
+ 85s latency=0.041s load1=8.34 qemu_cpu=225%
+ 87s latency=0.045s load1=8.34 qemu_cpu=225%
+ 88s latency=0.039s load1=8.39 qemu_cpu=223%
+ 89s latency=0.038s load1=8.39 qemu_cpu=222%
+ 91s latency=0.038s load1=8.39 qemu_cpu=223%
+ 92s latency=0.039s load1=8.39 qemu_cpu=225%
+ 93s latency=0.042s load1=8.20 qemu_cpu=227%
+ 94s latency=0.040s load1=8.20 qemu_cpu=224%
+ 96s latency=0.041s load1=8.20 qemu_cpu=222%
+ 97s latency=0.042s load1=8.20 qemu_cpu=223%
+ 98s latency=0.040s load1=8.10 qemu_cpu=223%
+100s latency=0.040s load1=8.10 qemu_cpu=226%
+101s latency=0.040s load1=8.10 qemu_cpu=224%
+102s latency=0.042s load1=8.10 qemu_cpu=223%
+103s latency=0.040s load1=8.02 qemu_cpu=222%
+105s latency=0.040s load1=8.02 qemu_cpu=223%
+106s latency=0.043s load1=8.02 qemu_cpu=226%
+107s latency=0.041s load1=8.02 qemu_cpu=224%
+109s latency=0.040s load1=8.01 qemu_cpu=222%
+110s latency=0.040s load1=8.01 qemu_cpu=222%
+111s latency=0.040s load1=8.01 qemu_cpu=222%
+112s latency=0.038s load1=8.01 qemu_cpu=224%
+114s latency=0.041s load1=7.85 qemu_cpu=225%
+115s latency=0.051s load1=7.85 qemu_cpu=227%
+116s latency=0.040s load1=7.85 qemu_cpu=223%
+118s latency=0.043s load1=7.85 qemu_cpu=224%
+119s latency=0.041s load1=7.38 qemu_cpu=222%
+120s latency=0.041s load1=7.38 qemu_cpu=224%
+122s latency=0.046s load1=7.38 qemu_cpu=225%
+123s latency=0.041s load1=7.19 qemu_cpu=225%
+124s latency=0.040s load1=7.19 qemu_cpu=222%
+125s latency=0.037s load1=7.19 qemu_cpu=222%
+127s latency=0.040s load1=7.19 qemu_cpu=222%
+128s latency=0.043s load1=6.94 qemu_cpu=224%
+129s latency=0.040s load1=6.94 qemu_cpu=226%
+131s latency=0.040s load1=6.94 qemu_cpu=224%
+132s latency=0.040s load1=6.94 qemu_cpu=222%
+133s latency=0.041s load1=6.86 qemu_cpu=222%
+134s latency=0.038s load1=6.86 qemu_cpu=223%
+136s latency=0.043s load1=6.86 qemu_cpu=225%
+137s latency=0.041s load1=6.86 qemu_cpu=225%
+138s latency=0.041s load1=6.71 qemu_cpu=223%
+140s latency=0.045s load1=6.71 qemu_cpu=223%
+141s latency=0.043s load1=6.71 qemu_cpu=223%
+142s latency=0.046s load1=6.71 qemu_cpu=225%
+143s latency=0.044s load1=6.74 qemu_cpu=225%
+145s latency=0.040s load1=6.74 qemu_cpu=225%
+146s latency=0.039s load1=6.74 qemu_cpu=222%
+147s latency=0.040s load1=6.74 qemu_cpu=222%
+149s latency=0.112s load1=6.36 qemu_cpu=164%
+150s latency=0.042s load1=6.36 qemu_cpu=225%
+151s latency=0.039s load1=6.36 qemu_cpu=226%
+153s latency=0.041s load1=6.36 qemu_cpu=222%
+154s latency=0.042s load1=6.25 qemu_cpu=223%
+155s latency=0.040s load1=6.25 qemu_cpu=224%
+156s latency=0.043s load1=6.25 qemu_cpu=226%
+158s latency=0.038s load1=6.07 qemu_cpu=228%
+159s latency=0.042s load1=6.07 qemu_cpu=226%
+160s latency=0.040s load1=6.07 qemu_cpu=223%
+162s latency=0.043s load1=6.07 qemu_cpu=222%
+163s latency=0.044s load1=5.74 qemu_cpu=223%
+164s latency=0.040s load1=5.74 qemu_cpu=225%
+166s latency=0.039s load1=5.74 qemu_cpu=225%
+167s latency=0.043s load1=5.74 qemu_cpu=224%
+168s latency=0.042s load1=5.44 qemu_cpu=224%
+169s latency=0.041s load1=5.44 qemu_cpu=223%
+171s latency=0.041s load1=5.44 qemu_cpu=224%
+172s latency=0.040s load1=5.44 qemu_cpu=226%
+173s latency=0.043s load1=5.49 qemu_cpu=224%
+175s latency=0.045s load1=5.49 qemu_cpu=224%
+176s latency=0.041s load1=5.49 qemu_cpu=222%
+177s latency=0.038s load1=5.49 qemu_cpu=223%
+178s latency=0.040s load1=5.45 qemu_cpu=225%
+180s latency=0.045s load1=5.45 qemu_cpu=225%
+summary: samples=139 avg_latency=0.043s max_latency=0.112s killed=no

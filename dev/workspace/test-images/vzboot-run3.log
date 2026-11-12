@@ -1,0 +1,127 @@
+[vzboot] VZVirtualMachine.isSupported = true
+[vzboot] configuration valid
+[vzboot] VM started
+[    0.278676] VMware PVSCSI driver - version 1.0.7.0-k
+[    0.278910] hv_vmbus: registering driver hv_netvsc
+[    0.279010] i8042: PNP: No PS/2 controller found.
+[    0.279168] hv_vmbus: registering driver hyperv_keyboard
+[    0.279290] rtc_cmos PNP0B00:00: RTC can wake from S4
+[    0.280998] rtc_cmos PNP0B00:00: registered as rtc0
+[    0.281364] rtc_cmos PNP0B00:00: setting system clock to 2026-11-10T17:00:54 UTC (1794330054)
+[    0.281570] rtc_cmos PNP0B00:00: alarms up to one day, y3k, 114 bytes nvram, hpet irqs
+[    0.281687] amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+[    0.281922] gre: GRE over IPv4 demultiplexer driver
+[    0.282055] NET: Registered PF_INET6 protocol family
+[    0.283463] Segment Routing with IPv6
+[    0.283535] In-situ OAM (IOAM) with IPv6
+[    0.285489] Key type dns_resolver registered
+[    0.285825] IPI shorthand broadcast: enabled
+[    0.300363] registered taskstats version 1
+[    0.300606] Loading compiled-in X.509 certificates
+[    0.399395] Freeing initrd memory: 9616K
+[    0.408312] Loaded X.509 cert 'alpinelinux.org: Alpine Linux kernel key: d76a695f66ad9cd28f5c22a8508f36e91f521f7a'
+[    0.410835] Demotion targets for Node 0: null
+[    0.411385] Key type .fscrypt registered
+[    0.411510] Key type fscrypt-provisioning registered
+[    0.415228] Unstable clock detected, switching default tracing clock to "global"
+[    0.415228] If you want to keep using the local clock, then add:
+[    0.415228]   "trace_clock=local"
+[    0.415228] on the kernel command line
+[    0.416970] Freeing unused kernel image (initmem) memory: 3008K
+[    0.417583] Write protecting the kernel read-only data: 26624k
+[    0.418797] Freeing unused kernel image (text/rodata gap) memory: 1664K
+[    0.419311] Freeing unused kernel image (rodata/data gap) memory: 304K
+[    0.419393] rodata_test: all tests were successful
+[    0.419481] Run /init as init process
+[    0.429884] Alpine Init 3.14.1-r0
+Alpine Init 3.14.1-r0
+[    0.431077] Loading boot drivers...
+ * Loading boot drivers: [    0.443468] loop: module loaded
+[    0.447733] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.457343] virtio_blk virtio1: 1/0/0 default/read/poll queues
+[    0.460263] virtio_blk virtio1: [vda] 137216 512-byte logical blocks (70.3 MB/67.0 MiB)
+[    0.466894]  vda: vda1 vda2
+[    0.473305] Loading boot drivers: ok.
+ok.
+[    0.476444] Mounting boot media...
+ * Mounting boot media: cat: can't open '/sys/class/virtio-ports/vport0p0/name': No such file or directory
+[    0.616192] FAT-fs (vda2): utf8 is not a recommended IO charset for FAT filesystems, filesystem will be case sensitive!
+[    0.669010] /dev/vda: Can't open blockdev
+[    0.921316] Mounting boot media: ok.
+ok.
+[    0.964440] Installing packages to root filesystem...
+ * Installing packages to root filesystem: ( 1/28) Installing alpine-baselayout-data (3.7.2-r1)
+7  0%                                             8[0K( 2/28) Installing musl (1.2.6-r3)
+7  0%                                             8[0K7  1%                                             8[0K7  3% #                                           8[0K7  5% ##                                          8[0K7  7% ###                                         8[0K( 3/28) Installing busybox (1.37.0-r31)
+7  7% ###                                         8[0K7  8% ###                                         8[0K7 10% ####                                        8[0K7 13% #####                                       8[0K7 15% ######                                      8[0K7 16% #######                                     8[0K  Executing busybox-1.37.0-r31.post-install
+7 16% #######                                     8[0K( 4/28) Installing busybox-binsh (1.37.0-r31)
+7 16% #######                                     8[0K7 17% #######                                     8[0K( 5/28) Installing alpine-baselayout (3.7.2-r1)
+7 17% #######                                     8[0K7 18% ########                                    8[0K  Executing alpine-baselayout-3.7.2-r1.pre-install
+7 18% ########                                    8[0K7 19% ########                                    8[0K  Executing alpine-baselayout-3.7.2-r1.post-install
+7 19% ########                                    8[0K( 6/28) Installing bridge (1.5-r5)
+7 19% ########                                    8[0K7 20% ########                                    8[0K( 7/28) Installing ifupdown-ng (0.13.0-r0)
+7 20% ########                                    8[0K7 21% #########                                   8[0K7 22% #########                                   8[0K( 8/28) Installing openrc-user (0.63.2-r0)
+7 22% #########                                   8[0K7 23% ##########                                  8[0K( 9/28) Installing libcap2 (2.78-r0)
+7 23% ##########                                  8[0K7 24% ##########                                  8[0K(10/28) Installing openrc (0.63.2-r0)
+7 24% ##########                                  8[0K7 25% ###########                                 8[0K7 27% ############                                8[0K7 29% ############                                8[0K  Executing openrc-0.63.2-r0.post-install
+7 29% ############                                8[0K(11/28) Installing alpine-conf (3.22.0-r0)
+7 29% ############                                8[0K7 30% #############                               8[0K7 31% #############                               8[0K(12/28) Installing alpine-keys (2.6-r0)
+7 31% #############                               8[0K7 32% ##############                              8[0K(13/28) Installing alpine-release (3.24.4-r0)
+7 32% ##############                              8[0K7 33% ##############                              8[0K(14/28) Installing libcrypto3 (3.5.9-r0)
+7 33% ##############                              8[0K7 34% ###############                             8[0K7 36% ################                            8[0K7 38% #################                           8[0K7 41% ##################                          8[0K7 43% ##################                          8[0K7 45% ###################                         8[0K7 47% ####################                        8[0K7 49% #####################                       8[0K7 51% ######################                      8[0K7 53% #######################                     8[0K7 55% ########################                    8[0K7 57% #########################                   8[0K7 59% ##########################                  8[0K7 61% ###########################                 8[0K7 63% ############################                8[0K7 66% #############################               8[0K(15/28) Installing libssl3 (3.5.9-r0)
+7 66% #############################               8[0K7 67% #############################               8[0K7 69% ##############################              8[0K7 71% ###############################             8[0K7 73% ################################            8[0K(16/28) Installing ssl_client (1.37.0-r31)
+7 73% ################################            8[0K7 74% ################################            8[0K(17/28) Installing zlib (1.3.2-r1)
+7 74% ################################            8[0K7 75% #################################           8[0K7 76% #################################           8[0K(18/28) Installing libapk (3.0.9-r0)
+7 76% #################################           8[0K7 77% ##################################          8[0K7 79% ##################################          8[0K7 79% ###################################         8[0K(19/28) Installing ca-certificates-bundle (20261020-r0)
+7 79% ###################################         8[0K7 80% ###################################         8[0K7 82% ####################################        8[0K(20/28) Installing apk-tools (3.0.9-r0)
+7 82% ####################################        8[0K7 83% ####################################        8[0K7 84% #####################################       8[0K(21/28) Installing mdev-conf (4.10-r0)
+7 84% #####################################       8[0K7 85% #####################################       8[0K(22/28) Installing busybox-mdev-openrc (1.37.0-r31)
+7 85% #####################################       8[0K7 86% ######################################      8[0K(23/28) Installing busybox-openrc (1.37.0-r31)
+7 86% ######################################      8[0K7 87% ######################################      8[0K(24/28) Installing busybox-suid (1.37.0-r31)
+7 87% ######################################      8[0K7 88% ######################################      8[0K7 88% #######################################     8[0K(25/28) Installing scanelf (1.3.9-r1)
+7 88% #######################################     8[0K7 89% #######################################     8[0K7 90% #######################################     8[0K(26/28) Installing musl-utils (1.2.6-r3)
+7 90% #######################################     8[0K7 91% ########################################    8[0K(27/28) Installing alpine-base (3.24.4-r0)
+7 91% ########################################    8[0K7 92% ########################################    8[0K(28/28) Installing openssl (3.5.9-r0)
+7 92% ########################################    8[0K7 93% #########################################   8[0K7 95% ##########################################  8[0K7 97% ##########################################  8[0K7 98% ########################################### 8[0K7100% ############################################8[0KExecuting busybox-1.37.0-r31.trigger
+OK: 10.5 MiB in 28 packages
+[    1.129345] Installing packages to root filesystem: ok.
+ok.
+
+
+   OpenRC 0.63.2 is starting up Linux 6.18.60-0-virt (x86_64)
+
+ * /proc is already mounted
+ * Mounting /run ... [ ok ]
+ * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/mqueue ... [ ok ]
+ * Mounting modloop  ... * Verifying modloop
+ [ ok ]
+ * Mounting security filesystem ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting trace filesystem ... [ ok ]
+ * Mounting persistent storage (pstore) filesystem ... [ ok ]
+ * Mounting bpf filesystem ... [ ok ]
+ * Starting busybox mdev ... [ ok ]
+ * Scanning hardware for mdev ...cat: can't open '/sys/class/virtio-ports/vport0p0/name': No such file or directory
+ [ ok ]
+ * Loading hardware drivers ... [ ok ]
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Checking local filesystems  ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * Configuring kernel parameters ... [ ok ]
+ * Creating user login records ... [ ok ]
+ * Cleaning /tmp directory ... [ ok ]
+ * Setting hostname to localhost from /etc/hostname ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * Starting firstboot ... [ ok ]
+
+Welcome to Alpine Linux 3.24
+Kernel 6.18.60-0-virt on x86_64 (/dev/hvc0)
+
+localhost login: [vzboot] time limit reached (80 s), state = 1; stopping

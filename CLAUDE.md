@@ -1,5 +1,8 @@
 # AMDVirt — hướng dẫn cho Claude Code
 
+Bạn đang ở repo AMDVirt (kext Hypervisor.framework cho Hackintosh AMD Ryzen của chủ dự án), nhánh `development`.
+Nếu thư mục làm việc `~/Downloads/dev/ryzenhv-native/` không còn, dựng lại theo **`dev/RESTORE.md`**.
+
 Trước khi làm gì trong repo này, đọc **`dev/HANDOFF.md`** (bàn giao đầy đủ: mục tiêu, cách làm việc, trạng thái, lỗi mở, phương án đã/chưa
 thử). Nhật ký chi tiết: `dev/JOURNAL.md`. Ghi chú dịch ngược: `dev/re-notes/`. Công cụ thử: `dev/tools/`.
 

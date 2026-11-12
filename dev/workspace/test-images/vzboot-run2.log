@@ -1,0 +1,50 @@
+[vzboot] VZVirtualMachine.isSupported = true
+[vzboot] configuration valid
+[vzboot] VM started
+[    0.271197] VMware PVSCSI driver - version 1.0.7.0-k
+[    0.271673] hv_vmbus: registering driver hv_netvsc
+[    0.271777] i8042: PNP: No PS/2 controller found.
+[    0.271860] hv_vmbus: registering driver hyperv_keyboard
+[    0.272010] rtc_cmos PNP0B00:00: RTC can wake from S4
+[    0.273706] rtc_cmos PNP0B00:00: registered as rtc0
+[    0.273974] rtc_cmos PNP0B00:00: setting system clock to 2026-11-10T16:59:45 UTC (1794329985)
+[    0.274304] rtc_cmos PNP0B00:00: alarms up to one day, y3k, 114 bytes nvram, hpet irqs
+[    0.274438] amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+[    0.274583] gre: GRE over IPv4 demultiplexer driver
+[    0.274699] NET: Registered PF_INET6 protocol family
+[    0.276598] Segment Routing with IPv6
+[    0.276929] In-situ OAM (IOAM) with IPv6
+[    0.278283] Key type dns_resolver registered
+[    0.278753] IPI shorthand broadcast: enabled
+[    0.290585] registered taskstats version 1
+[    0.291316] Loading compiled-in X.509 certificates
+[    0.398688] Freeing initrd memory: 9616K
+[    0.411633] Loaded X.509 cert 'alpinelinux.org: Alpine Linux kernel key: d76a695f66ad9cd28f5c22a8508f36e91f521f7a'
+[    0.413480] Demotion targets for Node 0: null
+[    0.413899] Key type .fscrypt registered
+[    0.413945] Key type fscrypt-provisioning registered
+[    0.426622] Unstable clock detected, switching default tracing clock to "global"
+[    0.426622] If you want to keep using the local clock, then add:
+[    0.426622]   "trace_clock=local"
+[    0.426622] on the kernel command line
+[    0.429507] Freeing unused kernel image (initmem) memory: 3008K
+[    0.430169] Write protecting the kernel read-only data: 26624k
+[    0.432606] Freeing unused kernel image (text/rodata gap) memory: 1664K
+[    0.433529] Freeing unused kernel image (rodata/data gap) memory: 304K
+[    0.433672] rodata_test: all tests were successful
+[    0.433750] Run /init as init process
+[    0.447503] Alpine Init 3.14.1-r0
+Alpine Init 3.14.1-r0
+[    0.447802] Loading boot drivers...
+ * Loading boot drivers: [    0.460647] loop: module loaded
+[    0.463795] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.465455] Loading boot drivers: ok.
+ok.
+[    0.467475] Mounting boot media...
+ * Mounting boot media: cat: can't open '/sys/class/virtio-ports/vport0p0/name': No such file or directory
+[    5.609627] Mounting boot media: failed. 
+failed. 
+Launching initramfs emergency recovery shell.
+
+sh: can't access tty; job control turned off
+~ # [6n[vzboot] time limit reached (60 s), state = 1; stopping

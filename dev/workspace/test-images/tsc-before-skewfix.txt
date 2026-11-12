@@ -1,0 +1,9 @@
+[    0.008000] tsc: Detected 2894.447 MHz processor
+[    0.000007] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x29b8c525a33, max_idle_ns: 440795211363 ns
+[    0.157676] TSC synchronization [CPU#0 -> CPU#1]:
+[    0.157676] Measured 1798 cycles TSC warp between CPUs, turning off TSC clock.
+[    0.157676] TSC warped randomly between CPUs
+[    0.158686] tsc: Marking TSC unstable due to check_tsc_sync_source failed
+[    0.348017] clocksource: Switched to clocksource hpet
+[    0.371845] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+hpet

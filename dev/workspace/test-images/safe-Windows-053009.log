@@ -1,0 +1,131 @@
+VM=Windows duration=180s kill-threshold=1.5s  log=/Users/liamhnam/Downloads/dev/ryzenhv-native/test-images/safe-Windows-053009.log
+  0s latency=0.052s load1=8.41 qemu_cpu=256%
+  2s latency=0.047s load1=8.41 qemu_cpu=101%
+  3s latency=0.067s load1=8.41 qemu_cpu=222%
+  5s latency=0.045s load1=8.93 qemu_cpu=257%
+  6s latency=0.045s load1=8.93 qemu_cpu=255%
+  7s latency=0.047s load1=8.93 qemu_cpu=256%
+  9s latency=0.057s load1=8.70 qemu_cpu=262%
+ 10s latency=0.046s load1=8.70 qemu_cpu=257%
+ 12s latency=0.043s load1=8.70 qemu_cpu=246%
+ 13s latency=0.053s load1=8.70 qemu_cpu=256%
+ 14s latency=0.052s load1=8.56 qemu_cpu=256%
+ 16s latency=0.048s load1=8.56 qemu_cpu=253%
+ 17s latency=0.046s load1=8.56 qemu_cpu=254%
+ 19s latency=0.064s load1=8.92 qemu_cpu=257%
+ 20s latency=0.064s load1=8.92 qemu_cpu=235%
+ 21s latency=0.059s load1=8.92 qemu_cpu=258%
+ 23s latency=0.054s load1=8.92 qemu_cpu=261%
+ 24s latency=0.057s load1=9.24 qemu_cpu=258%
+ 26s latency=0.076s load1=9.24 qemu_cpu=246%
+ 27s latency=0.068s load1=9.24 qemu_cpu=256%
+ 29s latency=0.061s load1=9.14 qemu_cpu=259%
+ 30s latency=0.059s load1=9.14 qemu_cpu=170%
+ 32s latency=0.076s load1=9.14 qemu_cpu=252%
+ 33s latency=0.043s load1=9.14 qemu_cpu=258%
+ 34s latency=0.048s load1=8.89 qemu_cpu=259%
+ 36s latency=0.044s load1=8.89 qemu_cpu=261%
+ 37s latency=0.039s load1=8.89 qemu_cpu=263%
+ 38s latency=0.068s load1=8.66 qemu_cpu=255%
+ 40s latency=0.058s load1=8.66 qemu_cpu=256%
+ 41s latency=0.070s load1=8.66 qemu_cpu=253%
+ 43s latency=0.051s load1=8.66 qemu_cpu=261%
+ 44s latency=0.040s load1=8.21 qemu_cpu=264%
+ 45s latency=0.049s load1=8.21 qemu_cpu=260%
+ 47s latency=0.086s load1=8.21 qemu_cpu=208%
+ 48s latency=0.055s load1=8.11 qemu_cpu=257%
+ 50s latency=0.047s load1=8.11 qemu_cpu=261%
+ 51s latency=0.041s load1=8.11 qemu_cpu=261%
+ 52s latency=0.039s load1=8.11 qemu_cpu=265%
+ 53s latency=0.046s load1=8.58 qemu_cpu=262%
+ 55s latency=0.049s load1=8.58 qemu_cpu=263%
+ 56s latency=0.044s load1=8.58 qemu_cpu=263%
+ 57s latency=0.045s load1=8.58 qemu_cpu=263%
+ 59s latency=0.050s load1=8.29 qemu_cpu=262%
+ 60s latency=0.048s load1=8.29 qemu_cpu=261%
+ 62s latency=0.071s load1=8.29 qemu_cpu=253%
+ 63s latency=0.055s load1=8.29 qemu_cpu=254%
+ 64s latency=0.059s load1=8.19 qemu_cpu=259%
+ 66s latency=0.046s load1=8.19 qemu_cpu=264%
+ 67s latency=0.048s load1=8.19 qemu_cpu=263%
+ 68s latency=0.047s load1=7.85 qemu_cpu=263%
+ 70s latency=0.049s load1=7.85 qemu_cpu=264%
+ 71s latency=0.060s load1=7.85 qemu_cpu=258%
+ 73s latency=0.050s load1=7.85 qemu_cpu=263%
+ 74s latency=0.050s load1=7.54 qemu_cpu=263%
+ 75s latency=0.044s load1=7.54 qemu_cpu=263%
+ 77s latency=0.049s load1=7.54 qemu_cpu=263%
+ 78s latency=0.055s load1=7.54 qemu_cpu=263%
+ 79s latency=0.049s load1=7.26 qemu_cpu=264%
+ 81s latency=0.050s load1=7.26 qemu_cpu=263%
+ 82s latency=0.048s load1=7.26 qemu_cpu=263%
+ 83s latency=0.048s load1=7.00 qemu_cpu=263%
+ 85s latency=0.049s load1=7.00 qemu_cpu=263%
+ 86s latency=0.049s load1=7.00 qemu_cpu=262%
+ 87s latency=0.045s load1=7.00 qemu_cpu=264%
+ 89s latency=0.065s load1=7.08 qemu_cpu=257%
+ 90s latency=0.045s load1=7.08 qemu_cpu=264%
+ 91s latency=0.045s load1=7.08 qemu_cpu=264%
+ 93s latency=0.054s load1=7.08 qemu_cpu=261%
+ 94s latency=0.050s load1=6.83 qemu_cpu=263%
+ 95s latency=0.049s load1=6.83 qemu_cpu=264%
+ 97s latency=0.055s load1=6.83 qemu_cpu=264%
+ 98s latency=0.084s load1=6.83 qemu_cpu=191%
+100s latency=0.080s load1=8.29 qemu_cpu=252%
+101s latency=0.046s load1=8.29 qemu_cpu=260%
+102s latency=0.038s load1=8.29 qemu_cpu=265%
+104s latency=0.045s load1=7.86 qemu_cpu=264%
+105s latency=0.078s load1=7.86 qemu_cpu=254%
+107s latency=0.068s load1=7.86 qemu_cpu=246%
+108s latency=0.059s load1=7.86 qemu_cpu=259%
+109s latency=0.067s load1=7.55 qemu_cpu=254%
+111s latency=0.070s load1=7.55 qemu_cpu=257%
+112s latency=0.051s load1=7.55 qemu_cpu=263%
+114s latency=0.062s load1=7.35 qemu_cpu=260%
+115s latency=0.064s load1=7.35 qemu_cpu=256%
+117s latency=0.068s load1=7.35 qemu_cpu=257%
+118s latency=0.070s load1=7.35 qemu_cpu=255%
+119s latency=0.070s load1=7.24 qemu_cpu=253%
+121s latency=0.049s load1=7.24 qemu_cpu=253%
+122s latency=0.060s load1=7.24 qemu_cpu=258%
+124s latency=0.082s load1=7.22 qemu_cpu=254%
+125s latency=0.068s load1=7.22 qemu_cpu=260%
+127s latency=0.054s load1=7.22 qemu_cpu=261%
+128s latency=0.062s load1=7.22 qemu_cpu=259%
+130s latency=0.070s load1=7.44 qemu_cpu=254%
+131s latency=0.073s load1=7.44 qemu_cpu=254%
+133s latency=0.069s load1=7.44 qemu_cpu=258%
+134s latency=0.070s load1=8.69 qemu_cpu=225%
+135s latency=0.061s load1=8.69 qemu_cpu=258%
+137s latency=0.074s load1=8.69 qemu_cpu=254%
+138s latency=0.047s load1=8.39 qemu_cpu=257%
+140s latency=0.072s load1=8.39 qemu_cpu=251%
+142s latency=0.060s load1=8.39 qemu_cpu=257%
+143s latency=0.076s load1=8.39 qemu_cpu=256%
+144s latency=0.057s load1=8.04 qemu_cpu=260%
+146s latency=0.046s load1=8.04 qemu_cpu=263%
+147s latency=0.068s load1=8.04 qemu_cpu=257%
+148s latency=0.037s load1=7.80 qemu_cpu=262%
+150s latency=0.056s load1=7.80 qemu_cpu=259%
+151s latency=0.057s load1=7.80 qemu_cpu=262%
+153s latency=0.046s load1=7.80 qemu_cpu=264%
+154s latency=0.066s load1=7.57 qemu_cpu=254%
+155s latency=0.043s load1=7.57 qemu_cpu=262%
+157s latency=0.040s load1=7.57 qemu_cpu=264%
+158s latency=0.048s load1=7.57 qemu_cpu=260%
+159s latency=0.050s load1=7.53 qemu_cpu=262%
+161s latency=0.047s load1=7.53 qemu_cpu=262%
+162s latency=0.064s load1=7.53 qemu_cpu=254%
+164s latency=0.051s load1=7.81 qemu_cpu=259%
+165s latency=0.069s load1=7.81 qemu_cpu=254%
+166s latency=0.060s load1=7.81 qemu_cpu=257%
+168s latency=0.054s load1=7.81 qemu_cpu=263%
+169s latency=0.052s load1=8.06 qemu_cpu=261%
+170s latency=0.047s load1=8.06 qemu_cpu=263%
+172s latency=0.058s load1=8.06 qemu_cpu=257%
+173s latency=0.066s load1=8.06 qemu_cpu=256%
+175s latency=0.052s load1=8.14 qemu_cpu=257%
+176s latency=0.050s load1=8.14 qemu_cpu=258%
+177s latency=0.089s load1=8.14 qemu_cpu=245%
+179s latency=0.046s load1=8.36 qemu_cpu=260%
+summary: samples=129 avg_latency=0.056s max_latency=0.089s killed=no

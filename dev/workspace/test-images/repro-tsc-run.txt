@@ -1,0 +1,5 @@
+== reboot 1
+   back (15.74 s)
+== reboot 2
+   NO ANSWER after reboot 2; VZ cpu =   0.0
+   dumps in /Users/liamhnam/Downloads/dev/ryzenhv-native/test-images/repro-hlt-043640

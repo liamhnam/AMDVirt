@@ -1,0 +1,701 @@
+[... 4942200 bytes lost, ring wrapped before they were read ...]
+pu12 trap thread 7 read_vmcs(slot) #22749000 pid 1726 arg=0x1e
+[  609.653479] I cpu2 trap thread 0 vcpu_run #19984000 pid 1726 arg=0xffffffffffffffff
+[  609.660516] I cpu12 trap thread 7 read_vmcs(slot) #22750000 pid 1726 arg=0x1e
+[  609.684298] I cpu0 trap thread 7 read_vmcs(slot) #22751000 pid 1726 arg=0x1e
+[  609.704530] I cpu12 trap thread 7 read_vmcs(slot) #22752000 pid 1726 arg=0x3a
+[  609.709479] I cpu0 trap thread 0 vcpu_run #19985000 pid 1726 arg=0xffffffffffffffff
+[  609.709486] I cpu8 hv front end: run 19985000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff9b2c5e26 rflags 0x46 rax 0 rcx 0 rdx 0 in rax 0x882a79d rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  609.715369] I cpu6 trap thread 7 read_vmcs(slot) #22753000 pid 1726 arg=0x1e
+[  609.727428] I cpu2 trap thread 7 read_vmcs(slot) #22754000 pid 1726 arg=0x3a
+[  609.739359] I cpu2 trap thread 7 read_vmcs(slot) #22755000 pid 1726 arg=0x3a
+[  609.741050] I cpu6 trap thread 0 vcpu_run #19986000 pid 1726 arg=0xffffffffffffffff
+[  609.752250] I cpu10 trap thread 7 read_vmcs(slot) #22756000 pid 1726 arg=0x3a
+[  609.762744] I cpu0 trap thread 7 read_vmcs(slot) #22757000 pid 1726 arg=0x1e
+[  609.770323] I cpu0 trap thread 0 vcpu_run #19987000 pid 1726 arg=0xffffffffffffffff
+[  609.770872] I cpu0 trap thread 7 read_vmcs(slot) #22758000 pid 1726 arg=0x39
+[  609.774960] I cpu12 trap thread 7 read_vmcs(slot) #22759000 pid 1726 arg=0x39
+[  609.778700] I cpu8 trap thread 7 read_vmcs(slot) #22760000 pid 1726 arg=0x1e
+[  609.780463] I cpu8 trap thread 0 vcpu_run #19988000 pid 1726 arg=0xffffffffffffffff
+[  609.782352] I cpu0 trap thread 7 read_vmcs(slot) #22761000 pid 1726 arg=0x3a
+[  609.786164] I cpu8 trap thread 7 read_vmcs(slot) #22762000 pid 1726 arg=0x39
+[  609.789996] I cpu4 trap thread 7 read_vmcs(slot) #22763000 pid 1726 arg=0x39
+[  609.791375] I cpu4 trap thread 0 vcpu_run #19989000 pid 1726 arg=0xffffffffffffffff
+[  609.793913] I cpu2 trap thread 7 read_vmcs(slot) #22764000 pid 1726 arg=0x3a
+[  609.797889] I cpu2 trap thread 7 read_vmcs(slot) #22765000 pid 1726 arg=0x3a
+[  609.801277] I cpu0 trap thread 0 vcpu_run #19990000 pid 1726 arg=0xffffffffffffffff
+[  609.801289] I cpu6 hv front end: run 19990000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2ca510 rflags 0x46 rax 0xffffa0cf40011000 rcx 0 rdx 0x1 in rax 0 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  609.801445] I cpu6 trap thread 7 read_vmcs(slot) #22766000 pid 1726 arg=0x3a
+[  609.804748] I cpu0 trap thread 7 read_vmcs(slot) #22767000 pid 1726 arg=0x39
+[  609.808126] I cpu0 trap thread 7 read_vmcs(slot) #22768000 pid 1726 arg=0x1e
+[  609.811341] I cpu14 trap thread 0 vcpu_run #19991000 pid 1726 arg=0xffffffffffffffff
+[  609.812920] I cpu10 trap thread 7 read_vmcs(slot) #22769000 pid 1726 arg=0x39
+[  609.816511] I cpu10 trap thread 7 read_vmcs(slot) #22770000 pid 1726 arg=0x39
+[  609.820248] I cpu6 trap thread 7 read_vmcs(slot) #22771000 pid 1726 arg=0x1e
+[  609.821455] I cpu0 trap thread 0 vcpu_run #19992000 pid 1726 arg=0xffffffffffffffff
+[  609.823578] I cpu4 trap thread 7 read_vmcs(slot) #22772000 pid 1726 arg=0x3a
+[  609.827286] I cpu0 trap thread 7 read_vmcs(slot) #22773000 pid 1726 arg=0x1e
+[  609.830693] I cpu12 trap thread 7 read_vmcs(slot) #22774000 pid 1726 arg=0x39
+[  609.831132] I cpu0 trap thread 0 vcpu_run #19993000 pid 1726 arg=0xffffffffffffffff
+[  609.839867] I cpu0 trap thread 7 read_vmcs(slot) #22775000 pid 1726 arg=0x3a
+[  609.868102] I cpu12 trap thread 7 read_vmcs(slot) #22776000 pid 1726 arg=0x39
+[  609.897034] I cpu0 trap thread 0 vcpu_run #19994000 pid 1726 arg=0xffffffffffffffff
+[  609.904071] I cpu6 trap thread 7 read_vmcs(slot) #22777000 pid 1726 arg=0x1e
+[  609.936989] I cpu10 trap thread 7 read_vmcs(slot) #22778000 pid 1726 arg=0x3a
+[  609.966182] I cpu2 trap thread 7 read_vmcs(slot) #22779000 pid 1726 arg=0x3a
+[  609.981870] I cpu12 trap thread 0 vcpu_run #19995000 pid 1726 arg=0xffffffffffffffff
+[  609.981904] I cpu12 hv front end: run 19995000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2ca510 rflags 0x46 rax 0xffffa0cf40011000 rcx 0 rdx 0x1 in rax 0x8be2a6a rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  609.990636] I cpu8 trap thread 7 read_vmcs(slot) #22780000 pid 1726 arg=0x1e
+[  610.003881] I cpu10 trap thread 7 read_vmcs(slot) #22781000 pid 1726 arg=0x3a
+[  610.015821] I cpu4 trap thread 7 read_vmcs(slot) #22782000 pid 1726 arg=0x3a
+[  610.021856] I cpu6 trap thread 0 vcpu_run #19996000 pid 1726 arg=0xffffffffffffffff
+[  610.034937] I cpu0 trap thread 7 read_vmcs(slot) #22783000 pid 1726 arg=0x3a
+[  610.055724] I cpu10 trap thread 7 read_vmcs(slot) #22784000 pid 1726 arg=0x1e
+[  610.074805] I cpu14 trap thread 7 read_vmcs(slot) #22785000 pid 1726 arg=0x39
+[  610.075702] I cpu14 trap thread 0 vcpu_run #19997000 pid 1726 arg=0xffffffffffffffff
+[  610.097717] I cpu6 trap thread 7 read_vmcs(slot) #22786000 pid 1726 arg=0x3a
+[  610.120695] I cpu10 trap thread 7 read_vmcs(slot) #22787000 pid 1726 arg=0x1e
+[  610.137570] I cpu10 trap thread 0 vcpu_run #19998000 pid 1726 arg=0xffffffffffffffff
+[  610.140744] I cpu8 trap thread 7 read_vmcs(slot) #22788000 pid 1726 arg=0x39
+[  610.161640] I cpu6 trap thread 7 read_vmcs(slot) #22789000 pid 1726 arg=0x39
+[  610.164494] I cpu10 trap task 13 vcpu_interrupt #61000 pid 1726 arg=0x2
+[  610.181769] I cpu12 trap thread 7 read_vmcs(slot) #22790000 pid 1726 arg=0x1e
+[  610.196451] I cpu10 trap thread 0 vcpu_run #19999000 pid 1726 arg=0xffffffffffffffff
+[  610.204896] I cpu14 trap thread 7 read_vmcs(slot) #22791000 pid 1726 arg=0x39
+[  610.227547] I cpu2 trap thread 7 read_vmcs(slot) #22792000 pid 1726 arg=0x1e
+[  610.247439] I cpu2 trap thread 7 read_vmcs(slot) #22793000 pid 1726 arg=0x3a
+[  610.255480] I cpu12 trap thread 0 vcpu_run #20000000 pid 1726 arg=0xffffffffffffffff
+[  610.255513] I cpu12 hv front end: run 20000000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff9b2c5dc6 rflags 0x13 rax 0xffffffff9b2bd260 rcx 0x20 rdx 0xc9f1f in rax 0x8f9f18e rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  610.271426] I cpu10 trap thread 7 read_vmcs(slot) #22794000 pid 1726 arg=0x39
+[  610.291369] I cpu10 trap thread 7 read_vmcs(slot) #22795000 pid 1726 arg=0x39
+[  610.312430] I cpu4 trap thread 7 read_vmcs(slot) #22796000 pid 1726 arg=0x3a
+[  610.314328] I cpu6 trap thread 0 vcpu_run #20001000 pid 1726 arg=0xffffffffffffffff
+[  610.332867] I cpu6 trap thread 7 read_vmcs(slot) #22797000 pid 1726 arg=0x3a
+[  610.353557] I cpu12 trap thread 7 read_vmcs(slot) #22798000 pid 1726 arg=0x39
+[  610.370172] I cpu10 trap thread 0 vcpu_run #20002000 pid 1726 arg=0xffffffffffffffff
+[  610.373267] I cpu8 trap thread 7 read_vmcs(slot) #22799000 pid 1726 arg=0x1e
+[  610.393187] I cpu0 trap thread 7 read_vmcs(slot) #22800000 pid 1726 arg=0x1e
+[  610.416197] I cpu10 trap thread 7 read_vmcs(slot) #22801000 pid 1726 arg=0x3a
+[  610.428093] I cpu6 trap thread 0 vcpu_run #20003000 pid 1726 arg=0xffffffffffffffff
+[  610.438206] I cpu0 trap thread 7 read_vmcs(slot) #22802000 pid 1726 arg=0x1e
+[  610.461002] I cpu10 trap thread 7 read_vmcs(slot) #22803000 pid 1726 arg=0x3a
+[  610.479991] I cpu4 trap thread 7 read_vmcs(slot) #22804000 pid 1726 arg=0x1e
+[  610.488126] I cpu2 trap thread 0 vcpu_run #20004000 pid 1726 arg=0xffffffffffffffff
+[  610.502904] I cpu8 trap thread 7 read_vmcs(slot) #22805000 pid 1726 arg=0x39
+[  610.518989] I cpu10 trap thread 7 read_vmcs(slot) #22806000 pid 1726 arg=0x3a
+[  610.529924] I cpu6 trap thread 7 read_vmcs(slot) #22807000 pid 1726 arg=0x1e
+[  610.531924] I cpu10 trap thread 0 vcpu_run #20005000 pid 1726 arg=0xffffffffffffffff
+[  610.531954] I cpu6 hv front end: run 20005000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2ca510 rflags 0x46 rax 0xffffa0cf40011000 rcx 0 rdx 0x1 in rax 0x9365833 rcx 0xffff90a43e01be70 rdx 0x1 intr 0 cr0 0x80050033
+[  610.568867] I cpu8 trap thread 7 read_vmcs(slot) #22808000 pid 1726 arg=0x3a
+[  610.605836] I cpu6 trap thread 7 read_vmcs(slot) #22809000 pid 1726 arg=0x39
+[  610.638648] I cpu8 trap thread 0 vcpu_run #20006000 pid 1726 arg=0xffffffffffffffff
+[  610.643671] I cpu0 trap thread 7 read_vmcs(slot) #22810000 pid 1726 arg=0x1e
+[  610.666641] I cpu6 trap thread 7 read_vmcs(slot) #22811000 pid 1726 arg=0x39
+[  610.680491] I cpu4 trap thread 7 read_vmcs(slot) #22812000 pid 1726 arg=0x39
+[  610.687333] I cpu6 trap thread 0 vcpu_run #20007000 pid 1726 arg=0xffffffffffffffff
+[  610.691542] I cpu2 trap thread 7 read_vmcs(slot) #22813000 pid 1726 arg=0x39
+[  610.707766] I cpu6 trap thread 7 read_vmcs(slot) #22814000 pid 1726 arg=0x39
+[  610.727503] I cpu6 trap thread 7 read_vmcs(slot) #22815000 pid 1726 arg=0x39
+[  610.733687] I cpu10 trap thread 0 vcpu_run #20008000 pid 1726 arg=0xffffffffffffffff
+[  610.746601] I cpu0 trap thread 7 read_vmcs(slot) #22816000 pid 1726 arg=0x3a
+[  610.767531] I cpu6 trap thread 7 read_vmcs(slot) #22817000 pid 1726 arg=0x1e
+[  610.788528] I cpu10 trap thread 7 read_vmcs(slot) #22818000 pid 1726 arg=0x39
+[  610.789509] I cpu8 trap thread 0 vcpu_run #20009000 pid 1726 arg=0xffffffffffffffff
+[  610.810649] I cpu10 trap thread 7 read_vmcs(slot) #22819000 pid 1726 arg=0x3a
+[  610.834357] I cpu12 trap thread 7 read_vmcs(slot) #22820000 pid 1726 arg=0x39
+[  610.850341] I cpu0 trap thread 0 vcpu_run #20010000 pid 1726 arg=0xffffffffffffffff
+[  610.850386] I cpu0 hv front end: run 20010000 vcpu0 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff9b2c5dc6 rflags 0x17 rax 0xffffffff9b2bd260 rcx 0x20 rdx 0xc3bd478 in rax 0x97beaac rcx 0x1 rdx 0x1 intr 0 cr0 0x80050033
+[  610.854301] I cpu14 trap thread 7 read_vmcs(slot) #22821000 pid 1726 arg=0x39
+[  610.875259] I cpu6 trap thread 7 read_vmcs(slot) #22822000 pid 1726 arg=0x3a
+[  610.894334] I cpu8 trap thread 7 read_vmcs(slot) #22823000 pid 1726 arg=0x39
+[  610.908182] I cpu8 trap thread 0 vcpu_run #20011000 pid 1726 arg=0xffffffffffffffff
+[  610.916246] I cpu8 trap thread 7 read_vmcs(slot) #22824000 pid 1726 arg=0x39
+[  610.936159] I cpu2 trap thread 7 read_vmcs(slot) #22825000 pid 1726 arg=0x39
+[  610.959148] I cpu0 trap thread 7 read_vmcs(slot) #22826000 pid 1726 arg=0x1e
+[  610.968080] I cpu2 trap thread 0 vcpu_run #20012000 pid 1726 arg=0xffffffffffffffff
+[  610.982209] I cpu14 trap thread 7 read_vmcs(slot) #22827000 pid 1726 arg=0x3a
+[  611.005033] I cpu11 trap thread 7 read_vmcs(slot) #22828000 pid 1726 arg=0x3a
+[  611.026958] I cpu6 trap thread 7 read_vmcs(slot) #22829000 pid 1726 arg=0x39
+[  611.027945] I cpu0 trap thread 0 vcpu_run #20013000 pid 1726 arg=0xffffffffffffffff
+[  611.046964] I cpu14 trap thread 7 read_vmcs(slot) #22830000 pid 1726 arg=0x39
+[  611.066870] I cpu2 trap thread 7 read_vmcs(slot) #22831000 pid 1726 arg=0x1e
+[  611.083954] I cpu6 trap thread 0 vcpu_run #20014000 pid 1726 arg=0xffffffffffffffff
+[  611.086803] I cpu8 trap task 13 vcpu_interrupt #62000 pid 1726 arg=0x2
+[  611.088134] I cpu2 trap thread 7 read_vmcs(slot) #22832000 pid 1726 arg=0x39
+[  611.113771] I cpu2 trap thread 7 read_vmcs(slot) #22833000 pid 1726 arg=0x3a
+[  611.139860] I cpu0 trap thread 7 read_vmcs(slot) #22834000 pid 1726 arg=0x39
+[  611.151786] I cpu4 trap thread 0 vcpu_run #20015000 pid 1726 arg=0xffffffffffffffff
+[  611.151820] I cpu4 hv front end: run 20015000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2ca510 rflags 0x46 rax 0xffffa0cf40011000 rcx 0 rdx 0x1 in rax 0x9bdc5b7 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  611.165721] I cpu12 trap thread 7 read_vmcs(slot) #22835000 pid 1726 arg=0x39
+[  611.181662] I cpu8 trap thread 7 read_vmcs(slot) #22836000 pid 1726 arg=0x1e
+[  611.204654] I cpu6 trap thread 7 read_vmcs(slot) #22837000 pid 1726 arg=0x1e
+[  611.213749] I cpu2 trap thread 0 vcpu_run #20016000 pid 1726 arg=0xffffffffffffffff
+[  611.226489] I cpu0 trap thread 7 read_vmcs(slot) #22838000 pid 1726 arg=0x3a
+[  611.236555] I cpu2 trap thread 7 read_vmcs(slot) #22839000 pid 1726 arg=0x1e
+[  611.245068] I cpu2 trap thread 7 read_vmcs(slot) #22840000 pid 1726 arg=0x39
+[  611.245384] I cpu6 trap thread 0 vcpu_run #20017000 pid 1726 arg=0xffffffffffffffff
+[  611.257649] I cpu12 trap thread 7 read_vmcs(slot) #22841000 pid 1726 arg=0x1e
+[  611.264214] I cpu8 trap thread 7 read_vmcs(slot) #22842000 pid 1726 arg=0x39
+[  611.271619] I cpu10 trap thread 0 vcpu_run #20018000 pid 1726 arg=0xffffffffffffffff
+[  611.273488] I cpu6 trap thread 7 read_vmcs(slot) #22843000 pid 1726 arg=0x1e
+[  611.281571] I cpu10 trap thread 7 read_vmcs(slot) #22844000 pid 1726 arg=0x39
+[  611.289493] I cpu6 trap thread 7 read_vmcs(slot) #22845000 pid 1726 arg=0x3a
+[  611.292193] I cpu6 trap thread 0 vcpu_run #20019000 pid 1726 arg=0xffffffffffffffff
+[  611.294456] I cpu6 trap thread 7 read_vmcs(slot) #22846000 pid 1726 arg=0x1e
+[  611.301446] I cpu14 trap thread 7 read_vmcs(slot) #22847000 pid 1726 arg=0x1e
+[  611.309172] I cpu12 trap thread 7 read_vmcs(slot) #22848000 pid 1726 arg=0x39
+[  611.310532] I cpu4 trap thread 0 vcpu_run #20020000 pid 1726 arg=0xffffffffffffffff
+[  611.310628] I cpu0 hv front end: run 20020000 vcpu1 exit reason 12 qual 0 ilen 1 rip 0xffffffff9be4837e rflags 0x246 rax 0 rcx 0 rdx 0 in rax 0x9e077bb rcx 0 rdx 0x1 intr 0x1 cr0 0x80050033
+[  611.320966] I cpu2 trap thread 7 read_vmcs(slot) #22849000 pid 1726 arg=0x39
+[  611.328346] I cpu6 trap thread 7 read_vmcs(slot) #22850000 pid 1726 arg=0x3a
+[  611.333875] I cpu8 trap thread 0 vcpu_run #20021000 pid 1726 arg=0xffffffffffffffff
+[  611.337402] I cpu14 trap thread 7 read_vmcs(slot) #22851000 pid 1726 arg=0x39
+[  611.348495] I cpu6 trap thread 7 read_vmcs(slot) #22852000 pid 1726 arg=0x3a
+[  611.354062] I cpu2 trap thread 7 read_vmcs(slot) #22853000 pid 1726 arg=0x1e
+[  611.354143] I cpu2 trap thread 0 vcpu_run #20022000 pid 1726 arg=0xffffffffffffffff
+[  611.356816] I cpu8 trap thread 7 read_vmcs(slot) #22854000 pid 1726 arg=0x3a
+[  611.361555] I cpu8 trap thread 7 read_vmcs(slot) #22855000 pid 1726 arg=0x39
+[  611.364508] I cpu12 trap thread 0 vcpu_run #20023000 pid 1726 arg=0xffffffffffffffff
+[  611.365207] I cpu14 trap thread 7 read_vmcs(slot) #22856000 pid 1726 arg=0x1e
+[  611.367026] I cpu8 trap thread 2 invalidate_tlb #245000 pid 1726 arg=0x1
+[  611.374642] I cpu12 trap thread 7 read_vmcs(slot) #22857000 pid 1726 arg=0x1e
+[  611.386223] I cpu4 trap thread 7 read_vmcs(slot) #22858000 pid 1726 arg=0x3a
+[  611.387934] I cpu14 trap thread 0 vcpu_run #20024000 pid 1726 arg=0xffffffffffffffff
+[  611.397168] I cpu0 trap thread 7 read_vmcs(slot) #22859000 pid 1726 arg=0x39
+[  611.402870] I cpu14 trap thread 7 read_vmcs(slot) #22860000 pid 1726 arg=0x39
+[  611.404989] I cpu8 trap thread 0 vcpu_run #20025000 pid 1726 arg=0xffffffffffffffff
+[  611.405019] I cpu8 hv front end: run 20025000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2ca510 rflags 0x46 rax 0xffffa0cf40011000 rcx 0 rdx 0x1 in rax 0x9f51772 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  611.405937] I cpu8 trap thread 7 read_vmcs(slot) #22861000 pid 1726 arg=0x1e
+[  611.413313] I cpu2 trap thread 7 read_vmcs(slot) #22862000 pid 1726 arg=0x3a
+[  611.421282] I cpu0 trap thread 7 read_vmcs(slot) #22863000 pid 1726 arg=0x39
+[  611.423473] I cpu12 trap thread 0 vcpu_run #20026000 pid 1726 arg=0xffffffffffffffff
+[  611.431035] I cpu0 trap thread 7 read_vmcs(slot) #22864000 pid 1726 arg=0x39
+[  611.441092] I cpu8 trap thread 7 read_vmcs(slot) #22865000 pid 1726 arg=0x3a
+[  611.444371] I cpu6 trap thread 0 vcpu_run #20027000 pid 1726 arg=0xffffffffffffffff
+[  611.445656] I cpu10 trap thread 7 read_vmcs(slot) #22866000 pid 1726 arg=0x1e
+[  611.453546] I cpu2 trap thread 7 read_vmcs(slot) #22867000 pid 1726 arg=0x39
+[  611.460116] I cpu0 trap thread 0 vcpu_run #20028000 pid 1726 arg=0xffffffffffffffff
+[  611.462956] I cpu6 trap thread 7 read_vmcs(slot) #22868000 pid 1726 arg=0x39
+[  611.470307] I cpu8 trap thread 7 read_vmcs(slot) #22869000 pid 1726 arg=0x1e
+[  611.479094] I cpu4 trap thread 7 read_vmcs(slot) #22870000 pid 1726 arg=0x1e
+[  611.480780] I cpu4 trap thread 0 vcpu_run #20029000 pid 1726 arg=0xffffffffffffffff
+[  611.487066] I cpu14 trap thread 7 read_vmcs(slot) #22871000 pid 1726 arg=0x39
+[  611.494757] I cpu0 trap thread 7 read_vmcs(slot) #22872000 pid 1726 arg=0x39
+[  611.494800] I cpu0 trap thread 2 invalidate_tlb #246000 pid 1726 arg=0x1
+[  611.498726] I cpu2 trap thread 0 vcpu_run #20030000 pid 1726 arg=0xffffffffffffffff
+[  611.498747] I cpu2 hv front end: run 20030000 vcpu0 exit reason 12 qual 0 ilen 1 rip 0xffffffff9be4837e rflags 0x246 rax 0 rcx 0 rdx 0 in rax 0xa0990d5 rcx 0 rdx 0x1 intr 0x1 cr0 0x80050033
+[  611.505241] I cpu6 trap thread 7 read_vmcs(slot) #22873000 pid 1726 arg=0x1e
+[  611.513701] I cpu10 trap thread 7 read_vmcs(slot) #22874000 pid 1726 arg=0x3a
+[  611.520543] I cpu14 trap thread 0 vcpu_run #20031000 pid 1726 arg=0xffffffffffffffff
+[  611.520840] I cpu14 trap thread 7 read_vmcs(slot) #22875000 pid 1726 arg=0x1e
+[  611.530290] I cpu0 trap thread 7 read_vmcs(slot) #22876000 pid 1726 arg=0x3a
+[  611.539306] I cpu4 trap thread 7 read_vmcs(slot) #22877000 pid 1726 arg=0x1e
+[  611.544485] I cpu0 trap thread 0 vcpu_run #20032000 pid 1726 arg=0xffffffffffffffff
+[  611.548021] I cpu4 trap thread 7 read_vmcs(slot) #22878000 pid 1726 arg=0x3a
+[  611.555914] I cpu14 trap task 13 vcpu_interrupt #63000 pid 1726 arg=0x2
+[  611.558752] I cpu12 trap thread 7 read_vmcs(slot) #22879000 pid 1726 arg=0x1e
+[  611.570736] I cpu14 trap thread 7 read_vmcs(slot) #22880000 pid 1726 arg=0x1e
+[  611.572936] I cpu8 trap thread 0 vcpu_run #20033000 pid 1726 arg=0xffffffffffffffff
+[  611.578702] I cpu8 trap thread 7 read_vmcs(slot) #22881000 pid 1726 arg=0x1e
+[  611.592961] I cpu0 trap thread 7 read_vmcs(slot) #22882000 pid 1726 arg=0x39
+[  611.628884] I cpu6 trap thread 7 read_vmcs(slot) #22883000 pid 1726 arg=0x39
+[  611.633808] I cpu10 trap thread 0 vcpu_run #20034000 pid 1726 arg=0xffffffffffffffff
+[  611.671996] I cpu14 trap thread 7 read_vmcs(slot) #22884000 pid 1726 arg=0x1e
+[  611.711336] I cpu12 trap thread 7 read_vmcs(slot) #22885000 pid 1726 arg=0x1e
+[  611.725682] I cpu0 trap thread 0 vcpu_run #20035000 pid 1726 arg=0xffffffffffffffff
+[  611.725715] I cpu0 hv front end: run 20035000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2ca510 rflags 0x46 rax 0xffffa0cf40011000 rcx 0 rdx 0x1 in rax 0xa3b2683 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  611.730670] I cpu2 trap thread 7 read_vmcs(slot) #22886000 pid 1726 arg=0x1e
+[  611.768581] I cpu0 trap thread 7 read_vmcs(slot) #22887000 pid 1726 arg=0x39
+[  611.809468] I cpu14 trap thread 7 read_vmcs(slot) #22888000 pid 1726 arg=0x39
+[  611.833166] I cpu12 trap thread 0 vcpu_run #20036000 pid 1726 arg=0xffffffffffffffff
+[  611.836348] I cpu2 trap thread 7 read_vmcs(slot) #22889000 pid 1726 arg=0x1e
+[  611.844511] I cpu0 trap thread 7 read_vmcs(slot) #22890000 pid 1726 arg=0x1e
+[  611.855727] I cpu14 trap thread 7 read_vmcs(slot) #22891000 pid 1726 arg=0x1e
+[  611.857972] I cpu4 trap thread 0 vcpu_run #20037000 pid 1726 arg=0xffffffffffffffff
+[  611.865424] I cpu0 trap thread 7 read_vmcs(slot) #22892000 pid 1726 arg=0x3a
+[  611.888425] I cpu4 trap thread 7 read_vmcs(slot) #22893000 pid 1726 arg=0x1e
+[  611.924444] I cpu6 trap thread 7 read_vmcs(slot) #22894000 pid 1726 arg=0x3a
+[  611.926277] I cpu6 trap thread 0 vcpu_run #20038000 pid 1726 arg=0xffffffffffffffff
+[  611.964291] I cpu12 trap thread 7 read_vmcs(slot) #22895000 pid 1726 arg=0x1e
+[  612.006152] I cpu0 trap thread 7 read_vmcs(slot) #22896000 pid 1726 arg=0x39
+[  612.024179] I cpu8 trap thread 0 vcpu_run #20039000 pid 1726 arg=0xffffffffffffffff
+[  612.029059] I cpu14 trap thread 7 read_vmcs(slot) #22897000 pid 1726 arg=0x39
+[  612.047106] I cpu2 trap thread 7 read_vmcs(slot) #22898000 pid 1726 arg=0x1e
+[  612.057918] I cpu10 trap thread 7 read_vmcs(slot) #22899000 pid 1726 arg=0x39
+[  612.062232] I cpu14 trap thread 0 vcpu_run #20040000 pid 1726 arg=0xffffffffffffffff
+[  612.062255] I cpu14 hv front end: run 20040000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2bf35f rflags 0x2 rax 0 rcx 0x4 rdx 0xffff90a4a0d56000 in rax 0xa84ade2 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  612.065062] I cpu10 trap thread 7 read_vmcs(slot) #22900000 pid 1726 arg=0x1e
+[  612.081317] I cpu2 trap thread 7 read_vmcs(slot) #22901000 pid 1726 arg=0x1e
+[  612.087468] I cpu0 trap thread 7 read_vmcs(slot) #22902000 pid 1726 arg=0x3a
+[  612.088411] I cpu6 trap thread 0 vcpu_run #20041000 pid 1726 arg=0xffffffffffffffff
+[  612.093651] I cpu10 trap thread 7 read_vmcs(slot) #22903000 pid 1726 arg=0x39
+[  612.100148] I cpu10 trap thread 7 read_vmcs(slot) #22904000 pid 1726 arg=0x1e
+[  612.111871] I cpu2 trap thread 0 vcpu_run #20042000 pid 1726 arg=0xffffffffffffffff
+[  612.112528] I cpu14 trap thread 7 read_vmcs(slot) #22905000 pid 1726 arg=0x3a
+[  612.124895] I cpu10 trap thread 7 read_vmcs(slot) #22906000 pid 1726 arg=0x3a
+[  612.141378] I cpu0 trap thread 7 read_vmcs(slot) #22907000 pid 1726 arg=0x3a
+[  612.150075] I cpu0 trap thread 0 vcpu_run #20043000 pid 1726 arg=0xffffffffffffffff
+[  612.154066] I cpu2 trap thread 7 read_vmcs(slot) #22908000 pid 1726 arg=0x1e
+[  612.172822] I cpu8 trap thread 7 read_vmcs(slot) #22909000 pid 1726 arg=0x39
+[  612.195959] I cpu2 trap thread 7 read_vmcs(slot) #22910000 pid 1726 arg=0x3a
+[  612.488424] I cpu8 trap thread 0 vcpu_run #20044000 pid 1726 arg=0xffffffffffffffff
+[  612.674860] I cpu10 trap thread 7 read_vmcs(slot) #22911000 pid 1726 arg=0x39
+[  612.679627] I cpu6 trap thread 7 read_vmcs(slot) #22912000 pid 1726 arg=0x39
+[  613.087312] I cpu10 trap thread 7 read_vmcs(slot) #22913000 pid 1726 arg=0x3a
+[  613.088223] I cpu0 trap thread 0 vcpu_run #20045000 pid 1726 arg=0xffffffffffffffff
+[  613.088258] I cpu0 hv front end: run 20045000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2ca510 rflags 0x46 rax 0xffffa0cf40011000 rcx 0 rdx 0x1 in rax 0xb64d5f0 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  613.367783] I cpu12 trap thread 7 read_vmcs(slot) #22914000 pid 1726 arg=0x3a
+[  613.381624] I cpu2 trap thread 7 read_vmcs(slot) #22915000 pid 1726 arg=0x1e
+[  613.390059] I cpu12 trap thread 0 vcpu_run #20046000 pid 1726 arg=0xffffffffffffffff
+[  613.419494] I cpu12 trap thread 7 read_vmcs(slot) #22916000 pid 1726 arg=0x39
+[  613.447320] I cpu2 trap thread 7 read_vmcs(slot) #22917000 pid 1726 arg=0x39
+[  613.455433] I cpu8 trap thread 7 read_vmcs(slot) #22918000 pid 1726 arg=0x1e
+[  613.463182] I cpu8 trap thread 0 vcpu_run #20047000 pid 1726 arg=0xffffffffffffffff
+[  613.468070] I cpu8 trap thread 7 read_vmcs(slot) #22919000 pid 1726 arg=0x39
+[  613.476565] I cpu0 trap thread 7 read_vmcs(slot) #22920000 pid 1726 arg=0x1e
+[  613.496879] I cpu0 trap thread 7 read_vmcs(slot) #22921000 pid 1726 arg=0x39
+[  613.503386] I cpu4 trap thread 0 vcpu_run #20048000 pid 1726 arg=0xffffffffffffffff
+[  613.510947] I cpu0 flight: 100 exits ending 0 before the newest of 52816 recorded, oldest first (seq reason qual rip rsp rflags rax r9 cr2 gs kgs cs sel/ar ss sel/ar cpl)
+[  613.510978] I cpu0 f52717 r48 c0 q181 ip 7fa218fc sp 7ffa4c70 fl 212 ax 0 r9 3 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511000] I cpu0 w52717: f100=7fa21900 401c=0
+[  613.511003] I cpu0 f52718 r48 c0 q181 ip 7fa218fc sp 7ffa4c70 fl 212 ax 0 r9 3 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511007] I cpu0 w52718: f100=7fa21900 401c=0
+[  613.511009] I cpu0 f52719 r48 c0 q181 ip 7fa218fc sp 7ffa4c70 fl 216 ax 0 r9 3 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511013] I cpu0 w52719: f100=7fa21900 401c=0
+[  613.511015] I cpu0 f52720 r10 c0 q0 ip 7fa21038 sp 7ffa4ba0 fl 246 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511019] I cpu0 w52720: f100=7fa21900 401c=0
+[  613.511021] I cpu0 f52721 r31 c0 q0 ip 7fa21663 sp 7ffa4bc0 fl 206 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511025] I cpu0 w52721: f100=7fa2103a 401c=0
+[  613.511027] I cpu0 f52722 r10 c0 q0 ip 7fa21038 sp 7ffa4ba0 fl 246 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511031] I cpu0 w52722: f100=7fa21665 401c=0
+[  613.511033] I cpu0 f52723 r31 c0 q0 ip 7fa21606 sp 7ffa4bc0 fl 206 ax fee00000 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511037] I cpu0 w52723: f100=7fa2103a 401c=0
+[  613.511039] I cpu0 f52724 r48 c0 q181 ip 7fa21692 sp 7ffa4c10 fl 202 ax fee00000 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511043] I cpu0 w52724: f100=7fa21608 401c=0
+[  613.511046] I cpu0 f52725 r10 c0 q0 ip 7fa21038 sp 7ffa4ba0 fl 246 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511050] I cpu0 w52725: f100=7fa21695 401c=0
+[  613.511052] I cpu0 f52726 r31 c0 q0 ip 7fa21663 sp 7ffa4bc0 fl 206 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511056] I cpu0 w52726: f100=7fa2103a 401c=0
+[  613.511058] I cpu0 f52727 r10 c0 q0 ip 7fa21038 sp 7ffa4ba0 fl 246 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511063] I cpu0 w52727: f100=7fa21665 401c=0
+[  613.511065] I cpu0 f52728 r31 c0 q0 ip 7fa21663 sp 7ffa4bc0 fl 206 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511069] I cpu0 w52728: f100=7fa2103a 401c=0
+[  613.511071] I cpu0 f52729 r10 c0 q0 ip 7fa21038 sp 7ffa4bf0 fl 246 ax 0 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511076] I cpu0 w52729: f100=7fa21665 401c=0
+[  613.511078] I cpu0 f52730 r10 c0 q0 ip 7fa21006 sp 7ffa4bf8 fl 246 ax b r9 7ffa4c4c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511081] I cpu0 w52730: f100=7fa2103a 401c=0
+[  613.511084] I cpu0 f52731 r48 c0 q182 ip 7fa219f1 sp 7ffa4c70 fl 282 ax fee0000000000140 r9 7ffa4c4c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511088] I cpu0 w52731: f100=7fa21008 401c=0
+[  613.511090] I cpu0 f52732 r48 c0 q181 ip 7fa21a01 sp 7ffa4c70 fl 256 ax 0 r9 7ffa4c4c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511096] I cpu0 w52732: f100=7fa219f6 401c=0
+[  613.511100] I cpu0 f52733 r48 c0 q182 ip 7fa21a31 sp 7ffa4c70 fl 256 ax 0 r9 7ffa4c4c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511104] I cpu0 w52733: f100=7fa21a05 401c=0
+[  613.511106] I cpu0 f52734 r48 c0 q181 ip 7fa21a40 sp 7ffa4c70 fl 256 ax 0 r9 7ffa4c4c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511111] I cpu0 w52734: f100=7fa21a35 401c=0
+[  613.511114] I cpu0 f52735 r48 c0 q182 ip 7fa210d1 sp 7ffa4c20 fl 46 ax 0 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511117] I cpu0 w52735: f100=7fa21a44 401c=0
+[  613.511120] I cpu0 f52736 r48 c0 q181 ip 7fa210f6 sp 7ffa4c20 fl 12 ax 22f4d r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511124] I cpu0 w52736: f100=7fa210d8 401c=0
+[  613.511127] I cpu0 f52737 r48 c0 q182 ip 7fa2118f sp 7ffa4c20 fl 2 ax 1 r9 22f4d cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511131] I cpu0 w52737: f100=7fa210fd 401c=0
+[  613.511133] I cpu0 f52738 r10 c0 q0 ip 7fa21038 sp 7ffa4b50 fl 46 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511136] I cpu0 w52738: f100=7fa21197 401c=0
+[  613.511139] I cpu0 f52739 r31 c0 q0 ip 7fa21663 sp 7ffa4b70 fl 6 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511143] I cpu0 w52739: f100=7fa2103a 401c=0
+[  613.511144] I cpu0 f52740 r10 c0 q0 ip 7fa21038 sp 7ffa4b50 fl 46 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511149] I cpu0 w52740: f100=7fa21665 401c=0
+[  613.511151] I cpu0 f52741 r31 c0 q0 ip 7fa21606 sp 7ffa4b70 fl 6 ax fee00000 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511156] I cpu0 w52741: f100=7fa2103a 401c=0
+[  613.511159] I cpu0 f52742 r48 c0 q181 ip 7fa21692 sp 7ffa4bc0 fl 2 ax fee00000 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511162] I cpu0 w52742: f100=7fa21608 401c=0
+[  613.511164] I cpu0 f52743 r10 c0 q0 ip 7fa21038 sp 7ffa4b50 fl 46 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511168] I cpu0 w52743: f100=7fa21695 401c=0
+[  613.511171] I cpu0 f52744 r31 c0 q0 ip 7fa21663 sp 7ffa4b70 fl 6 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511174] I cpu0 w52744: f100=7fa2103a 401c=0
+[  613.511178] I cpu0 f52745 r10 c0 q0 ip 7fa21038 sp 7ffa4b50 fl 46 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511182] I cpu0 w52745: f100=7fa21665 401c=0
+[  613.511184] I cpu0 f52746 r31 c0 q0 ip 7fa21663 sp 7ffa4b70 fl 6 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511188] I cpu0 w52746: f100=7fa2103a 401c=0
+[  613.511193] I cpu0 f52747 r10 c0 q0 ip 7fa21038 sp 7ffa4ba0 fl 46 ax 0 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511198] I cpu0 w52747: f100=7fa21665 401c=0
+[  613.511201] I cpu0 f52748 r10 c0 q0 ip 7fa21006 sp 7ffa4ba8 fl 46 ax b r9 7ffa4bfc cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511205] I cpu0 w52748: f100=7fa2103a 401c=0
+[  613.511207] I cpu0 f52749 r48 c0 q182 ip 7fa211f7 sp 7ffa4c20 fl 82 ax fee0000000000140 r9 7ffa4bfc cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511212] I cpu0 w52749: f100=7fa21008 401c=0
+[  613.511214] I cpu0 f52750 r48 c0 q182 ip 7fa2127f sp 7ffa4c20 fl 56 ax 0 r9 7ffa4bfc cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511218] I cpu0 w52750: f100=7fa211ff 401c=0
+[  613.511221] I cpu0 f52751 r48 c0 q182 ip 7fa2129c sp 7ffa4c20 fl 2 ax 1 r9 7ffa4bfc cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511225] I cpu0 w52751: f100=7fa21287 401c=0
+[  613.511227] I cpu0 f52752 r1 c0 q0 ip 7ffa620c sp 7ffa4b28 fl 246 ax 0 r9 7eda0017 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511231] I cpu0 w52752: f100=7fa212a3 401c=0
+[  613.511234] I cpu0 f52753 r28 c0 q4 ip 7fa58425 sp 7ffa49d8 fl 2 ax 668 r9 7eda0017 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511238] I cpu0 w52753: 4016=80000040 401c=0
+[  613.511240] I cpu0 f52754 r48 c0 q182 ip 7fa213e6 sp 7ffa4710 fl 2 ax 1 r9 7eda0017 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511244] I cpu0 w52754: f100=7fa58428 401c=0
+[  613.511247] I cpu0 f52755 r10 c0 q0 ip 7fa21038 sp 7ffa46a0 fl 46 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511251] I cpu0 w52755: f100=7fa213ea 401c=0
+[  613.511253] I cpu0 f52756 r31 c0 q0 ip 7fa21663 sp 7ffa46c0 fl 6 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511257] I cpu0 w52756: f100=7fa2103a 401c=0
+[  613.511259] I cpu0 f52757 r10 c0 q0 ip 7fa21038 sp 7ffa46a0 fl 46 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511263] I cpu0 w52757: f100=7fa21665 401c=0
+[  613.511265] I cpu0 f52758 r31 c0 q0 ip 7fa21606 sp 7ffa46c0 fl 6 ax fee00000 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511269] I cpu0 w52758: f100=7fa2103a 401c=0
+[  613.511271] I cpu0 f52759 r48 c0 q182 ip 7fa213fa sp 7ffa4710 fl 2 ax fee00000 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511275] I cpu0 w52759: f100=7fa21608 401c=0
+[  613.511277] I cpu0 f52760 r48 c0 q182 ip 7fa2141f sp 7ffa4710 fl 46 ax 0 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511282] I cpu0 w52760: f100=7fa21404 401c=0
+[  613.511284] I cpu0 f52761 r48 c0 q181 ip 7fa21422 sp 7ffa4710 fl 46 ax 0 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511288] I cpu0 w52761: f100=7fa21422 401c=0
+[  613.511291] I cpu0 f52762 r48 c0 q181 ip 7fa21434 sp 7ffa4710 fl 56 ax 0 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511297] I cpu0 w52762: f100=7fa21429 401c=0
+[  613.511299] I cpu0 f52763 r48 c0 q182 ip 7fa214b9 sp 7ffa4710 fl 56 ax 4a04d r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511303] I cpu0 w52763: f100=7fa2143c 401c=0
+[  613.511306] I cpu0 f52764 r48 c0 q182 ip 7fa214cf sp 7ffa4710 fl 2 ax 1 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511310] I cpu0 w52764: f100=7fa214c1 401c=0
+[  613.511312] I cpu0 f52765 r28 c0 q0 ip 7fa584ae sp 7ffa49b8 fl 2 ax 80010033 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511316] I cpu0 w52765: f100=7fa214d2 401c=0
+[  613.511318] I cpu0 f52766 r28 c0 q4 ip 7fa584be sp 7ffa49d8 fl 16 ax 668 r9 0 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511322] I cpu0 w52766: f100=7fa584b1 401c=0
+[  613.511324] I cpu0 f52767 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 33 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511329] I cpu0 w52767: f100=7fa584c1 401c=0
+[  613.511332] I cpu0 f52768 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 23 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511337] I cpu0 w52768: f100=7fbaa5ba 401c=0
+[  613.511340] I cpu0 f52769 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 23 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511344] I cpu0 w52769: f100=7fbaa5c8 401c=0
+[  613.511347] I cpu0 f52770 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 5b r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511351] I cpu0 w52770: f100=7fbaa5ba 401c=0
+[  613.511353] I cpu0 f52771 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 5b r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511357] I cpu0 w52771: f100=7fbaa5c8 401c=0
+[  613.511359] I cpu0 f52772 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 44 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511363] I cpu0 w52772: f100=7fbaa5ba 401c=0
+[  613.511366] I cpu0 f52773 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 44 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511370] I cpu0 w52773: f100=7fbaa5c8 401c=0
+[  613.511373] I cpu0 f52774 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 58 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511377] I cpu0 w52774: f100=7fbaa5ba 401c=0
+[  613.511379] I cpu0 f52775 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 212 ax 58 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511383] I cpu0 w52775: f100=7fbaa5c8 401c=0
+[  613.511386] I cpu0 f52776 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 45 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511393] I cpu0 w52776: f100=7fbaa5ba 401c=0
+[  613.511398] I cpu0 f52777 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 45 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511403] I cpu0 w52777: f100=7fbaa5c8 401c=0
+[  613.511404] I cpu0 f52778 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 7c r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511409] I cpu0 w52778: f100=7fbaa5ba 401c=0
+[  613.511411] I cpu0 f52779 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 7c r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511415] I cpu0 w52779: f100=7fbaa5c8 401c=0
+[  613.511417] I cpu0 f52780 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 44 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511421] I cpu0 w52780: f100=7fbaa5ba 401c=0
+[  613.511423] I cpu0 f52781 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 44 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511428] I cpu0 w52781: f100=7fbaa5c8 401c=0
+[  613.511430] I cpu0 f52782 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 5d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511434] I cpu0 w52782: f100=7fbaa5ba 401c=0
+[  613.511436] I cpu0 f52783 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 5d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511440] I cpu0 w52783: f100=7fbaa5c8 401c=0
+[  613.511443] I cpu0 f52784 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 20 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511447] I cpu0 w52784: f100=7fbaa5ba 401c=0
+[  613.511449] I cpu0 f52785 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 20 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511454] I cpu0 w52785: f100=7fbaa5c8 401c=0
+[  613.511456] I cpu0 f52786 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 30 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511460] I cpu0 w52786: f100=7fbaa5ba 401c=0
+[  613.511463] I cpu0 f52787 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 30 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511468] I cpu0 w52787: f100=7fbaa5c8 401c=0
+[  613.511470] I cpu0 f52788 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 30 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511474] I cpu0 w52788: f100=7fbaa5ba 401c=0
+[  613.511476] I cpu0 f52789 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 30 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511481] I cpu0 w52789: f100=7fbaa5c8 401c=0
+[  613.511484] I cpu0 f52790 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511488] I cpu0 w52790: f100=7fbaa5ba 401c=0
+[  613.511491] I cpu0 f52791 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511498] I cpu0 w52791: f100=7fbaa5c8 401c=0
+[  613.511500] I cpu0 f52792 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 20 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511503] I cpu0 w52792: f100=7fbaa5ba 401c=0
+[  613.511506] I cpu0 f52793 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 20 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511509] I cpu0 w52793: f100=7fbaa5c8 401c=0
+[  613.511511] I cpu0 f52794 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511515] I cpu0 w52794: f100=7fbaa5ba 401c=0
+[  613.511517] I cpu0 f52795 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511520] I cpu0 w52795: f100=7fbaa5c8 401c=0
+[  613.511522] I cpu0 f52796 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 32 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511525] I cpu0 w52796: f100=7fbaa5ba 401c=0
+[  613.511527] I cpu0 f52797 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 32 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511531] I cpu0 w52797: f100=7fbaa5c8 401c=0
+[  613.511533] I cpu0 f52798 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 212 ax 42 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511537] I cpu0 w52798: f100=7fbaa5ba 401c=0
+[  613.511538] I cpu0 f52799 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 42 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511542] I cpu0 w52799: f100=7fbaa5c8 401c=0
+[  613.511543] I cpu0 f52800 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 41 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511547] I cpu0 w52800: f100=7fbaa5ba 401c=0
+[  613.511549] I cpu0 f52801 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 41 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511553] I cpu0 w52801: f100=7fbaa5c8 401c=0
+[  613.511555] I cpu0 f52802 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 38 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511558] I cpu0 w52802: f100=7fbaa5ba 401c=0
+[  613.511560] I cpu0 f52803 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 38 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511563] I cpu0 w52803: f100=7fbaa5c8 401c=0
+[  613.511565] I cpu0 f52804 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511568] I cpu0 w52804: f100=7fbaa5ba 401c=0
+[  613.511570] I cpu0 f52805 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511577] I cpu0 w52805: f100=7fbaa5c8 401c=0
+[  613.511579] I cpu0 f52806 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 33 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511582] I cpu0 w52806: f100=7fbaa5ba 401c=0
+[  613.511584] I cpu0 f52807 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 212 ax 33 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511588] I cpu0 w52807: f100=7fbaa5c8 401c=0
+[  613.511590] I cpu0 f52808 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 31 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511594] I cpu0 w52808: f100=7fbaa5ba 401c=0
+[  613.511596] I cpu0 f52809 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 31 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511601] I cpu0 w52809: f100=7fbaa5c8 401c=0
+[  613.511605] I cpu0 f52810 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511610] I cpu0 w52810: f100=7fbaa5ba 401c=0
+[  613.511612] I cpu0 f52811 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511616] I cpu0 w52811: f100=7fbaa5c8 401c=0
+[  613.511617] I cpu0 f52812 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 35 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511621] I cpu0 w52812: f100=7fbaa5ba 401c=0
+[  613.511623] I cpu0 f52813 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 35 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511626] I cpu0 w52813: f100=7fbaa5c8 401c=0
+[  613.511628] I cpu0 f52814 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 32 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511631] I cpu0 w52814: f100=7fbaa5ba 401c=0
+[  613.511633] I cpu0 f52815 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 32 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511637] I cpu0 w52815: f100=7fbaa5c8 401c=0
+[  613.511638] I cpu0 f52816 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.511642] I cpu0 w52816: f100=7fbaa5ba 401c=0
+[  613.511643] I cpu0 flight: the last state of each vCPU (5 lines each: regs; r8-r15; gs/fs/kernel gs/idt/exception bitmap; tr/gdt/syscall msrs; cr, controls, TSC offset)
+[  613.511647] I cpu0 v0 seq 52816 reason 30 rip 7fbaa5c7 rsp 7ffa48a0 fl 202 ax 34 cx 0 dx 3f8 bx 7ffa4b00 bp 7ffa4a80 si 7ffa4949 di 1b
+[  613.511651] I cpu0 v0 r8 0 r9 7fbabf3c r10 33 r11 1 r12 0 r13 1 r14 3040002 r15 1
+[  613.511653] I cpu0 v0 gs 0 fs 0 kgs 0 gsmsr 0 idt 7f189018 exc 0 cr2 7f8dfad6b01d ok2 3f
+[  613.511656] I cpu0 v0 tr 0 gdt 7fbea618 star 0 lstar 0 sfmask 0
+[  613.511660] I cpu0 v0 cr0 80010033 cr3 7fc01000 cr4 2668 efer d00 cs 38 pin 0 proc 200080 sec 0 tscoff 0 act 0 intr 0 evt 40 ok 7f
+[  613.511663] I cpu0 v0 vtpr 0 tprpage 0 tprthr 0
+[  613.511666] I cpu0 v1 seq 52325 reason 12 rip 7fa5813f rsp 7e809f38 fl 46 ax 1 cx 7e809f1c dx 178bfbff bx 7e9fc6a0 bp 7e809fc0 si 7e9fc288 di 1
+[  613.511670] I cpu0 v1 r8 0 r9 0 r10 0 r11 7fa622c6 r12 2 r13 1 r14 7e9fa004 r15 c8
+[  613.511672] I cpu0 v1 gs 0 fs 0 kgs 0 gsmsr 0 idt 7e9fb288 exc 0 cr2 7f8955fe201d ok2 3f
+[  613.511674] I cpu0 v1 tr 0 gdt 7fbea618 star 0 lstar 0 sfmask 0
+[  613.511676] I cpu0 v1 cr0 80010033 cr3 7fc01000 cr4 2660 efer d00 cs 38 pin 0 proc 200080 sec 0 tscoff 0 act 0 intr 0 evt f8 ok 7f
+[  613.511680] I cpu0 v1 vtpr 0 tprpage 0 tprthr 0
+[  613.624403] I cpu6 trap thread 7 read_vmcs(slot) #22922000 pid 1726 arg=0x39
+[  613.629176] I cpu6 trap thread 7 read_vmcs(slot) #22923000 pid 1726 arg=0x39
+[  613.632234] I cpu2 trap thread 0 vcpu_run #20049000 pid 1726 arg=0xffffffffffffffff
+[  613.634308] I cpu2 trap thread 7 read_vmcs(slot) #22924000 pid 1726 arg=0x3a
+[  613.637179] I cpu10 trap task 13 vcpu_interrupt #64000 pid 1726 arg=0x2
+[  613.639177] I cpu6 trap thread 7 read_vmcs(slot) #22925000 pid 1726 arg=0x39
+[  613.642580] I cpu0 trap thread 7 read_vmcs(slot) #22926000 pid 1726 arg=0x3a
+[  613.643955] I cpu6 trap thread 0 vcpu_run #20050000 pid 1726 arg=0xffffffffffffffff
+[  613.644006] I cpu6 hv front end: run 20050000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff9b2ca510 rflags 0x46 rax 0xffffa0cf40011000 rcx 0x1 rdx 0x1 in rax 0xbde4293 rcx 0x1 rdx 0x1 intr 0 cr0 0x80050033
+[  613.647350] I cpu0 trap thread 7 read_vmcs(slot) #22927000 pid 1726 arg=0x39
+[  613.650602] I cpu4 trap thread 7 read_vmcs(slot) #22928000 pid 1726 arg=0x1e
+[  613.654323] I cpu4 trap thread 0 vcpu_run #20051000 pid 1726 arg=0xffffffffffffffff
+[  613.654423] I cpu0 trap thread 7 read_vmcs(slot) #22929000 pid 1726 arg=0x39
+[  613.661917] I cpu12 trap thread 7 read_vmcs(slot) #22930000 pid 1726 arg=0x1e
+[  613.667379] I cpu2 trap thread 7 read_vmcs(slot) #22931000 pid 1726 arg=0x39
+[  613.875453] I cpu14 flight: 100 exits ending 100 before the newest of 52816 recorded, oldest first (seq reason qual rip rsp rflags rax r9 cr2 gs kgs cs sel/ar ss sel/ar cpl)
+[  613.875465] I cpu14 f52617 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875469] I cpu14 w52617: f100=7fbaa5ba 401c=0
+[  613.875478] I cpu14 f52618 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875482] I cpu14 w52618: f100=7fbaa5c8 401c=0
+[  613.875484] I cpu14 f52619 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875488] I cpu14 w52619: f100=7fbaa5ba 401c=0
+[  613.875489] I cpu14 f52620 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875493] I cpu14 w52620: f100=7fbaa5c8 401c=0
+[  613.875494] I cpu14 f52621 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 212 ax 45 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875498] I cpu14 w52621: f100=7fbaa5ba 401c=0
+[  613.875499] I cpu14 f52622 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 45 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875503] I cpu14 w52622: f100=7fbaa5c8 401c=0
+[  613.875504] I cpu14 f52623 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875508] I cpu14 w52623: f100=7fbaa5ba 401c=0
+[  613.875509] I cpu14 f52624 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875513] I cpu14 w52624: f100=7fbaa5c8 401c=0
+[  613.875515] I cpu14 f52625 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 42 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875518] I cpu14 w52625: f100=7fbaa5ba 401c=0
+[  613.875522] I cpu14 f52626 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 42 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875525] I cpu14 w52626: f100=7fbaa5c8 401c=0
+[  613.875527] I cpu14 f52627 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 30 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875530] I cpu14 w52627: f100=7fbaa5ba 401c=0
+[  613.875532] I cpu14 f52628 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 30 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875535] I cpu14 w52628: f100=7fbaa5c8 401c=0
+[  613.875537] I cpu14 f52629 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 44 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875540] I cpu14 w52629: f100=7fbaa5ba 401c=0
+[  613.875542] I cpu14 f52630 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 212 ax 44 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875545] I cpu14 w52630: f100=7fbaa5c8 401c=0
+[  613.875547] I cpu14 f52631 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 45 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875550] I cpu14 w52631: f100=7fbaa5ba 401c=0
+[  613.875552] I cpu14 f52632 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 45 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875555] I cpu14 w52632: f100=7fbaa5c8 401c=0
+[  613.875557] I cpu14 f52633 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875560] I cpu14 w52633: f100=7fbaa5ba 401c=0
+[  613.875562] I cpu14 f52634 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875566] I cpu14 w52634: f100=7fbaa5c8 401c=0
+[  613.875567] I cpu14 f52635 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 37 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875571] I cpu14 w52635: f100=7fbaa5ba 401c=0
+[  613.875572] I cpu14 f52636 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 37 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875576] I cpu14 w52636: f100=7fbaa5c8 401c=0
+[  613.875577] I cpu14 f52637 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 38 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875581] I cpu14 w52637: f100=7fbaa5ba 401c=0
+[  613.875582] I cpu14 f52638 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 38 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875586] I cpu14 w52638: f100=7fbaa5c8 401c=0
+[  613.875587] I cpu14 f52639 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 31 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875591] I cpu14 w52639: f100=7fbaa5ba 401c=0
+[  613.875593] I cpu14 f52640 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 31 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875596] I cpu14 w52640: f100=7fbaa5c8 401c=0
+[  613.875598] I cpu14 f52641 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875601] I cpu14 w52641: f100=7fbaa5ba 401c=0
+[  613.875603] I cpu14 f52642 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875607] I cpu14 w52642: f100=7fbaa5c8 401c=0
+[  613.875608] I cpu14 f52643 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875612] I cpu14 w52643: f100=7fbaa5ba 401c=0
+[  613.875613] I cpu14 f52644 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875617] I cpu14 w52644: f100=7fbaa5c8 401c=0
+[  613.875618] I cpu14 f52645 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875622] I cpu14 w52645: f100=7fbaa5ba 401c=0
+[  613.875624] I cpu14 f52646 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875628] I cpu14 w52646: f100=7fbaa5c8 401c=0
+[  613.875629] I cpu14 f52647 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 46 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875633] I cpu14 w52647: f100=7fbaa5ba 401c=0
+[  613.875634] I cpu14 f52648 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 46 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875638] I cpu14 w52648: f100=7fbaa5c8 401c=0
+[  613.875639] I cpu14 f52649 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875643] I cpu14 w52649: f100=7fbaa5ba 401c=0
+[  613.875644] I cpu14 f52650 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875647] I cpu14 w52650: f100=7fbaa5c8 401c=0
+[  613.875649] I cpu14 f52651 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875652] I cpu14 w52651: f100=7fbaa5ba 401c=0
+[  613.875654] I cpu14 f52652 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875658] I cpu14 w52652: f100=7fbaa5c8 401c=0
+[  613.875659] I cpu14 f52653 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 216 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875662] I cpu14 w52653: f100=7fbaa5ba 401c=0
+[  613.875664] I cpu14 f52654 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875667] I cpu14 w52654: f100=7fbaa5c8 401c=0
+[  613.875669] I cpu14 f52655 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 42 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875672] I cpu14 w52655: f100=7fbaa5ba 401c=0
+[  613.875674] I cpu14 f52656 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 42 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875677] I cpu14 w52656: f100=7fbaa5c8 401c=0
+[  613.875679] I cpu14 f52657 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875682] I cpu14 w52657: f100=7fbaa5ba 401c=0
+[  613.875684] I cpu14 f52658 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875687] I cpu14 w52658: f100=7fbaa5c8 401c=0
+[  613.875689] I cpu14 f52659 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 32 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875693] I cpu14 w52659: f100=7fbaa5ba 401c=0
+[  613.875694] I cpu14 f52660 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 32 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875701] I cpu14 w52660: f100=7fbaa5c8 401c=0
+[  613.875703] I cpu14 f52661 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 44 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875706] I cpu14 w52661: f100=7fbaa5ba 401c=0
+[  613.875708] I cpu14 f52662 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 216 ax 44 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875711] I cpu14 w52662: f100=7fbaa5c8 401c=0
+[  613.875713] I cpu14 f52663 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875716] I cpu14 w52663: f100=7fbaa5ba 401c=0
+[  613.875718] I cpu14 f52664 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 2d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875721] I cpu14 w52664: f100=7fbaa5c8 401c=0
+[  613.875723] I cpu14 f52665 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 39 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875726] I cpu14 w52665: f100=7fbaa5ba 401c=0
+[  613.875728] I cpu14 f52666 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 39 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875731] I cpu14 w52666: f100=7fbaa5c8 401c=0
+[  613.875733] I cpu14 f52667 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 38 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875736] I cpu14 w52667: f100=7fbaa5ba 401c=0
+[  613.875738] I cpu14 f52668 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 38 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875741] I cpu14 w52668: f100=7fbaa5c8 401c=0
+[  613.875743] I cpu14 f52669 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 33 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875746] I cpu14 w52669: f100=7fbaa5ba 401c=0
+[  613.875748] I cpu14 f52670 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 33 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875752] I cpu14 w52670: f100=7fbaa5c8 401c=0
+[  613.875753] I cpu14 f52671 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875757] I cpu14 w52671: f100=7fbaa5ba 401c=0
+[  613.875758] I cpu14 f52672 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875763] I cpu14 w52672: f100=7fbaa5c8 401c=0
+[  613.875765] I cpu14 f52673 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875769] I cpu14 w52673: f100=7fbaa5ba 401c=0
+[  613.875770] I cpu14 f52674 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875777] I cpu14 w52674: f100=7fbaa5c8 401c=0
+[  613.875779] I cpu14 f52675 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875782] I cpu14 w52675: f100=7fbaa5ba 401c=0
+[  613.875784] I cpu14 f52676 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875787] I cpu14 w52676: f100=7fbaa5c8 401c=0
+[  613.875789] I cpu14 f52677 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875792] I cpu14 w52677: f100=7fbaa5ba 401c=0
+[  613.875794] I cpu14 f52678 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 36 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875797] I cpu14 w52678: f100=7fbaa5c8 401c=0
+[  613.875799] I cpu14 f52679 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 31 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875803] I cpu14 w52679: f100=7fbaa5ba 401c=0
+[  613.875805] I cpu14 f52680 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 31 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875808] I cpu14 w52680: f100=7fbaa5c8 401c=0
+[  613.875810] I cpu14 f52681 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875814] I cpu14 w52681: f100=7fbaa5ba 401c=0
+[  613.875816] I cpu14 f52682 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 34 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875821] I cpu14 w52682: f100=7fbaa5c8 401c=0
+[  613.875822] I cpu14 f52683 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax 42 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875826] I cpu14 w52683: f100=7fbaa5ba 401c=0
+[  613.875828] I cpu14 f52684 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 42 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875832] I cpu14 w52684: f100=7fbaa5c8 401c=0
+[  613.875833] I cpu14 f52685 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 216 ax 45 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875837] I cpu14 w52685: f100=7fbaa5ba 401c=0
+[  613.875838] I cpu14 f52686 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 206 ax 45 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875842] I cpu14 w52686: f100=7fbaa5c8 401c=0
+[  613.875843] I cpu14 f52687 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875847] I cpu14 w52687: f100=7fbaa5ba 401c=0
+[  613.875849] I cpu14 f52688 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax 43 r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875857] I cpu14 w52688: f100=7fbaa5c8 401c=0
+[  613.875859] I cpu14 f52689 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 202 ax d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875862] I cpu14 w52689: f100=7fbaa5ba 401c=0
+[  613.875864] I cpu14 f52690 r30 c0 q3fd0008 ip 7fbaa5b9 sp 7ffa48a0 fl 202 ax d r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875867] I cpu14 w52690: f100=7fbaa5c8 401c=0
+[  613.875869] I cpu14 f52691 r30 c0 q3f80000 ip 7fbaa5c7 sp 7ffa48a0 fl 206 ax a r9 7fbabf3c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875872] I cpu14 w52691: f100=7fbaa5ba 401c=0
+[  613.875873] I cpu14 f52692 r30 c0 q3fb0000 ip 7fa2176d sp 7ffa4c70 fl 202 ax 87 r9 100 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875877] I cpu14 w52692: f100=7fbaa5c8 401c=0
+[  613.875878] I cpu14 f52693 r30 c0 q3f90000 ip 7fa21774 sp 7ffa4c70 fl 246 ax 0 r9 100 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875882] I cpu14 w52693: f100=7fa2176e 401c=0
+[  613.875883] I cpu14 f52694 r30 c0 q3f80000 ip 7fa2177b sp 7ffa4c70 fl 246 ax 1 r9 100 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875886] I cpu14 w52694: f100=7fa21775 401c=0
+[  613.875888] I cpu14 f52695 r30 c0 q3fb0000 ip 7fa21782 sp 7ffa4c70 fl 246 ax 7 r9 100 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875891] I cpu14 w52695: f100=7fa2177c 401c=0
+[  613.875893] I cpu14 f52696 r48 c0 q181 ip 7fa217bb sp 7ffa4c70 fl 246 ax 7f970018 r9 11d493d77739f24c cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875897] I cpu14 w52696: f100=7fa21783 401c=0
+[  613.875898] I cpu14 f52697 r48 c0 q181 ip 7fa21830 sp 7ffa4c70 fl 46 ax 7f9712d0 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875902] I cpu14 w52697: f100=7fa217c1 401c=0
+[  613.875903] I cpu14 f52698 r30 c0 q608000b ip 7fa2183f sp 7ffa4c70 fl 2 ax 7f9712d0 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875907] I cpu14 w52698: f100=7fa21837 401c=0
+[  613.875908] I cpu14 f52699 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 16 ax c2bff6fa r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875912] I cpu14 w52699: f100=7fa21840 401c=0
+[  613.875913] I cpu14 f52700 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 16 ax 83f8945 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875917] I cpu14 w52700: f100=7fa2184f 401c=0
+[  613.875918] I cpu14 f52701 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 2 ax 83f8962 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875922] I cpu14 w52701: f100=7fa2184f 401c=0
+[  613.875924] I cpu14 f52702 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 16 ax 83f897f r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875930] I cpu14 w52702: f100=7fa2184f 401c=0
+[  613.875931] I cpu14 f52703 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 12 ax 83f899b r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875935] I cpu14 w52703: f100=7fa2184f 401c=0
+[  613.875936] I cpu14 f52704 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 12 ax 83f89ba r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875940] I cpu14 w52704: f100=7fa2184f 401c=0
+[  613.875941] I cpu14 f52705 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 12 ax 83f89d7 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875944] I cpu14 w52705: f100=7fa2184f 401c=0
+[  613.875946] I cpu14 f52706 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 6 ax 83f89f3 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875950] I cpu14 w52706: f100=7fa2184f 401c=0
+[  613.875951] I cpu14 f52707 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 16 ax 83f8a24 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875955] I cpu14 w52707: f100=7fa2184f 401c=0
+[  613.875956] I cpu14 f52708 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 6 ax 83f8a40 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875960] I cpu14 w52708: f100=7fa2184f 401c=0
+[  613.875961] I cpu14 f52709 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 12 ax 83f8a5b r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875965] I cpu14 w52709: f100=7fa2184f 401c=0
+[  613.875967] I cpu14 f52710 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 12 ax 83f8a77 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875970] I cpu14 w52710: f100=7fa2184f 401c=0
+[  613.875972] I cpu14 f52711 r30 c0 q608000b ip 7fa2184e sp 7ffa4c70 fl 46 ax 83f8a93 r9 246 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875975] I cpu14 w52711: f100=7fa2184f 401c=0
+[  613.875977] I cpu14 f52712 r48 c0 q181 ip 7fa2188e sp 7ffa4c70 fl 202 ax 0 r9 7f188018 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875980] I cpu14 w52712: f100=7fa2184f 401c=0
+[  613.875982] I cpu14 f52713 r48 c0 q181 ip 7fa2189c sp 7ffa4c70 fl 202 ax 429b17e80868301 r9 7f188018 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875986] I cpu14 w52713: f100=7fa21895 401c=0
+[  613.875987] I cpu14 f52714 r48 c0 q182 ip 7fa218ce sp 7ffa4c70 fl 246 ax 0 r9 7f188018 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875991] I cpu14 w52714: f100=7fa218a3 401c=0
+[  613.875992] I cpu14 f52715 r48 c0 q181 ip 7fa218d5 sp 7ffa4c70 fl 246 ax 0 r9 7f188018 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.875996] I cpu14 w52715: f100=7fa218d5 401c=0
+[  613.875997] I cpu14 f52716 r48 c0 q181 ip 7fa218fc sp 7ffa4c70 fl 256 ax ff r9 7f188018 cr2 7f8dfad6b01d gs 0 kg 0 cs 38/209b ss 30/c093
+[  613.876003] I cpu14 w52716: f100=7fa218d9 401c=0
+[  613.876004] I cpu14 flight: the last state of each vCPU (5 lines each: regs; r8-r15; gs/fs/kernel gs/idt/exception bitmap; tr/gdt/syscall msrs; cr, controls, TSC offset)
+[  613.876008] I cpu14 v0 seq 52816 reason 30 rip 7fbaa5c7 rsp 7ffa48a0 fl 202 ax 34 cx 0 dx 3f8 bx 7ffa4b00 bp 7ffa4a80 si 7ffa4949 di 1b
+[  613.876011] I cpu14 v0 r8 0 r9 7fbabf3c r10 33 r11 1 r12 0 r13 1 r14 3040002 r15 1
+[  613.876013] I cpu14 v0 gs 0 fs 0 kgs 0 gsmsr 0 idt 7f189018 exc 0 cr2 7f8dfad6b01d ok2 3f
+[  613.876016] I cpu14 v0 tr 0 gdt 7fbea618 star 0 lstar 0 sfmask 0
+[  613.876018] I cpu14 v0 cr0 80010033 cr3 7fc01000 cr4 2668 efer d00 cs 38 pin 0 proc 200080 sec 0 tscoff 0 act 0 intr 0 evt 40 ok 7f
+[  613.876021] I cpu14 v0 vtpr 0 tprpage 0 tprthr 0
+[  613.876023] I cpu14 v1 seq 52325 reason 12 rip 7fa5813f rsp 7e809f38 fl 46 ax 1 cx 7e809f1c dx 178bfbff bx 7e9fc6a0 bp 7e809fc0 si 7e9fc288 di 1
+[  613.876027] I cpu14 v1 r8 0 r9 0 r10 0 r11 7fa622c6 r12 2 r13 1 r14 7e9fa004 r15 c8
+[  613.876032] I cpu14 v1 gs 0 fs 0 kgs 0 gsmsr 0 idt 7e9fb288 exc 0 cr2 7f8955fe201d ok2 3f
+[  613.876035] I cpu14 v1 tr 0 gdt 7fbea618 star 0 lstar 0 sfmask 0
+[  613.876037] I cpu14 v1 cr0 80010033 cr3 7fc01000 cr4 2660 efer d00 cs 38 pin 0 proc 200080 sec 0 tscoff 0 act 0 intr 0 evt f8 ok 7f
+[  613.876040] I cpu14 v1 vtpr 0 tprpage 0 tprthr 0
+[  614.082045] I cpu6 trap thread 0 vcpu_run #20052000 pid 1726 arg=0xffffffffffffffff

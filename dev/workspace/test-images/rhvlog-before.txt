@@ -1,0 +1,647 @@
+[... 34021 bytes lost, ring wrapped before they were read ...]
+rap task 4 vm_map #12 pid 1057 arg=0x7000005bca08 [0 0x109602000 0xf0000 0x3ff10000 0x7 ...]
+[  174.979596] I cpu10 trap task 5 vm_unmap #7 pid 1057 arg=0x7000005bca00 [0 0 0xc0000 0x10000 0 ...]
+[  174.979676] I cpu10 trap task 5 vm_unmap #8 pid 1057 arg=0x7000005bca00 [0 0 0xd0000 0x10000 0 ...]
+[  174.979699] I cpu10 trap task 5 vm_unmap #9 pid 1057 arg=0x7000005bca00 [0 0 0xe0000 0x10000 0 ...]
+[  174.979716] I cpu10 trap task 5 vm_unmap #10 pid 1057 arg=0x7000005bca00 [0 0 0xf0000 0x3ff10000 0 ...]
+[  175.015457] I cpu4 trap task 4 vm_map #13 pid 1057 arg=0x7000005bca08 [0 0x1095d2000 0xc0000 0x3ff40000 0x7 ...]
+[  175.067951] I cpu8 trap thread 0 vcpu_run #1000 pid 1057 arg=0xffffffffffffffff
+[  175.070146] I cpu6 trap task 4 vm_map #14 pid 1057 arg=0x7000005bc968 [0 0x149554000 0xfd000000 0x1000000 0x7 ...]
+[  175.080603] I cpu2 trap task 13 vcpu_interrupt #20 pid 1057 arg=0x2
+[  175.080626] I cpu2 trap task 13 vcpu_interrupt #21 pid 1057 arg=0x2
+[  175.080676] I cpu0 trap thread 2 invalidate_tlb #4 pid 1057 arg=0x18
+[  175.080682] I cpu0 trap thread 7 read_vmcs(slot) #3 pid 1057 arg=0xb
+[  175.080686] I cpu0 trap thread 2 invalidate_tlb #5 pid 1057 arg=0x18
+[  175.080690] I cpu0 trap thread 11 sync_special_regs #2 pid 1057 arg=0x29
+[  175.080697] I cpu0 hv front end: qemu-system-x86_64 vcpu1 writes control 0x4000 = 0x3f (was 0)
+[  175.080701] I cpu0 hv front end: qemu-system-x86_64 vcpu1 writes control 0x4002 = 0xffffffff842065fa (was 0)
+[  175.080704] I cpu0 hv front end: qemu-system-x86_64 vcpu1 writes control 0x401e = 0x8 (was 0)
+[  175.080713] I cpu0 hv front end: vcpu1 of this client uses the TPR shadow (processor controls 0x842065fa)
+[  175.080717] I cpu0 vCPU 1: first VMRUN, rip=0x0 cs.base=0x10000 efer=0x1000 cr0=0x30 nCr3=0x61732000
+[  175.080735] I cpu0 trap thread 7 read_vmcs(slot) #4 pid 1057 arg=0x4
+[  175.080738] I cpu0 trap thread 2 invalidate_tlb #6 pid 1057 arg=0x18
+[  175.080778] I cpu2 trap thread 7 read_vmcs(slot) #5 pid 1057 arg=0x4
+[  175.080783] I cpu2 trap thread 2 invalidate_tlb #7 pid 1057 arg=0x18
+[  175.080818] I cpu2 trap thread 7 read_vmcs(slot) #6 pid 1057 arg=0x4
+[  175.080822] I cpu2 trap thread 2 invalidate_tlb #8 pid 1057 arg=0x18
+[  175.084216] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0xffffffff842065fa)
+[  175.084720] I cpu6 trap task 4 vm_map #15 pid 1057 arg=0x7000005bc968 [0 0x109051000 0xfebe0000 0x10000 0x5 ...]
+[  175.084842] I cpu6 trap thread 7 read_vmcs(slot) #7 pid 1057 arg=0x4
+[  175.084851] I cpu6 trap thread 2 invalidate_tlb #9 pid 1057 arg=0x18
+[  175.084894] I cpu6 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  175.084967] I cpu6 trap thread 7 read_vmcs(slot) #8 pid 1057 arg=0x4
+[  175.084974] I cpu6 trap thread 2 invalidate_tlb #10 pid 1057 arg=0x18
+[  175.084998] I cpu6 trap thread 7 read_vmcs(slot) #9 pid 1057 arg=0x4
+[  175.085006] I cpu6 trap thread 2 invalidate_tlb #11 pid 1057 arg=0x18
+[  175.085057] I cpu6 trap thread 7 read_vmcs(slot) #10 pid 1057 arg=0x4
+[  175.085065] I cpu6 trap thread 2 invalidate_tlb #12 pid 1057 arg=0x18
+[  175.085088] I cpu6 trap thread 7 read_vmcs(slot) #11 pid 1057 arg=0x4
+[  175.085095] I cpu6 trap thread 2 invalidate_tlb #13 pid 1057 arg=0x18
+[  175.085146] I cpu6 trap thread 7 read_vmcs(slot) #12 pid 1057 arg=0x4
+[  175.085154] I cpu6 trap thread 2 invalidate_tlb #14 pid 1057 arg=0x18
+[  175.085177] I cpu6 trap thread 7 read_vmcs(slot) #13 pid 1057 arg=0x4
+[  175.085184] I cpu6 trap thread 2 invalidate_tlb #15 pid 1057 arg=0x18
+[  175.085236] I cpu6 trap thread 7 read_vmcs(slot) #14 pid 1057 arg=0x4
+[  175.085244] I cpu6 trap thread 2 invalidate_tlb #16 pid 1057 arg=0x18
+[  175.085258] I cpu6 trap thread 7 read_vmcs(slot) #15 pid 1057 arg=0x4
+[  175.085262] I cpu6 trap thread 2 invalidate_tlb #17 pid 1057 arg=0x18
+[  175.085289] I cpu6 trap thread 7 read_vmcs(slot) #16 pid 1057 arg=0x4
+[  175.085292] I cpu6 trap thread 2 invalidate_tlb #18 pid 1057 arg=0x18
+[  175.085303] I cpu6 trap thread 7 read_vmcs(slot) #17 pid 1057 arg=0x4
+[  175.085307] I cpu6 trap thread 2 invalidate_tlb #19 pid 1057 arg=0x18
+[  175.085329] I cpu6 trap thread 7 read_vmcs(slot) #18 pid 1057 arg=0x4
+[  175.085333] I cpu6 trap thread 2 invalidate_tlb #20 pid 1057 arg=0x18
+[  175.085343] I cpu6 trap thread 7 read_vmcs(slot) #19 pid 1057 arg=0x4
+[  175.085347] I cpu6 trap thread 2 invalidate_tlb #21 pid 1057 arg=0x18
+[  175.085366] I cpu6 trap thread 7 read_vmcs(slot) #20 pid 1057 arg=0x4
+[  175.085369] I cpu6 trap thread 2 invalidate_tlb #22 pid 1057 arg=0x18
+[  175.085379] I cpu6 trap thread 7 read_vmcs(slot) #21 pid 1057 arg=0x4
+[  175.085382] I cpu6 trap thread 2 invalidate_tlb #23 pid 1057 arg=0x18
+[  175.085401] I cpu6 trap thread 7 read_vmcs(slot) #22 pid 1057 arg=0x4
+[  175.085404] I cpu6 trap thread 2 invalidate_tlb #24 pid 1057 arg=0x18
+[  175.085413] I cpu6 trap thread 7 read_vmcs(slot) #23 pid 1057 arg=0x4
+[  175.085433] I cpu6 trap thread 7 read_vmcs(slot) #24 pid 1057 arg=0x4
+[  175.085807] I cpu6 trap task 5 vm_unmap #11 pid 1057 arg=0x7000005bc960 [0 0 0xfebe0000 0x10000 0 ...]
+[  175.088702] I cpu6 trap thread 0 vcpu_run #2000 pid 1057 arg=0xffffffffffffffff
+[  175.094878] I cpu6 trap thread 0 vcpu_run #3000 pid 1057 arg=0xffffffffffffffff
+[  175.107055] I cpu2 trap thread 0 vcpu_run #4000 pid 1057 arg=0xffffffffffffffff
+[  175.116280] I cpu6 trap thread 0 vcpu_run #5000 pid 1057 arg=0xffffffffffffffff
+[  175.116295] I cpu6 hv front end: run 5000 vcpu0 exit reason 30 qual 0xcfc000b ilen 1 rip 0xea541 rflags 0x86 rax 0x80001830 rcx 0 rdx 0xcfc in rax 0x80001830 rcx 0 rdx 0xcf8 intr 0 cr0 0x31
+[  175.116425] I cpu6 trap task 4 vm_map #16 pid 1057 arg=0x7000005bc928 [0 0x14a681000 0xfeb80000 0x40000 0x5 ...]
+[  175.117532] I cpu6 trap task 5 vm_unmap #12 pid 1057 arg=0x7000005bc920 [0 0 0xfeb80000 0x40000 0 ...]
+[  175.124903] I cpu4 trap thread 0 vcpu_run #6000 pid 1057 arg=0xffffffffffffffff
+[  175.129378] I cpu12 trap thread 11 sync_special_regs #3 pid 1057 arg=0x29
+[  175.129498] I cpu12 trap task 13 vcpu_interrupt #22 pid 1057 arg=0x2
+[  175.129854] I cpu12 trap task 5 vm_unmap #13 pid 1057 arg=0x7000005bca00 [0 0 0xc0000 0x3ff40000 0 ...]
+[  175.165829] I cpu12 trap task 4 vm_map #17 pid 1057 arg=0x7000005bca08 [0 0x1095d2000 0xc0000 0xb000 0x7 ...]
+[  175.165876] I cpu12 trap task 4 vm_map #18 pid 1057 arg=0x7000005bca08 [0 0x1095dd000 0xcb000 0x3000 0x7 ...]
+[  175.165895] I cpu12 trap task 4 vm_map #19 pid 1057 arg=0x7000005bca08 [0 0x1095e0000 0xce000 0x2000 0x7 ...]
+[  175.165911] I cpu12 trap task 4 vm_map #20 pid 1057 arg=0x7000005bca08 [0 0x1095e2000 0xd0000 0x20000 0x7 ...]
+[  175.165936] I cpu12 trap task 4 vm_map #21 pid 1057 arg=0x7000005bca08 [0 0x109602000 0xf0000 0x10000 0x7 ...]
+[  175.165956] I cpu12 trap task 4 vm_map #22 pid 1057 arg=0x7000005bca08 [0 0x109612000 0x100000 0x3ff00000 0x7 ...]
+[  175.215278] I cpu12 trap task 13 vcpu_interrupt #23 pid 1057 arg=0x1
+[  175.215331] I cpu12 trap task 13 vcpu_interrupt #24 pid 1057 arg=0x1
+[  175.215637] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  175.216029] I cpu4 trap task 5 vm_unmap #14 pid 1057 arg=0x7000005bca00 [0 0 0xce000 0x2000 0 ...]
+[  175.216082] I cpu4 trap task 5 vm_unmap #15 pid 1057 arg=0x7000005bca00 [0 0 0xd0000 0x20000 0 ...]
+[  175.216117] I cpu4 trap task 4 vm_map #23 pid 1057 arg=0x7000005bca08 [0 0x1095e0000 0xce000 0x1a000 0x7 ...]
+[  175.216162] I cpu4 trap task 4 vm_map #24 pid 1057 arg=0x7000005bca08 [0 0x1095fa000 0xe8000 0x8000 0x7 ...]
+[  175.216916] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  175.224387] I cpu0 trap thread 0 vcpu_run #7000 pid 1057 arg=0xffffffffffffffff
+[  175.243857] I cpu2 trap thread 0 vcpu_run #8000 pid 1057 arg=0xffffffffffffffff
+[  175.248653] I cpu2 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  175.249952] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  175.271240] I cpu0 trap thread 0 vcpu_run #9000 pid 1057 arg=0xffffffffffffffff
+[  175.272380] I cpu0 trap thread 7 read_vmcs(slot) #1000 pid 1057 arg=0x4
+[  175.272402] I cpu0 trap thread 2 invalidate_tlb #1000 pid 1057 arg=0x18
+[  175.278486] I cpu12 trap thread 0 vcpu_run #10000 pid 1057 arg=0xffffffffffffffff
+[  175.278535] I cpu12 hv front end: run 10000 vcpu0 exit reason 28 qual 0 ilen 3 rip 0x8507 rflags 0x6 rax 0x30 rcx 0 rdx 0x320000 in rax 0x60 rcx 0x1003f8 rdx 0x1003fd intr 0 cr0 0x31
+[  175.284197] I cpu6 trap thread 7 read_vmcs(slot) #2000 pid 1057 arg=0x4
+[  175.284216] I cpu6 trap thread 2 invalidate_tlb #2000 pid 1057 arg=0x18
+[  175.287404] I cpu0 trap thread 0 vcpu_run #11000 pid 1057 arg=0xffffffffffffffff
+[  175.296493] I cpu4 trap thread 0 vcpu_run #12000 pid 1057 arg=0xffffffffffffffff
+[  175.298263] I cpu12 trap thread 7 read_vmcs(slot) #3000 pid 1057 arg=0x4
+[  175.298286] I cpu12 trap thread 2 invalidate_tlb #3000 pid 1057 arg=0x18
+[  175.303851] I cpu14 trap thread 0 vcpu_run #13000 pid 1057 arg=0xffffffffffffffff
+[  175.305612] I cpu6 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  175.305672] I cpu6 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  175.309500] I cpu10 trap thread 7 read_vmcs(slot) #4000 pid 1057 arg=0x4
+[  175.309521] I cpu10 trap thread 2 invalidate_tlb #4000 pid 1057 arg=0x18
+[  175.311702] I cpu10 trap thread 0 vcpu_run #14000 pid 1057 arg=0xffffffffffffffff
+[  175.321404] I cpu6 trap thread 0 vcpu_run #15000 pid 1057 arg=0xffffffffffffffff
+[  175.321423] I cpu6 hv front end: run 15000 vcpu0 exit reason 30 qual 0x3fd0008 ilen 1 rip 0x104101 rflags 0x46 rax 0x1 rcx 0x1003f8 rdx 0x1003fd in rax 0x31 rcx 0 rdx 0 intr 0 cr0 0x31
+[  175.322574] I cpu6 trap thread 7 read_vmcs(slot) #5000 pid 1057 arg=0x4
+[  175.322585] I cpu6 trap thread 2 invalidate_tlb #5000 pid 1057 arg=0x18
+[  175.328165] I cpu14 trap thread 0 vcpu_run #16000 pid 1057 arg=0xffffffffffffffff
+[  175.332936] I cpu2 trap thread 7 read_vmcs(slot) #6000 pid 1057 arg=0x4
+[  175.332963] I cpu2 trap thread 2 invalidate_tlb #6000 pid 1057 arg=0x18
+[  175.335790] I cpu0 trap thread 0 vcpu_run #17000 pid 1057 arg=0xffffffffffffffff
+[  175.343713] I cpu0 trap thread 0 vcpu_run #18000 pid 1057 arg=0xffffffffffffffff
+[  175.344897] I cpu0 trap thread 7 read_vmcs(slot) #7000 pid 1057 arg=0x4
+[  175.344908] I cpu0 trap thread 2 invalidate_tlb #7000 pid 1057 arg=0x18
+[  175.351336] I cpu6 trap thread 0 vcpu_run #19000 pid 1057 arg=0xffffffffffffffff
+[  175.356406] I cpu10 trap thread 7 read_vmcs(slot) #8000 pid 1057 arg=0x4
+[  175.356459] I cpu10 trap thread 2 invalidate_tlb #8000 pid 1057 arg=0x18
+[  175.359104] I cpu0 trap thread 0 vcpu_run #20000 pid 1057 arg=0xffffffffffffffff
+[  175.359135] I cpu0 hv front end: run 20000 vcpu0 exit reason 28 qual 0 ilen 3 rip 0x84e6 rflags 0x2 rax 0x31 rcx 0 rdx 0 in rax 0x30 rcx 0 rdx 0x320000 intr 0 cr0 0x30
+[  175.361543] I cpu0 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  175.361572] I cpu0 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  175.366125] I cpu12 trap thread 0 vcpu_run #21000 pid 1057 arg=0xffffffffffffffff
+[  175.367228] I cpu12 trap thread 7 read_vmcs(slot) #9000 pid 1057 arg=0x4
+[  175.367239] I cpu12 trap thread 2 invalidate_tlb #9000 pid 1057 arg=0x18
+[  175.372973] I cpu10 trap thread 0 vcpu_run #22000 pid 1057 arg=0xffffffffffffffff
+[  175.378066] I cpu14 trap thread 7 read_vmcs(slot) #10000 pid 1057 arg=0x4
+[  175.378084] I cpu14 trap thread 2 invalidate_tlb #10000 pid 1057 arg=0x18
+[  175.380789] I cpu10 trap thread 0 vcpu_run #23000 pid 1057 arg=0xffffffffffffffff
+[  175.389027] I cpu10 trap thread 0 vcpu_run #24000 pid 1057 arg=0xffffffffffffffff
+[  175.390223] I cpu10 trap thread 7 read_vmcs(slot) #11000 pid 1057 arg=0x4
+[  175.390247] I cpu10 trap thread 2 invalidate_tlb #11000 pid 1057 arg=0x18
+[  175.396742] I cpu10 trap thread 0 vcpu_run #25000 pid 1057 arg=0xffffffffffffffff
+[  175.396800] I cpu10 hv front end: run 25000 vcpu0 exit reason 30 qual 0x3fd0008 ilen 1 rip 0x104101 rflags 0x46 rax 0x1 rcx 0x1003f8 rdx 0x1003fd in rax 0x31 rcx 0 rdx 0 intr 0 cr0 0x31
+[  175.402468] I cpu4 trap thread 7 read_vmcs(slot) #12000 pid 1057 arg=0x4
+[  175.402486] I cpu4 trap thread 2 invalidate_tlb #12000 pid 1057 arg=0x18
+[  175.405279] I cpu4 trap thread 0 vcpu_run #26000 pid 1057 arg=0xffffffffffffffff
+[  175.412372] I cpu0 trap thread 0 vcpu_run #27000 pid 1057 arg=0xffffffffffffffff
+[  175.413547] I cpu0 trap thread 7 read_vmcs(slot) #13000 pid 1057 arg=0x4
+[  175.413558] I cpu0 trap thread 2 invalidate_tlb #13000 pid 1057 arg=0x18
+[  175.413959] I cpu0 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  175.413973] I cpu0 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.330627] I cpu0 trap thread 0 vcpu_run #28000 pid 1057 arg=0xffffffffffffffff
+[  176.347258] I cpu14 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.348573] I cpu0 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.392495] I cpu0 trap thread 0 vcpu_run #29000 pid 1057 arg=0xffffffffffffffff
+[  176.402135] I cpu8 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.402737] I cpu6 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.448450] I cpu14 trap thread 0 vcpu_run #30000 pid 1057 arg=0xffffffffffffffff
+[  176.448483] I cpu14 hv front end: run 30000 vcpu0 exit reason 30 qual 0x1770008 ilen 1 rip 0xa60b rflags 0x6 rax 0x7299ca9 rcx 0xda80 rdx 0x177 in rax 0x5590a9 rcx 0xda80 rdx 0x608 intr 0 cr0 0x30
+[  176.457204] I cpu2 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.458434] I cpu2 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.512189] I cpu9 trap thread 0 vcpu_run #31000 pid 1057 arg=0xffffffffffffffff
+[  176.512466] I cpu8 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.512490] I cpu8 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.566779] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.567343] I cpu10 trap thread 0 vcpu_run #32000 pid 1057 arg=0xffffffffffffffff
+[  176.575304] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.621881] I cpu14 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.622239] I cpu14 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.629339] I cpu10 trap thread 0 vcpu_run #33000 pid 1057 arg=0xffffffffffffffff
+[  176.676904] I cpu8 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.677216] I cpu8 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.684807] I cpu8 trap thread 0 vcpu_run #34000 pid 1057 arg=0xffffffffffffffff
+[  176.731765] I cpu14 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.733672] I cpu14 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.743936] I cpu8 trap thread 0 vcpu_run #35000 pid 1057 arg=0xffffffffffffffff
+[  176.743963] I cpu8 hv front end: run 35000 vcpu0 exit reason 30 qual 0x3760008 ilen 1 rip 0xa8c5 rflags 0x46 rax 0x374 rcx 0 rdx 0x376 in rax 0x1e80 rcx 0 rdx 0x3740170 intr 0 cr0 0x30
+[  176.786696] I cpu2 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.788227] I cpu8 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.801488] I cpu4 trap thread 0 vcpu_run #36000 pid 1057 arg=0xffffffffffffffff
+[  176.841591] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.841909] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.858139] I cpu10 trap thread 0 vcpu_run #37000 pid 1057 arg=0xffffffffffffffff
+[  176.896455] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.896496] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.911808] I cpu12 trap thread 0 vcpu_run #38000 pid 1057 arg=0xffffffffffffffff
+[  176.951314] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  176.951622] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  176.968763] I cpu0 trap thread 0 vcpu_run #39000 pid 1057 arg=0xffffffffffffffff
+[  177.006205] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.006967] I cpu0 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.024112] I cpu12 trap thread 0 vcpu_run #40000 pid 1057 arg=0xffffffffffffffff
+[  177.024133] I cpu12 hv front end: run 40000 vcpu0 exit reason 30 qual 0x608000b ilen 2 rip 0x75d6 rflags 0x2 rax 0x7d00 rcx 0xda80 rdx 0x608 in rax 0xead0 rcx 0 rdx 0x376 intr 0 cr0 0x30
+[  177.061329] I cpu12 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.062437] I cpu8 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.082592] I cpu0 trap thread 0 vcpu_run #41000 pid 1057 arg=0xffffffffffffffff
+[  177.116192] I cpu6 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.118180] I cpu0 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.137703] I cpu6 trap thread 0 vcpu_run #42000 pid 1057 arg=0xffffffffffffffff
+[  177.171043] I cpu12 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.171368] I cpu12 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.194133] I cpu0 trap thread 0 vcpu_run #43000 pid 1057 arg=0xffffffffffffffff
+[  177.226086] I cpu5 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.228978] I cpu2 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.251191] I cpu4 trap thread 0 vcpu_run #44000 pid 1057 arg=0xffffffffffffffff
+[  177.281421] I cpu8 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.281806] I cpu14 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.312090] I cpu2 trap thread 0 vcpu_run #45000 pid 1057 arg=0xffffffffffffffff
+[  177.312138] I cpu2 hv front end: run 45000 vcpu0 exit reason 30 qual 0x1770008 ilen 1 rip 0xa60b rflags 0x2 rax 0x758c897 rcx 0xda80 rdx 0x177 in rax 0x84bc97 rcx 0xda80 rdx 0x608 intr 0 cr0 0x30
+[  177.335886] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.335942] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.369923] I cpu10 trap thread 0 vcpu_run #46000 pid 1057 arg=0xffffffffffffffff
+[  177.390660] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.395711] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.430685] I cpu10 trap thread 0 vcpu_run #47000 pid 1057 arg=0xffffffffffffffff
+[  177.445678] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.445981] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.491959] I cpu10 trap thread 0 vcpu_run #48000 pid 1057 arg=0xffffffffffffffff
+[  177.500748] I cpu2 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.500777] I cpu2 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.546429] I cpu8 trap thread 0 vcpu_run #49000 pid 1057 arg=0xffffffffffffffff
+[  177.555581] I cpu12 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.556692] I cpu2 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.605329] I cpu0 trap thread 0 vcpu_run #50000 pid 1057 arg=0xffffffffffffffff
+[  177.605345] I cpu0 hv front end: run 50000 vcpu0 exit reason 30 qual 0x1700039 ilen 3 rip 0xa8b8 rflags 0x46 rax 0x1480 rcx 0x400 rdx 0x3740170 in rax 0x58 rcx 0x88f5 rdx 0x177 intr 0 cr0 0x30
+[  177.610479] I cpu12 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.611022] I cpu12 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.658460] I cpu12 trap thread 0 vcpu_run #51000 pid 1057 arg=0xffffffffffffffff
+[  177.665384] I cpu6 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.666526] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.713113] I cpu12 trap thread 0 vcpu_run #52000 pid 1057 arg=0xffffffffffffffff
+[  177.720379] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.721771] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.771634] I cpu10 trap thread 0 vcpu_run #53000 pid 1057 arg=0xffffffffffffffff
+[  177.775365] I cpu12 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.777802] I cpu12 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.830144] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.830434] I cpu10 trap thread 0 vcpu_run #54000 pid 1057 arg=0xffffffffffffffff
+[  177.832089] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.885415] I cpu14 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.887398] I cpu14 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.890303] I cpu8 trap thread 0 vcpu_run #55000 pid 1057 arg=0xffffffffffffffff
+[  177.890338] I cpu8 hv front end: run 55000 vcpu0 exit reason 30 qual 0x1700039 ilen 3 rip 0xa8b8 rflags 0x46 rax 0x1300 rcx 0x400 rdx 0x3740170 in rax 0x7785d58 rcx 0xda80 rdx 0x177 intr 0 cr0 0x30
+[  177.939951] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.940629] I cpu10 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  177.944866] I cpu4 trap thread 0 vcpu_run #56000 pid 1057 arg=0xffffffffffffffff
+[  177.995155] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fe (was 0x842065fa)
+[  177.997938] I cpu4 hv front end: qemu-system-x86_64 vcpu0 writes control 0x4002 = 0x842065fa (was 0x842065fe)
+[  178.005883] I cpu10 trap thread 0 vcpu_run #57000 pid 1057 arg=0xffffffffffffffff
+[  178.056394] I cpu2 trap thread 0 vcpu_run #58000 pid 1057 arg=0xffffffffffffffff
+[  178.112189] I cpu0 trap thread 0 vcpu_run #59000 pid 1057 arg=0xffffffffffffffff
+[  178.166519] I cpu4 trap thread 0 vcpu_run #60000 pid 1057 arg=0xffffffffffffffff
+[  178.166563] I cpu4 hv front end: run 60000 vcpu0 exit reason 30 qual 0x3760008 ilen 1 rip 0xa8c5 rflags 0x46 rax 0x374 rcx 0 rdx 0x376 in rax 0x1100 rcx 0 rdx 0x3740170 intr 0 cr0 0x30
+[  178.219824] I cpu8 trap thread 0 vcpu_run #61000 pid 1057 arg=0xffffffffffffffff
+[  178.280333] I cpu8 trap thread 0 vcpu_run #62000 pid 1057 arg=0xffffffffffffffff
+[  178.333767] I cpu2 trap thread 0 vcpu_run #63000 pid 1057 arg=0xffffffffffffffff
+[  178.382238] I cpu0 trap thread 0 vcpu_run #64000 pid 1057 arg=0xffffffffffffffff
+[  178.433687] I cpu14 trap thread 0 vcpu_run #65000 pid 1057 arg=0xffffffffffffffff
+[  178.433702] I cpu14 hv front end: run 65000 vcpu0 exit reason 30 qual 0x1770008 ilen 1 rip 0xa60b rflags 0x2 rax 0x7960b6e rcx 0xda80 rdx 0x177 in rax 0xc1ff6e rcx 0xda80 rdx 0x608 intr 0 cr0 0x30
+[  178.488560] I cpu4 trap thread 0 vcpu_run #66000 pid 1057 arg=0xffffffffffffffff
+[  178.550675] I cpu10 trap thread 0 vcpu_run #67000 pid 1057 arg=0xffffffffffffffff
+[  178.615175] I cpu14 trap thread 0 vcpu_run #68000 pid 1057 arg=0xffffffffffffffff
+[  178.677452] I cpu14 trap thread 0 vcpu_run #69000 pid 1057 arg=0xffffffffffffffff
+[  178.732617] I cpu14 trap thread 0 vcpu_run #70000 pid 1057 arg=0xffffffffffffffff
+[  178.732646] I cpu14 hv front end: run 70000 vcpu0 exit reason 30 qual 0x1770008 ilen 1 rip 0xa60b rflags 0x2 rax 0x7a65f40 rcx 0xda80 rdx 0x177 in rax 0xd25340 rcx 0xda80 rdx 0x608 intr 0 cr0 0x30
+[  178.782434] I cpu0 trap thread 0 vcpu_run #71000 pid 1057 arg=0xffffffffffffffff
+[  178.843574] I cpu10 trap thread 0 vcpu_run #72000 pid 1057 arg=0xffffffffffffffff
+[  178.902355] I cpu0 trap thread 0 vcpu_run #73000 pid 1057 arg=0xffffffffffffffff
+[  178.958374] I cpu0 trap thread 0 vcpu_run #74000 pid 1057 arg=0xffffffffffffffff
+[  179.018139] I cpu0 trap thread 0 vcpu_run #75000 pid 1057 arg=0xffffffffffffffff
+[  179.018168] I cpu0 hv front end: run 75000 vcpu0 exit reason 30 qual 0x1700039 ilen 3 rip 0xa8b8 rflags 0x46 rax 0x1f00 rcx 0x400 rdx 0x3740170 in rax 0x58 rcx 0x88f5 rdx 0x177 intr 0 cr0 0x30
+[  179.080118] I cpu6 trap thread 0 vcpu_run #76000 pid 1057 arg=0xffffffffffffffff
+[  179.139398] I cpu8 trap thread 0 vcpu_run #77000 pid 1057 arg=0xffffffffffffffff
+[  179.200514] I cpu8 trap thread 0 vcpu_run #78000 pid 1057 arg=0xffffffffffffffff
+[  179.260433] I cpu0 trap thread 0 vcpu_run #79000 pid 1057 arg=0xffffffffffffffff
+[  179.316450] I cpu8 trap thread 0 vcpu_run #80000 pid 1057 arg=0xffffffffffffffff
+[  179.316467] I cpu8 hv front end: run 80000 vcpu0 exit reason 30 qual 0x608000b ilen 2 rip 0x75d6 rflags 0x2 rax 0x7d00 rcx 0xda80 rdx 0x608 in rax 0x3d0 rcx 0 rdx 0x376 intr 0 cr0 0x30
+[  179.372693] I cpu8 trap thread 0 vcpu_run #81000 pid 1057 arg=0xffffffffffffffff
+[  179.431518] I cpu2 trap thread 0 vcpu_run #82000 pid 1057 arg=0xffffffffffffffff
+[  179.493222] I cpu0 trap thread 0 vcpu_run #83000 pid 1057 arg=0xffffffffffffffff
+[  179.545850] I cpu0 trap thread 0 vcpu_run #84000 pid 1057 arg=0xffffffffffffffff
+[  179.597671] I cpu10 trap thread 0 vcpu_run #85000 pid 1057 arg=0xffffffffffffffff
+[  179.597704] I cpu10 hv front end: run 85000 vcpu0 exit reason 30 qual 0x3760008 ilen 1 rip 0xa8c5 rflags 0x46 rax 0x374 rcx 0 rdx 0x376 in rax 0x1f00 rcx 0 rdx 0x3740170 intr 0 cr0 0x30
+[  179.659253] I cpu4 trap thread 0 vcpu_run #86000 pid 1057 arg=0xffffffffffffffff
+[  179.718385] I cpu4 trap thread 0 vcpu_run #87000 pid 1057 arg=0xffffffffffffffff
+[  179.781741] I cpu4 trap thread 0 vcpu_run #88000 pid 1057 arg=0xffffffffffffffff
+[  179.838290] I cpu14 trap thread 0 vcpu_run #89000 pid 1057 arg=0xffffffffffffffff
+[  179.892529] I cpu10 trap thread 0 vcpu_run #90000 pid 1057 arg=0xffffffffffffffff
+[  179.892550] I cpu10 hv front end: run 90000 vcpu0 exit reason 30 qual 0x608000b ilen 2 rip 0x75d6 rflags 0x2 rax 0x7d00 rcx 0xda80 rdx 0x608 in rax 0x3d0 rcx 0 rdx 0x376 intr 0 cr0 0x30
+[  179.952972] I cpu0 trap thread 0 vcpu_run #91000 pid 1057 arg=0xffffffffffffffff
+[  179.995664] I cpu10 trap thread 0 vcpu_run #92000 pid 1057 arg=0xffffffffffffffff
+[  180.002244] I cpu10 trap thread 0 vcpu_run #93000 pid 1057 arg=0xffffffffffffffff
+[  180.007773] I cpu0 trap thread 0 vcpu_run #94000 pid 1057 arg=0xffffffffffffffff
+[  180.014300] I cpu6 trap thread 0 vcpu_run #95000 pid 1057 arg=0xffffffffffffffff
+[  180.014325] I cpu6 hv front end: run 95000 vcpu0 exit reason 30 qual 0x3c80000 ilen 1 rip 0x28b0 rflags 0x93 rax 0xe4 rcx 0 rdx 0x3c8 in rax 0 rcx 0 rdx 0x3c9 intr 0 cr0 0x30
+[  180.183522] I cpu8 trap thread 0 vcpu_run #96000 pid 1057 arg=0xffffffffffffffff
+[  180.218961] I cpu14 trap thread 0 vcpu_run #97000 pid 1057 arg=0xffffffffffffffff
+[  180.227876] I cpu0 trap thread 0 vcpu_run #98000 pid 1057 arg=0xffffffffffffffff
+[  180.237270] I cpu6 trap thread 0 vcpu_run #99000 pid 1057 arg=0xffffffffffffffff
+[  180.238700] I cpu10 trap thread 11 sync_special_regs #4 pid 1057 arg=0x29
+[  180.238767] I cpu10 trap thread 11 sync_special_regs #5 pid 1057 arg=0x29
+[  180.251991] I cpu2 trap thread 0 vcpu_run #100000 pid 1057 arg=0xffffffffffffffff
+[  180.252018] I cpu2 hv front end: run 100000 vcpu0 exit reason 30 qual 0x610008 ilen 2 rip 0xffffffff8329cc6a rflags 0x6 rax 0x15225 rcx 0x81d847ecb8 rdx 0x15225 in rax 0x4211 rcx 0x81d8469a93 rdx 0x42f3 intr 0 cr0 0x80050033
+[  180.259876] I cpu0 trap thread 0 vcpu_run #101000 pid 1057 arg=0xffffffffffffffff
+[  180.267145] I cpu14 trap thread 0 vcpu_run #102000 pid 1057 arg=0xffffffffffffffff
+[  180.274285] I cpu12 trap thread 0 vcpu_run #103000 pid 1057 arg=0xffffffffffffffff
+[  180.281089] I cpu10 trap thread 0 vcpu_run #104000 pid 1057 arg=0xffffffffffffffff
+[  180.288592] I cpu4 trap thread 0 vcpu_run #105000 pid 1057 arg=0xffffffffffffffff
+[  180.288618] I cpu4 hv front end: run 105000 vcpu0 exit reason 30 qual 0x610008 ilen 2 rip 0xffffffff8329cc6a rflags 0x2 rax 0x14b3c rcx 0x81de987d07 rdx 0x14b3c in rax 0x4001 rcx 0x81de9731cb rdx 0x403b intr 0 cr0 0x80050033
+[  180.294559] I cpu4 trap thread 0 vcpu_run #106000 pid 1057 arg=0xffffffffffffffff
+[  180.300534] I cpu10 trap thread 0 vcpu_run #107000 pid 1057 arg=0xffffffffffffffff
+[  180.307614] I cpu0 trap thread 0 vcpu_run #108000 pid 1057 arg=0xffffffffffffffff
+[  180.314755] I cpu0 trap thread 0 vcpu_run #109000 pid 1057 arg=0xffffffffffffffff
+[  180.376166] I cpu12 trap thread 0 vcpu_run #110000 pid 1057 arg=0xffffffffffffffff
+[  180.376210] I cpu12 hv front end: run 110000 vcpu0 exit reason 30 qual 0x608000b ilen 1 rip 0xffffffff83b812bb rflags 0x2 rax 0xfe26b00 rcx 0xebd063ed0e68b4b3 rdx 0x608 in rax 0xfe26b00 rcx 0xebd063ed0e68b4b3 rdx 0x2c2af2 intr 0 cr0 0x80050033
+[  180.450829] I cpu0 trap thread 11 sync_special_regs #6 pid 1057 arg=0x29
+[  180.451037] I cpu0 trap thread 11 sync_special_regs #7 pid 1057 arg=0x29
+[  180.451296] I cpu0 trap thread 11 sync_special_regs #8 pid 1057 arg=0x29
+[  180.451321] I cpu0 trap thread 11 sync_special_regs #9 pid 1057 arg=0x29
+[  180.523950] I cpu12 trap thread 0 vcpu_run #111000 pid 1057 arg=0xffffffffffffffff
+[  180.538305] I cpu0 trap thread 0 vcpu_run #112000 pid 1057 arg=0xffffffffffffffff
+[  180.542153] I cpu0 trap task 5 vm_unmap #16 pid 1057 arg=0x7000005bc960 [0 0 0xfd000000 0x1000000 0 ...]
+[  180.549129] I cpu12 trap thread 0 vcpu_run #113000 pid 1057 arg=0xffffffffffffffff
+[  180.588746] I cpu6 trap thread 0 vcpu_run #114000 pid 1057 arg=0xffffffffffffffff
+[  180.607612] I cpu6 trap thread 0 vcpu_run #115000 pid 1057 arg=0xffffffffffffffff
+[  180.607651] I cpu6 hv front end: run 115000 vcpu1 exit reason 30 qual 0x1f30000 ilen 1 rip 0xffffffff83867b8a rflags 0x206 rax 0xaa rcx 0 rdx 0x101f3 in rax 0x55 rcx 0 rdx 0x101f2 intr 0 cr0 0x80050033
+[  180.634034] I cpu6 trap thread 0 vcpu_run #116000 pid 1057 arg=0xffffffffffffffff
+[  180.693601] I cpu0 trap thread 0 vcpu_run #117000 pid 1057 arg=0xffffffffffffffff
+[  180.698580] I cpu10 trap task 13 vcpu_interrupt #1000 pid 1057 arg=0x2
+[  180.750948] I cpu12 trap thread 0 vcpu_run #118000 pid 1057 arg=0xffffffffffffffff
+[  180.771218] I cpu8 trap thread 0 vcpu_run #119000 pid 1057 arg=0xffffffffffffffff
+[  180.802395] I cpu8 trap thread 0 vcpu_run #120000 pid 1057 arg=0xffffffffffffffff
+[  180.802415] I cpu8 hv front end: run 120000 vcpu0 exit reason 10 qual 0 ilen 2 rip 0x7fa3889e016e rflags 0x202 rax 0x1 rcx 0x444d4163 rdx 0x69746e65 in rax 0xd rcx 0x444d4163 rdx 0x69746e65 intr 0 cr0 0x80050033
+[  180.805610] I cpu8 trap thread 2 invalidate_tlb #14000 pid 1057 arg=0x18
+[  180.817537] I cpu4 trap thread 0 vcpu_run #121000 pid 1057 arg=0xffffffffffffffff
+[  180.833447] I cpu8 trap thread 0 vcpu_run #122000 pid 1057 arg=0xffffffffffffffff
+[  180.853250] I cpu0 trap thread 0 vcpu_run #123000 pid 1057 arg=0xffffffffffffffff
+[  180.875507] I cpu6 trap thread 0 vcpu_run #124000 pid 1057 arg=0xffffffffffffffff
+[  180.905631] I cpu10 trap thread 0 vcpu_run #125000 pid 1057 arg=0xffffffffffffffff
+[  180.905649] I cpu6 hv front end: run 125000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0x3fa8e00 rcx 0xffff96b0be51be70 rdx 0x1 intr 0 cr0 0x80050033
+[  180.937543] I cpu12 trap thread 0 vcpu_run #126000 pid 1057 arg=0xffffffffffffffff
+[  180.981824] I cpu0 trap thread 0 vcpu_run #127000 pid 1057 arg=0xffffffffffffffff
+[  181.024250] I cpu4 trap task 13 vcpu_interrupt #2000 pid 1057 arg=0x1
+[  181.033478] I cpu2 trap thread 0 vcpu_run #128000 pid 1057 arg=0xffffffffffffffff
+[  181.076367] I cpu4 trap thread 0 vcpu_run #129000 pid 1057 arg=0xffffffffffffffff
+[  181.109688] I cpu2 trap thread 0 vcpu_run #130000 pid 1057 arg=0xffffffffffffffff
+[  181.109713] I cpu2 hv front end: run 130000 vcpu1 exit reason 30 qual 0x1770008 ilen 1 rip 0xffffffff83867708 rflags 0x6 rax 0xffffffff83b01de0 rcx 0x1 rdx 0x10177 in rax 0xffffffff84b86a58 rcx 0x1 rdx 0x10376 intr 0 cr0 0x80050033
+[  181.122567] I cpu2 trap thread 0 vcpu_run #131000 pid 1057 arg=0xffffffffffffffff
+[  181.155017] I cpu2 trap thread 0 vcpu_run #132000 pid 1057 arg=0xffffffffffffffff
+[  181.169195] I cpu10 trap thread 0 vcpu_run #133000 pid 1057 arg=0xffffffffffffffff
+[  181.185204] I cpu10 trap thread 0 vcpu_run #134000 pid 1057 arg=0xffffffffffffffff
+[  181.292612] I cpu12 trap thread 0 vcpu_run #135000 pid 1057 arg=0xffffffffffffffff
+[  181.292688] I cpu12 hv front end: run 135000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0x648ff20 rcx 0xffff96b0be52bc80 rdx 0x1 intr 0 cr0 0x80050033
+[  181.472426] I cpu0 trap thread 0 vcpu_run #136000 pid 1057 arg=0xffffffffffffffff
+[  181.490373] I cpu14 trap thread 0 vcpu_run #137000 pid 1057 arg=0xffffffffffffffff
+[  181.503708] I cpu14 trap thread 0 vcpu_run #138000 pid 1057 arg=0xffffffffffffffff
+[  181.532852] I cpu12 trap thread 0 vcpu_run #139000 pid 1057 arg=0xffffffffffffffff
+[  181.550447] I cpu8 trap thread 0 vcpu_run #140000 pid 1057 arg=0xffffffffffffffff
+[  181.550457] I cpu10 hv front end: run 140000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0x7d273bc rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  181.565878] I cpu10 trap thread 0 vcpu_run #141000 pid 1057 arg=0xffffffffffffffff
+[  181.572285] I cpu12 trap task 13 vcpu_interrupt #3000 pid 1057 arg=0x1
+[  181.585266] I cpu2 trap thread 0 vcpu_run #142000 pid 1057 arg=0xffffffffffffffff
+[  181.602331] I cpu2 trap thread 0 vcpu_run #143000 pid 1057 arg=0xffffffffffffffff
+[  181.620018] I cpu6 trap thread 0 vcpu_run #144000 pid 1057 arg=0xffffffffffffffff
+[  181.633093] I cpu0 trap thread 0 vcpu_run #145000 pid 1057 arg=0xffffffffffffffff
+[  181.633131] I cpu0 hv front end: run 145000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0x9 rcx 0 rdx 0x1c048 intr 0 cr0 0x80050033
+[  181.654825] I cpu10 trap thread 0 vcpu_run #146000 pid 1057 arg=0xffffffffffffffff
+[  181.670389] I cpu4 trap thread 0 vcpu_run #147000 pid 1057 arg=0xffffffffffffffff
+[  181.686505] I cpu14 trap thread 0 vcpu_run #148000 pid 1057 arg=0xffffffffffffffff
+[  181.705297] I cpu4 trap thread 0 vcpu_run #149000 pid 1057 arg=0xffffffffffffffff
+[  181.721908] I cpu4 trap thread 0 vcpu_run #150000 pid 1057 arg=0xffffffffffffffff
+[  181.721925] I cpu4 hv front end: run 150000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff839fb915 rflags 0x202 rax 0xb rcx 0x700 rdx 0x700 in rax 0xb rcx 0x700 rdx 0x720 intr 0 cr0 0x80050033
+[  181.735672] I cpu2 trap thread 0 vcpu_run #151000 pid 1057 arg=0xffffffffffffffff
+[  181.749634] I cpu14 trap thread 0 vcpu_run #152000 pid 1057 arg=0xffffffffffffffff
+[  181.765779] I cpu4 trap thread 0 vcpu_run #153000 pid 1057 arg=0xffffffffffffffff
+[  181.782517] I cpu8 trap thread 0 vcpu_run #154000 pid 1057 arg=0xffffffffffffffff
+[  181.794632] I cpu10 trap thread 0 vcpu_run #155000 pid 1057 arg=0xffffffffffffffff
+[  181.794664] I cpu10 hv front end: run 155000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff83a01d4b rflags 0x202 rax 0xffff96b0800b875a rcx 0x700 rdx 0xffffff00 in rax 0xffff96b0800b8758 rcx 0x700 rdx 0xffffff00 intr 0 cr0 0x80050033
+[  181.808142] I cpu2 trap thread 0 vcpu_run #156000 pid 1057 arg=0xffffffffffffffff
+[  181.822014] I cpu10 trap thread 0 vcpu_run #157000 pid 1057 arg=0xffffffffffffffff
+[  181.835189] I cpu6 trap thread 0 vcpu_run #158000 pid 1057 arg=0xffffffffffffffff
+[  181.850947] I cpu0 trap thread 0 vcpu_run #159000 pid 1057 arg=0xffffffffffffffff
+[  181.879783] I cpu14 trap thread 0 vcpu_run #160000 pid 1057 arg=0xffffffffffffffff
+[  181.879826] I cpu14 hv front end: run 160000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0x9c8f8a8 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  181.904614] I cpu2 trap thread 0 vcpu_run #161000 pid 1057 arg=0xffffffffffffffff
+[  181.930614] I cpu0 trap thread 0 vcpu_run #162000 pid 1057 arg=0xffffffffffffffff
+[  181.947225] I cpu14 trap thread 0 vcpu_run #163000 pid 1057 arg=0xffffffffffffffff
+[  181.966886] I cpu4 trap thread 0 vcpu_run #164000 pid 1057 arg=0xffffffffffffffff
+[  181.990404] I cpu2 trap task 13 vcpu_interrupt #4000 pid 1057 arg=0x1
+[  181.996709] I cpu14 trap thread 0 vcpu_run #165000 pid 1057 arg=0xffffffffffffffff
+[  181.996738] I cpu6 hv front end: run 165000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff832c5e26 rflags 0x46 rax 0 rcx 0 rdx 0 in rax 0xa7b68bc rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  182.025664] I cpu4 trap thread 0 vcpu_run #166000 pid 1057 arg=0xffffffffffffffff
+[  182.055860] I cpu6 trap thread 0 vcpu_run #167000 pid 1057 arg=0xffffffffffffffff
+[  182.085044] I cpu4 trap thread 0 vcpu_run #168000 pid 1057 arg=0xffffffffffffffff
+[  182.112178] I cpu0 trap thread 0 vcpu_run #169000 pid 1057 arg=0xffffffffffffffff
+[  182.132196] I cpu10 trap thread 0 vcpu_run #170000 pid 1057 arg=0xffffffffffffffff
+[  182.132216] I cpu14 hv front end: run 170000 vcpu1 exit reason 1 qual 0 ilen 0 rip 0xffffffff832ca516 rflags 0x46 rax 0xb4a2684 rcx 0 rdx 0x1 in rax 0xb4a2684 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  182.161227] I cpu14 trap thread 0 vcpu_run #171000 pid 1057 arg=0xffffffffffffffff
+[  182.181321] I cpu0 trap thread 0 vcpu_run #172000 pid 1057 arg=0xffffffffffffffff
+[  182.201406] I cpu4 trap thread 0 vcpu_run #173000 pid 1057 arg=0xffffffffffffffff
+[  182.215311] I cpu14 trap thread 0 vcpu_run #174000 pid 1057 arg=0xffffffffffffffff
+[  182.229953] I cpu6 trap thread 0 vcpu_run #175000 pid 1057 arg=0xffffffffffffffff
+[  182.229990] I cpu6 hv front end: run 175000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff832bf36e rflags 0x46 rax 0 rcx 0 rdx 0xffff96b139156000 in rax 0xfb rcx 0 rdx 0xffff96b139156000 intr 0 cr0 0x80050033
+[  182.245476] I cpu2 trap thread 0 vcpu_run #176000 pid 1057 arg=0xffffffffffffffff
+[  182.245726] I cpu8 trap task 13 vcpu_interrupt #5000 pid 1057 arg=0x1
+[  182.259522] I cpu6 trap thread 0 vcpu_run #177000 pid 1057 arg=0xffffffffffffffff
+[  182.273841] I cpu4 trap thread 0 vcpu_run #178000 pid 1057 arg=0xffffffffffffffff
+[  182.287376] I cpu2 trap thread 0 vcpu_run #179000 pid 1057 arg=0xffffffffffffffff
+[  182.301788] I cpu8 trap thread 0 vcpu_run #180000 pid 1057 arg=0xffffffffffffffff
+[  182.301800] I cpu10 hv front end: run 180000 vcpu0 exit reason 1 qual 0 ilen 0 rip 0xffffffff832ca516 rflags 0x46 rax 0xc4ceaa8 rcx 0 rdx 0x1 in rax 0xc4ceaa8 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  182.315049] I cpu14 trap thread 0 vcpu_run #181000 pid 1057 arg=0xffffffffffffffff
+[  182.329270] I cpu10 trap thread 0 vcpu_run #182000 pid 1057 arg=0xffffffffffffffff
+[  182.343520] I cpu10 trap thread 0 vcpu_run #183000 pid 1057 arg=0xffffffffffffffff
+[  182.360300] I cpu8 trap thread 0 vcpu_run #184000 pid 1057 arg=0xffffffffffffffff
+[  182.387096] I cpu14 trap thread 0 vcpu_run #185000 pid 1057 arg=0xffffffffffffffff
+[  182.387110] I cpu14 hv front end: run 185000 vcpu1 exit reason 30 qual 0x800000 ilen 2 rip 0xffffffff8329dc59 rflags 0x97 rax 0 rcx 0 rdx 0x3d5 in rax 0x1f rcx 0 rdx 0x3d5 intr 0 cr0 0x80050033
+[  182.404237] I cpu14 trap thread 0 vcpu_run #186000 pid 1057 arg=0xffffffffffffffff
+[  182.422400] I cpu14 trap thread 0 vcpu_run #187000 pid 1057 arg=0xffffffffffffffff
+[  182.451468] I cpu0 trap thread 0 vcpu_run #188000 pid 1057 arg=0xffffffffffffffff
+[  182.486993] I cpu10 trap thread 0 vcpu_run #189000 pid 1057 arg=0xffffffffffffffff
+[  182.520449] I cpu8 trap task 13 vcpu_interrupt #6000 pid 1057 arg=0x1
+[  182.523140] I cpu12 trap thread 0 vcpu_run #190000 pid 1057 arg=0xffffffffffffffff
+[  182.523148] I cpu8 hv front end: run 190000 vcpu0 exit reason 1 qual 0 ilen 0 rip 0xffffffff832ca516 rflags 0x46 rax 0xd9eab1c rcx 0 rdx 0x1 in rax 0xd9eab1c rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  182.540680] I cpu0 trap thread 0 vcpu_run #191000 pid 1057 arg=0xffffffffffffffff
+[  182.568478] I cpu12 trap thread 0 vcpu_run #192000 pid 1057 arg=0xffffffffffffffff
+[  182.609654] I cpu14 trap thread 0 vcpu_run #193000 pid 1057 arg=0xffffffffffffffff
+[  182.642805] I cpu10 trap thread 0 vcpu_run #194000 pid 1057 arg=0xffffffffffffffff
+[  182.660287] I cpu0 trap thread 0 vcpu_run #195000 pid 1057 arg=0xffffffffffffffff
+[  182.660317] I cpu14 hv front end: run 195000 vcpu0 exit reason 1 qual 0 ilen 0 rip 0xffffffff832ca516 rflags 0x46 rax 0xe6ff794 rcx 0 rdx 0x1 in rax 0xe6ff794 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  182.693159] I cpu0 trap thread 0 vcpu_run #196000 pid 1057 arg=0xffffffffffffffff
+[  182.701252] I cpu14 trap thread 2 invalidate_tlb #15000 pid 1057 arg=0x18
+[  182.724263] I cpu10 trap thread 0 vcpu_run #197000 pid 1057 arg=0xffffffffffffffff
+[  182.760961] I cpu2 trap thread 0 vcpu_run #198000 pid 1057 arg=0xffffffffffffffff
+[  182.789005] I cpu14 trap thread 0 vcpu_run #199000 pid 1057 arg=0xffffffffffffffff
+[  182.799218] I cpu6 trap task 13 vcpu_interrupt #7000 pid 1057 arg=0x2
+[  182.814495] I cpu6 trap thread 0 vcpu_run #200000 pid 1057 arg=0xffffffffffffffff
+[  182.814508] I cpu2 hv front end: run 200000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff832c5e26 rflags 0x46 rax 0 rcx 0 rdx 0 in rax 0 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  182.839565] I cpu10 trap thread 0 vcpu_run #201000 pid 1057 arg=0xffffffffffffffff
+[  182.955864] I cpu12 trap thread 0 vcpu_run #202000 pid 1057 arg=0xffffffffffffffff
+[  183.042554] I cpu0 trap thread 0 vcpu_run #203000 pid 1057 arg=0xffffffffffffffff
+[  183.124450] I cpu8 trap thread 0 vcpu_run #204000 pid 1057 arg=0xffffffffffffffff
+[  183.192513] I cpu2 trap thread 0 vcpu_run #205000 pid 1057 arg=0xffffffffffffffff
+[  183.192543] I cpu0 hv front end: run 205000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832bf35f rflags 0x6 rax 0 rcx 0 rdx 0xffff96b139156000 in rax 0xfb rcx 0 rdx 0xffff96b139156000 intr 0 cr0 0x80050033
+[  183.229666] I cpu12 trap thread 0 vcpu_run #206000 pid 1057 arg=0xffffffffffffffff
+[  183.256393] I cpu12 trap thread 0 vcpu_run #207000 pid 1057 arg=0xffffffffffffffff
+[  183.282176] I cpu10 trap thread 0 vcpu_run #208000 pid 1057 arg=0xffffffffffffffff
+[  183.307044] I cpu4 trap thread 0 vcpu_run #209000 pid 1057 arg=0xffffffffffffffff
+[  183.334721] I cpu6 trap thread 0 vcpu_run #210000 pid 1057 arg=0xffffffffffffffff
+[  183.334768] I cpu6 hv front end: run 210000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832bf35f rflags 0x6 rax 0 rcx 0 rdx 0xffff96b139156000 in rax 0x12750834 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  183.362271] I cpu12 trap thread 0 vcpu_run #211000 pid 1057 arg=0xffffffffffffffff
+[  183.388838] I cpu4 trap thread 0 vcpu_run #212000 pid 1057 arg=0xffffffffffffffff
+[  183.416473] I cpu12 trap thread 0 vcpu_run #213000 pid 1057 arg=0xffffffffffffffff
+[  183.444071] I cpu8 trap thread 0 vcpu_run #214000 pid 1057 arg=0xffffffffffffffff
+[  183.472289] I cpu12 trap thread 0 vcpu_run #215000 pid 1057 arg=0xffffffffffffffff
+[  183.472306] I cpu12 hv front end: run 215000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffffc06e895f rflags 0x202 rax 0xffffb809c08e0000 rcx 0xffffb809c08e0000 rdx 0x188 in rax 0x1c8 rcx 0xffffb809c08e0000 rdx 0x188 intr 0 cr0 0x80050033
+[  183.499635] I cpu2 trap thread 0 vcpu_run #216000 pid 1057 arg=0xffffffffffffffff
+[  183.519557] I cpu2 trap task 13 vcpu_interrupt #8000 pid 1057 arg=0x2
+[  183.526972] I cpu8 trap thread 0 vcpu_run #217000 pid 1057 arg=0xffffffffffffffff
+[  183.554520] I cpu0 trap thread 0 vcpu_run #218000 pid 1057 arg=0xffffffffffffffff
+[  183.582343] I cpu4 trap thread 0 vcpu_run #219000 pid 1057 arg=0xffffffffffffffff
+[  183.624231] I cpu8 trap thread 0 vcpu_run #220000 pid 1057 arg=0xffffffffffffffff
+[  183.624245] I cpu8 hv front end: run 220000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffffc06eec47 rflags 0x286 rax 0x130 rcx 0 rdx 0xffffb809c08e5730 in rax 0x130 rcx 0 rdx 0xffffb809c08e5730 intr 0 cr0 0x80050033
+[  183.643603] I cpu10 trap thread 0 vcpu_run #221000 pid 1057 arg=0xffffffffffffffff
+[  183.669540] I cpu2 trap thread 0 vcpu_run #222000 pid 1057 arg=0xffffffffffffffff
+[  183.686015] I cpu12 trap thread 0 vcpu_run #223000 pid 1057 arg=0xffffffffffffffff
+[  183.716013] I cpu0 trap thread 0 vcpu_run #224000 pid 1057 arg=0xffffffffffffffff
+[  183.756824] I cpu10 trap thread 0 vcpu_run #225000 pid 1057 arg=0xffffffffffffffff
+[  183.757759] I cpu12 hv front end: run 225000 vcpu0 exit reason 1 qual 0 ilen 0 rip 0xffffffff839013b5 rflags 0x283 rax 0x10140d2 rcx 0x1 rdx 0x1b3a4c in rax 0xfb rcx 0 rdx 0xffff96b139256000 intr 0 cr0 0x80050033
+[  183.796998] I cpu6 trap thread 0 vcpu_run #226000 pid 1057 arg=0xffffffffffffffff
+[  183.836152] I cpu12 trap thread 0 vcpu_run #227000 pid 1057 arg=0xffffffffffffffff
+[  183.879158] I cpu14 trap thread 0 vcpu_run #228000 pid 1057 arg=0xffffffffffffffff
+[  183.888146] I cpu6 trap task 13 vcpu_interrupt #9000 pid 1057 arg=0x1
+[  183.917484] I cpu0 trap thread 0 vcpu_run #229000 pid 1057 arg=0xffffffffffffffff
+[  183.960157] I cpu2 trap thread 0 vcpu_run #230000 pid 1057 arg=0xffffffffffffffff
+[  183.960201] I cpu14 hv front end: run 230000 vcpu0 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff832c5e26 rflags 0x46 rax 0 rcx 0 rdx 0 in rax 0x11 rcx 0xffff96b0be5306c0 rdx 0x1 intr 0 cr0 0x80050033
+[  183.999562] I cpu0 trap thread 0 vcpu_run #231000 pid 1057 arg=0xffffffffffffffff
+[  184.035541] I cpu0 trap thread 0 vcpu_run #232000 pid 1057 arg=0xffffffffffffffff
+[  184.076531] I cpu10 trap thread 0 vcpu_run #233000 pid 1057 arg=0xffffffffffffffff
+[  184.114342] I cpu4 trap thread 0 vcpu_run #234000 pid 1057 arg=0xffffffffffffffff
+[  184.207222] I cpu6 trap thread 0 vcpu_run #235000 pid 1057 arg=0xffffffffffffffff
+[  184.207239] I cpu6 hv front end: run 235000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0x17a85b58 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  185.062072] I cpu8 trap thread 0 vcpu_run #236000 pid 1057 arg=0xffffffffffffffff
+[  186.502330] I cpu6 trap thread 0 vcpu_run #237000 pid 1057 arg=0xffffffffffffffff
+[  187.876578] I cpu2 trap task 13 vcpu_interrupt #10000 pid 1057 arg=0x1
+[  188.077118] I cpu4 trap thread 0 vcpu_run #238000 pid 1057 arg=0xffffffffffffffff
+[  189.540556] I cpu10 trap thread 0 vcpu_run #239000 pid 1057 arg=0xffffffffffffffff
+[  191.117834] I cpu0 trap thread 0 vcpu_run #240000 pid 1057 arg=0xffffffffffffffff
+[  191.117866] I cpu0 hv front end: run 240000 vcpu0 exit reason 1 qual 0 ilen 0 rip 0xffffffff832ca516 rflags 0x46 rax 0x40d91eb8 rcx 0 rdx 0x1 in rax 0x40d91eb8 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  192.652952] I cpu2 trap thread 0 vcpu_run #241000 pid 1057 arg=0xffffffffffffffff
+[  194.116060] I cpu2 trap thread 0 vcpu_run #242000 pid 1057 arg=0xffffffffffffffff
+[  195.772621] I cpu8 trap thread 0 vcpu_run #243000 pid 1057 arg=0xffffffffffffffff
+[  197.164242] I cpu2 trap thread 0 vcpu_run #244000 pid 1057 arg=0xffffffffffffffff
+[  198.692260] I cpu12 trap thread 0 vcpu_run #245000 pid 1057 arg=0xffffffffffffffff
+[  198.692299] I cpu12 hv front end: run 245000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffffc06dee33 rflags 0x286 rax 0xffffb809c0035000 rcx 0 rdx 0 in rax 0xffffb809c0035000 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  200.187690] I cpu6 trap thread 0 vcpu_run #246000 pid 1057 arg=0xffffffffffffffff
+[  201.699402] I cpu8 trap thread 0 vcpu_run #247000 pid 1057 arg=0xffffffffffffffff
+[  203.212267] I cpu2 trap thread 0 vcpu_run #248000 pid 1057 arg=0xffffffffffffffff
+[  204.611962] I cpu2 trap thread 0 vcpu_run #249000 pid 1057 arg=0xffffffffffffffff
+[  206.171852] I cpu0 trap thread 0 vcpu_run #250000 pid 1057 arg=0xffffffffffffffff
+[  206.171969] I cpu0 hv front end: run 250000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0xffffffff832bd260 rcx 0x20 rdx 0x327e6ff8 intr 0 cr0 0x80050033
+[  207.732136] I cpu4 trap thread 0 vcpu_run #251000 pid 1057 arg=0xffffffffffffffff
+[  207.837210] I cpu2 trap task 13 vcpu_interrupt #11000 pid 1057 arg=0x1
+[  209.092750] I cpu10 trap thread 0 vcpu_run #252000 pid 1057 arg=0xffffffffffffffff
+[  210.548613] I cpu8 trap thread 0 vcpu_run #253000 pid 1057 arg=0xffffffffffffffff
+[  212.100827] I cpu4 trap thread 0 vcpu_run #254000 pid 1057 arg=0xffffffffffffffff
+[  213.558222] I cpu10 trap thread 0 vcpu_run #255000 pid 1057 arg=0xffffffffffffffff
+[  213.558259] I cpu10 hv front end: run 255000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0xffffffff832bd260 rcx 0x20 rdx 0xe5bc8 intr 0 cr0 0x80050033
+[  215.221632] I cpu2 trap thread 0 vcpu_run #256000 pid 1057 arg=0xffffffffffffffff
+[  216.678255] I cpu0 trap thread 0 vcpu_run #257000 pid 1057 arg=0xffffffffffffffff
+[  218.245173] I cpu0 trap thread 0 vcpu_run #258000 pid 1057 arg=0xffffffffffffffff
+[  219.844361] I cpu14 trap thread 0 vcpu_run #259000 pid 1057 arg=0xffffffffffffffff
+[  221.364323] I cpu10 trap thread 0 vcpu_run #260000 pid 1057 arg=0xffffffffffffffff
+[  221.364427] I cpu10 hv front end: run 260000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0xffffffff832bd260 rcx 0x20 rdx 0xccd58 intr 0 cr0 0x80050033
+[  222.868047] I cpu0 trap thread 0 vcpu_run #261000 pid 1057 arg=0xffffffffffffffff
+[  224.379817] I cpu2 trap thread 0 vcpu_run #262000 pid 1057 arg=0xffffffffffffffff
+[  225.894329] I cpu8 trap thread 0 vcpu_run #263000 pid 1057 arg=0xffffffffffffffff
+[  227.403645] I cpu10 trap thread 0 vcpu_run #264000 pid 1057 arg=0xffffffffffffffff
+[  228.221310] I cpu6 trap task 13 vcpu_interrupt #12000 pid 1057 arg=0x2
+[  229.051891] I cpu4 trap thread 0 vcpu_run #265000 pid 1057 arg=0xffffffffffffffff
+[  229.051940] I cpu4 hv front end: run 265000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0xffff96b0be41be70 rdx 0x1 in rax 0 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  230.723572] I cpu2 trap thread 0 vcpu_run #266000 pid 1057 arg=0xffffffffffffffff
+[  232.276478] I cpu12 trap thread 0 vcpu_run #267000 pid 1057 arg=0xffffffffffffffff
+[  233.732683] I cpu2 trap thread 0 vcpu_run #268000 pid 1057 arg=0xffffffffffffffff
+[  235.396236] I cpu2 trap thread 0 vcpu_run #269000 pid 1057 arg=0xffffffffffffffff
+[  236.964866] I cpu14 trap thread 0 vcpu_run #270000 pid 1057 arg=0xffffffffffffffff
+[  236.964899] I cpu14 hv front end: run 270000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0x521e2398 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  238.619426] I cpu0 trap thread 0 vcpu_run #271000 pid 1057 arg=0xffffffffffffffff
+[  240.083733] I cpu0 trap thread 0 vcpu_run #272000 pid 1057 arg=0xffffffffffffffff
+[  241.636259] I cpu10 trap thread 0 vcpu_run #273000 pid 1057 arg=0xffffffffffffffff
+[  243.197303] I cpu14 trap thread 0 vcpu_run #274000 pid 1057 arg=0xffffffffffffffff
+[  244.653298] I cpu4 trap thread 0 vcpu_run #275000 pid 1057 arg=0xffffffffffffffff
+[  244.653331] I cpu4 hv front end: run 275000 vcpu0 exit reason 1 qual 0 ilen 0 rip 0xffffffff832ca516 rflags 0x46 rax 0x7ff1c0f4 rcx 0 rdx 0x1 in rax 0x7ff1c0f4 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  246.107951] I cpu8 trap thread 0 vcpu_run #276000 pid 1057 arg=0xffffffffffffffff
+[  247.667520] I cpu12 trap thread 0 vcpu_run #277000 pid 1057 arg=0xffffffffffffffff
+[  249.230190] I cpu14 trap task 13 vcpu_interrupt #13000 pid 1057 arg=0x1
+[  249.235976] I cpu6 trap thread 0 vcpu_run #278000 pid 1057 arg=0xffffffffffffffff
+[  250.693317] I cpu12 trap thread 0 vcpu_run #279000 pid 1057 arg=0xffffffffffffffff
+[  252.356316] I cpu14 trap thread 0 vcpu_run #280000 pid 1057 arg=0xffffffffffffffff
+[  252.356351] I cpu14 hv front end: run 280000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0xaddba05c rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  253.908690] I cpu0 trap thread 0 vcpu_run #281000 pid 1057 arg=0xffffffffffffffff
+[  255.475530] I cpu0 trap thread 0 vcpu_run #282000 pid 1057 arg=0xffffffffffffffff
+[  256.724662] I cpu4 trap thread 0 vcpu_run #283000 pid 1057 arg=0xffffffffffffffff
+[  258.380581] I cpu8 trap thread 0 vcpu_run #284000 pid 1057 arg=0xffffffffffffffff
+[  259.940683] I cpu10 trap thread 0 vcpu_run #285000 pid 1057 arg=0xffffffffffffffff
+[  259.940715] I cpu10 hv front end: run 285000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0xdb1073b8 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  261.508609] I cpu10 trap thread 0 vcpu_run #286000 pid 1057 arg=0xffffffffffffffff
+[  263.172093] I cpu8 trap thread 0 vcpu_run #287000 pid 1057 arg=0xffffffffffffffff
+[  264.524269] I cpu12 trap thread 0 vcpu_run #288000 pid 1057 arg=0xffffffffffffffff
+[  266.076215] I cpu2 trap thread 0 vcpu_run #289000 pid 1057 arg=0xffffffffffffffff
+[  267.740478] I cpu2 trap thread 0 vcpu_run #290000 pid 1057 arg=0xffffffffffffffff
+[  267.740514] I cpu12 hv front end: run 290000 vcpu1 exit reason 12 qual 0 ilen 1 rip 0xffffffff83e4837e rflags 0x246 rax 0 rcx 0 rdx 0 in rax 0xffffffff832bd260 rcx 0x20 rdx 0x2e97c3d0 intr 0x1 cr0 0x80050033
+[  269.204344] I cpu10 trap thread 0 vcpu_run #291000 pid 1057 arg=0xffffffffffffffff
+[  269.827608] I cpu2 trap task 13 vcpu_interrupt #14000 pid 1057 arg=0x2
+[  270.758206] I cpu14 trap thread 0 vcpu_run #292000 pid 1057 arg=0xffffffffffffffff
+[  272.324177] I cpu8 trap thread 0 vcpu_run #293000 pid 1057 arg=0xffffffffffffffff
+[  273.772071] I cpu8 trap thread 0 vcpu_run #294000 pid 1057 arg=0xffffffffffffffff
+[  275.332359] I cpu12 trap thread 0 vcpu_run #295000 pid 1057 arg=0xffffffffffffffff
+[  275.332394] I cpu10 hv front end: run 295000 vcpu1 exit reason 12 qual 0 ilen 1 rip 0xffffffff83e4837e rflags 0x246 rax 0 rcx 0 rdx 0 in rax 0xffffffff832bd260 rcx 0x20 rdx 0xcd140 intr 0x1 cr0 0x80050033
+[  276.790124] I cpu8 trap thread 0 vcpu_run #296000 pid 1057 arg=0xffffffffffffffff
+[  278.357350] I cpu0 trap thread 0 vcpu_run #297000 pid 1057 arg=0xffffffffffffffff
+[  280.020467] I cpu6 trap thread 0 vcpu_run #298000 pid 1057 arg=0xffffffffffffffff
+[  281.571629] I cpu10 trap thread 0 vcpu_run #299000 pid 1057 arg=0xffffffffffffffff
+[  283.140091] I cpu6 trap thread 0 vcpu_run #300000 pid 1057 arg=0xffffffffffffffff
+[  283.140136] I cpu6 hv front end: run 300000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0x1 rdx 0x1 in rax 0x6557f0dc rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  284.796685] I cpu2 trap thread 0 vcpu_run #301000 pid 1057 arg=0xffffffffffffffff
+[  286.355894] I cpu10 trap thread 0 vcpu_run #302000 pid 1057 arg=0xffffffffffffffff
+[  287.918387] I cpu14 trap thread 0 vcpu_run #303000 pid 1057 arg=0xffffffffffffffff
+[  289.379804] I cpu8 trap thread 0 vcpu_run #304000 pid 1057 arg=0xffffffffffffffff
+[  290.931512] I cpu14 trap thread 0 vcpu_run #305000 pid 1057 arg=0xffffffffffffffff
+[  290.931575] I cpu0 hv front end: run 305000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  291.251454] I cpu6 trap task 13 vcpu_interrupt #15000 pid 1057 arg=0x1
+[  292.420230] I cpu12 trap thread 0 vcpu_run #306000 pid 1057 arg=0xffffffffffffffff
+[  293.933339] I cpu10 trap thread 0 vcpu_run #307000 pid 1057 arg=0xffffffffffffffff
+[  295.507400] I cpu0 trap thread 0 vcpu_run #308000 pid 1057 arg=0xffffffffffffffff
+[  297.068351] I cpu4 trap thread 0 vcpu_run #309000 pid 1057 arg=0xffffffffffffffff
+[  298.532439] I cpu14 trap thread 0 vcpu_run #310000 pid 1057 arg=0xffffffffffffffff
+[  298.532470] I cpu14 hv front end: run 310000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0x1 rdx 0x1 in rax 0xc116cba0 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  300.100028] I cpu0 trap thread 0 vcpu_run #311000 pid 1057 arg=0xffffffffffffffff
+[  301.493627] I cpu14 trap thread 0 vcpu_run #312000 pid 1057 arg=0xffffffffffffffff
+[  303.220736] I cpu10 trap thread 0 vcpu_run #313000 pid 1057 arg=0xffffffffffffffff
+[  304.523315] I cpu10 trap thread 0 vcpu_run #314000 pid 1057 arg=0xffffffffffffffff
+[  306.132502] I cpu8 trap thread 0 vcpu_run #315000 pid 1057 arg=0xffffffffffffffff
+[  306.132552] I cpu8 hv front end: run 315000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  307.588425] I cpu2 trap thread 0 vcpu_run #316000 pid 1057 arg=0xffffffffffffffff
+[  309.147941] I cpu14 trap thread 0 vcpu_run #317000 pid 1057 arg=0xffffffffffffffff
+[  310.812645] I cpu12 trap thread 0 vcpu_run #318000 pid 1057 arg=0xffffffffffffffff
+[  311.645316] I cpu9 trap task 13 vcpu_interrupt #16000 pid 1057 arg=0x1
+[  312.268110] I cpu2 trap thread 0 vcpu_run #319000 pid 1057 arg=0xffffffffffffffff
+[  313.924760] I cpu2 trap thread 0 vcpu_run #320000 pid 1057 arg=0xffffffffffffffff
+[  313.924827] I cpu2 hv front end: run 320000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0xffff96b0be52bc80 rdx 0x1 in rax 0x1cd59e30 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  315.387408] I cpu12 trap thread 0 vcpu_run #321000 pid 1057 arg=0xffffffffffffffff
+[  316.836365] I cpu6 trap thread 0 vcpu_run #322000 pid 1057 arg=0xffffffffffffffff
+[  318.499798] I cpu12 trap thread 0 vcpu_run #323000 pid 1057 arg=0xffffffffffffffff
+[  319.965335] I cpu6 trap thread 0 vcpu_run #324000 pid 1057 arg=0xffffffffffffffff
+[  321.412713] I cpu10 trap thread 0 vcpu_run #325000 pid 1057 arg=0xffffffffffffffff
+[  321.412794] I cpu10 hv front end: run 325000 vcpu1 exit reason 7 qual 0 ilen 0 rip 0xffffffff83e58c5c rflags 0x206 rax 0 rcx 0 rdx 0 in rax 0x31d7 rcx 0xffffffff8331d646 rdx 0x31d6 intr 0 cr0 0x80050033
+[  323.075968] I cpu8 trap thread 0 vcpu_run #326000 pid 1057 arg=0xffffffffffffffff
+[  324.532799] I cpu2 trap thread 0 vcpu_run #327000 pid 1057 arg=0xffffffffffffffff
+[  326.190055] I cpu12 trap thread 0 vcpu_run #328000 pid 1057 arg=0xffffffffffffffff
+[  327.662161] I cpu8 trap thread 0 vcpu_run #329000 pid 1057 arg=0xffffffffffffffff
+[  329.115727] I cpu10 trap thread 0 vcpu_run #330000 pid 1057 arg=0xffffffffffffffff
+[  329.115775] I cpu10 hv front end: run 330000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0x77613148 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  330.676579] I cpu0 trap thread 0 vcpu_run #331000 pid 1057 arg=0xffffffffffffffff
+[  332.237231] I cpu4 trap thread 0 vcpu_run #332000 pid 1057 arg=0xffffffffffffffff
+[  332.445205] I cpu10 trap task 13 vcpu_interrupt #17000 pid 1057 arg=0x1
+[  333.748147] I cpu2 trap thread 0 vcpu_run #333000 pid 1057 arg=0xffffffffffffffff
+[  335.460586] I cpu8 trap thread 0 vcpu_run #334000 pid 1057 arg=0xffffffffffffffff
+[  337.012953] I cpu10 trap thread 0 vcpu_run #335000 pid 1057 arg=0xffffffffffffffff
+[  337.012996] I cpu10 hv front end: run 335000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffffc06deea4 rflags 0x202 rax 0xffffb809c0035000 rcx 0x34 rdx 0x1e1e1e1e in rax 0xffffb809c0035000 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  338.579315] I cpu12 trap thread 0 vcpu_run #336000 pid 1057 arg=0xffffffffffffffff
+[  340.243420] I cpu4 trap thread 0 vcpu_run #337000 pid 1057 arg=0xffffffffffffffff
+[  341.596551] I cpu0 trap thread 0 vcpu_run #338000 pid 1057 arg=0xffffffffffffffff
+[  343.253133] I cpu2 trap thread 0 vcpu_run #339000 pid 1057 arg=0xffffffffffffffff
+[  344.715595] I cpu2 trap thread 0 vcpu_run #340000 pid 1057 arg=0xffffffffffffffff
+[  344.715612] I cpu2 hv front end: run 340000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  346.371560] I cpu4 trap thread 0 vcpu_run #341000 pid 1057 arg=0xffffffffffffffff
+[  347.940122] I cpu4 trap thread 0 vcpu_run #342000 pid 1057 arg=0xffffffffffffffff
+[  349.603734] I cpu2 trap thread 0 vcpu_run #343000 pid 1057 arg=0xffffffffffffffff
+[  351.155967] I cpu12 trap thread 0 vcpu_run #344000 pid 1057 arg=0xffffffffffffffff
+[  352.723661] I cpu10 trap thread 0 vcpu_run #345000 pid 1057 arg=0xffffffffffffffff
+[  352.723676] I cpu10 hv front end: run 345000 vcpu1 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff832c5dc6 rflags 0x16 rax 0xffffffff832bd260 rcx 0x20 rdx 0x781e0 in rax 0x4180b48 rcx 0x1 rdx 0x1 intr 0 cr0 0x80050033
+[  353.763608] I cpu12 trap task 13 vcpu_interrupt #18000 pid 1057 arg=0x2
+[  354.284629] I cpu14 trap thread 0 vcpu_run #346000 pid 1057 arg=0xffffffffffffffff
+[  355.742669] I cpu2 trap thread 0 vcpu_run #347000 pid 1057 arg=0xffffffffffffffff
+[  357.300309] I cpu4 trap thread 0 vcpu_run #348000 pid 1057 arg=0xffffffffffffffff
+[  358.860118] I cpu8 trap thread 0 vcpu_run #349000 pid 1057 arg=0xffffffffffffffff
+[  360.308258] I cpu10 trap thread 0 vcpu_run #350000 pid 1057 arg=0xffffffffffffffff
+[  360.308274] I cpu10 hv front end: run 350000 vcpu1 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  361.763959] I cpu8 trap thread 0 vcpu_run #351000 pid 1057 arg=0xffffffffffffffff
+[  363.428070] I cpu6 trap thread 0 vcpu_run #352000 pid 1057 arg=0xffffffffffffffff
+[  364.788748] I cpu2 trap thread 0 vcpu_run #353000 pid 1057 arg=0xffffffffffffffff
+[  366.452677] I cpu10 trap thread 0 vcpu_run #354000 pid 1057 arg=0xffffffffffffffff
+[  368.020492] I cpu0 trap thread 0 vcpu_run #355000 pid 1057 arg=0xffffffffffffffff
+[  368.020542] I cpu6 hv front end: run 355000 vcpu0 exit reason 48 qual 0x182 ilen 0 rip 0xffffffff832c5dc6 rflags 0x13 rax 0xffffffff832bd260 rcx 0x20 rdx 0x5a46d70 in rax 0x5f452208 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  369.531862] I cpu8 trap thread 0 vcpu_run #356000 pid 1057 arg=0xffffffffffffffff
+[  371.123797] I cpu0 trap thread 0 vcpu_run #357000 pid 1057 arg=0xffffffffffffffff
+[  372.580429] I cpu4 trap thread 0 vcpu_run #358000 pid 1057 arg=0xffffffffffffffff
+[  374.068657] I cpu5 trap task 13 vcpu_interrupt #19000 pid 1057 arg=0x1
+[  374.244416] I cpu2 trap thread 0 vcpu_run #359000 pid 1057 arg=0xffffffffffffffff
+[  375.812432] I cpu10 trap thread 0 vcpu_run #360000 pid 1057 arg=0xffffffffffffffff
+[  375.812498] I cpu10 hv front end: run 360000 vcpu0 exit reason 48 qual 0x181 ilen 0 rip 0xffffffff832ca510 rflags 0x46 rax 0xffffb809c000c000 rcx 0 rdx 0x1 in rax 0 rcx 0 rdx 0 intr 0 cr0 0x80050033
+[  377.267909] I cpu6 trap thread 0 vcpu_run #361000 pid 1057 arg=0xffffffffffffffff
+[  379.027974] I cpu0 trap thread 0 vcpu_run #362000 pid 1057 arg=0xffffffffffffffff
+[  380.461462] I cpu10 trap thread 0 vcpu_run #363000 pid 1057 arg=0xffffffffffffffff
+[  381.845014] I cpu4 trap thread 0 vcpu_run #364000 pid 1057 arg=0xffffffffffffffff
+[  383.524468] I cpu4 trap thread 0 vcpu_run #365000 pid 1057 arg=0xffffffffffffffff
+[  383.524497] I cpu4 hv front end: run 365000 vcpu1 exit reason 1 qual 0 ilen 0 rip 0xffffffff832ca516 rflags 0x46 rax 0xbbae5820 rcx 0 rdx 0x1 in rax 0xbbae5820 rcx 0 rdx 0x1 intr 0 cr0 0x80050033
+[  384.980613] I cpu6 trap thread 0 vcpu_run #366000 pid 1057 arg=0xffffffffffffffff
+[  386.668475] I cpu6 trap thread 0 vcpu_run #367000 pid 1057 arg=0xffffffffffffffff
+[  388.181486] I cpu0 trap thread 0 vcpu_run #368000 pid 1057 arg=0xffffffffffffffff

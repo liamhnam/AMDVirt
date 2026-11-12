@@ -2,7 +2,8 @@
 
 Đọc file này trước khi làm bất cứ việc gì. Nó chứa đủ mục tiêu, cách làm việc, trạng thái hiện tại, các lỗi còn mở và những gì đã thử,
 để không phải tìm hay nghiên cứu lại. Chi tiết theo thời gian ở `dev/JOURNAL.md`; ghi chú dịch ngược (chỉ hành vi, không code Apple) ở
-`dev/re-notes/`. Cập nhật lần cuối: **2026-11-12**.
+`dev/re-notes/`; log, bản kext cũ, config cũ ở `dev/workspace/`; dựng lại thư mục làm việc theo `dev/RESTORE.md`.
+Cập nhật lần cuối: **2026-11-12**.
 
 ---
 

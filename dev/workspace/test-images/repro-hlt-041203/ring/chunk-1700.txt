@@ -1,0 +1,564 @@
+[... 4554493 bytes lost, ring wrapped before they were read ...]
+46 ax 10000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.417983] I cpu4 w49110: f100=ffffffffab2c5dcc 401c=0
+[  447.417985] I cpu4 f49111 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a800e4fd0 fl 46 ax 10000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.417988] I cpu4 w49111: f100=ffffffffab2c5dcc 401c=0
+[  447.417990] I cpu4 f49112 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a800e4fd0 fl 46 ax 0 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.417994] I cpu4 w49112: f100=ffffffffab2c5dfc 401c=0
+[  447.417996] I cpu4 f49113 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a800e4fd8 fl 46 ax ff r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.418000] I cpu4 w49113: f100=ffffffffab2c5dfc 401c=0
+[  447.418001] I cpu4 f49114 r12 c0 q0 ip ffffffffab29f78c sp ffffa78a800e4fe0 fl 46 ax 0 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.418005] I cpu4 w49114: f100=ffffffffab2c5dcc 401c=0
+[  447.418006] I cpu4 f49115 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bcf8 fl 86 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418010] I cpu4 w49115: f100=ffffffffab2bf677 4002=200084 401c=0
+[  447.418012] I cpu4 f49116 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 6 ax 70015 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418016] I cpu4 w49116: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418017] I cpu4 f49117 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bcf8 fl 46 ax 70015 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418021] I cpu4 w49117: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418023] I cpu4 f49118 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 2 ax 100ec r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418027] I cpu4 w49118: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418028] I cpu4 f49119 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bcf8 fl 46 ax 100ec r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418032] I cpu4 w49119: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418034] I cpu4 f49120 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 6 ax 10700 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418037] I cpu4 w49120: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418039] I cpu4 f49121 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bcf8 fl 46 ax 10700 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418043] I cpu4 w49121: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418044] I cpu4 f49122 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 6 ax 10400 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418048] I cpu4 w49122: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418050] I cpu4 f49123 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bcf8 fl 6 ax 10400 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418053] I cpu4 w49123: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418056] I cpu4 f49124 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418059] I cpu4 w49124: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418063] I cpu4 f49125 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bcf8 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418067] I cpu4 w49125: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418069] I cpu4 f49126 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418072] I cpu4 w49126: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418074] I cpu4 f49127 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418077] I cpu4 w49127: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418079] I cpu4 f49128 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418083] I cpu4 w49128: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418085] I cpu4 f49129 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418088] I cpu4 w49129: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418090] I cpu4 f49130 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418094] I cpu4 w49130: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418096] I cpu4 f49131 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 2 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418099] I cpu4 w49131: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418101] I cpu4 f49132 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bcf8 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418105] I cpu4 w49132: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418106] I cpu4 f49133 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd18 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418110] I cpu4 w49133: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418112] I cpu4 f49134 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd18 fl 46 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418115] I cpu4 w49134: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418117] I cpu4 f49135 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd20 fl 46 ax ff r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418120] I cpu4 w49135: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418122] I cpu4 f49136 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd08 fl 86 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418126] I cpu4 w49136: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418127] I cpu4 f49137 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 6 ax 70015 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418131] I cpu4 w49137: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418133] I cpu4 f49138 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd08 fl 46 ax 70015 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418137] I cpu4 w49138: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418138] I cpu4 f49139 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418142] I cpu4 w49139: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418144] I cpu4 f49140 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd08 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418147] I cpu4 w49140: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418149] I cpu4 f49141 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418152] I cpu4 w49141: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418154] I cpu4 f49142 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd08 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418158] I cpu4 w49142: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418159] I cpu4 f49143 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418163] I cpu4 w49143: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418165] I cpu4 f49144 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd08 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418168] I cpu4 w49144: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418170] I cpu4 f49145 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418173] I cpu4 w49145: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418175] I cpu4 f49146 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd08 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418179] I cpu4 w49146: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418180] I cpu4 f49147 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 6 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418184] I cpu4 w49147: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418186] I cpu4 f49148 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418189] I cpu4 w49148: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418191] I cpu4 f49149 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418194] I cpu4 w49149: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418197] I cpu4 f49150 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418200] I cpu4 w49150: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418202] I cpu4 f49151 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418206] I cpu4 w49151: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418207] I cpu4 f49152 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 2 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418211] I cpu4 w49152: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418213] I cpu4 f49153 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd08 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418216] I cpu4 w49153: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418218] I cpu4 f49154 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd28 fl 46 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418222] I cpu4 w49154: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418223] I cpu4 f49155 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd28 fl 46 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418227] I cpu4 w49155: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418229] I cpu4 f49156 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd30 fl 46 ax ff r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418232] I cpu4 w49156: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418234] I cpu4 f49157 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd30 fl 86 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418238] I cpu4 w49157: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418240] I cpu4 f49158 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd30 fl 6 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418244] I cpu4 w49158: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418246] I cpu4 f49159 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd30 fl 46 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418250] I cpu4 w49159: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418252] I cpu4 f49160 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd30 fl 6 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418256] I cpu4 w49160: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418259] I cpu4 f49161 r48 c0 q181 ip ffffffffab2c5df6 sp ffffa78a8209bd30 fl 46 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418263] I cpu4 w49161: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418265] I cpu4 f49162 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a8209bd40 fl 6 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418275] I cpu4 w49162: f100=ffffffffab2c5dfc 4002=200084 401c=0
+[  447.418277] I cpu4 f49163 r48 c0 q182 ip ffffffffab2cac9c sp ffffa78a8209bd40 fl 46 ax ffffa78a80011000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418281] I cpu4 w49163: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.418283] I cpu4 f49164 r48 c0 q182 ip ffffffffab2cacc9 sp ffffa78a8209bd40 fl 86 ax ffffa78a80011100 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418288] I cpu4 w49164: f100=ffffffffab2cac9f 4002=200084 401c=0
+[  447.418291] I cpu4 f49165 r48 c0 q182 ip ffffffffab2cacc9 sp ffffa78a8209bd40 fl 82 ax ffffa78a80011120 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418295] I cpu4 w49165: f100=ffffffffab2caccb 4002=200084 401c=0
+[  447.418297] I cpu4 f49166 r48 c0 q182 ip ffffffffab2cacc9 sp ffffa78a8209bd40 fl 82 ax ffffa78a80011140 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418301] I cpu4 w49166: f100=ffffffffab2caccb 4002=200084 401c=0
+[  447.418302] I cpu4 f49167 r48 c0 q182 ip ffffffffab2cacc9 sp ffffa78a8209bd40 fl 86 ax ffffa78a80011160 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418307] I cpu4 w49167: f100=ffffffffab2caccb 4002=200084 401c=0
+[  447.418308] I cpu4 f49168 r48 c0 q182 ip ffffffffab2cacf1 sp ffffa78a8209bd40 fl 2 ax 1 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418313] I cpu4 w49168: f100=ffffffffab2caccb 4002=200084 401c=0
+[  447.418315] I cpu4 f49169 r30 c0 qcf90000 ip ffffffffab95157d sp ffffa78a8209bd00 fl 46 ax 6 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418319] I cpu4 w49169: f100=ffffffffab2cacf4 4002=200084 401c=0
+[  447.418321] I cpu4 f49170 r1 c0 q0 ip ffffffffabe3ee2d sp ffffa78a8209bd00 fl 46 ax b04f76be r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.418325] I cpu4 w49170: f100=ffffffffab95157e 4002=200084 401c=0
+[  447.418327] I cpu4 f49171 r1 c0 q0 ip fff0 sp 0 fl 2 ax 0 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs f000/9b ss 0/93
+[  447.418331] I cpu4 w49171: f100=fff0 f101=0 f102=2 4002=200084 800=0 802=f000
+[  447.418333] I cpu4 f49172 r28 c0 q0 ip ff57 sp 0 fl 2 ax 40000023 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs f000/9b ss 0/93
+[  447.418336] I cpu4 w49172: 4002=200084 401c=0
+[  447.418338] I cpu4 f49173 r28 c0 q4 ip ffffff67 sp 0 fl 2 ax 640 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 10/409b ss 0/93
+[  447.418341] I cpu4 w49173: f100=ff5a 4002=200084 401c=0
+[  447.418343] I cpu4 f49174 r10 c0 q0 ip fffffe7a sp 0 fl 82 ax 80000000 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 10/409b ss 8/c093
+[  447.418346] I cpu4 w49174: f100=ffffff6a 4002=200084 401c=0
+[  447.418348] I cpu4 f49175 r28 c0 q4 ip fffffe4f sp 0 fl 2 ax 660 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 10/409b ss 8/c093
+[  447.418358] I cpu4 w49175: f100=fffffe7c 4002=200084 401c=0
+[  447.418360] I cpu4 f49176 r31 c0 q0 ip fffffe57 sp 0 fl 2 ax 660 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 10/409b ss 8/c093
+[  447.418363] I cpu4 w49176: f100=fffffe52 4002=200084 401c=0
+[  447.418365] I cpu4 f49177 r32 c0 q0 ip fffffe5d sp 0 fl 2 ax 100 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 10/409b ss 8/c093
+[  447.418368] I cpu4 w49177: f100=fffffe59 4002=200084 401c=0
+[  447.418370] I cpu4 f49178 r28 c0 q0 ip fffffe66 sp 0 fl 2 ax 80000033 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 10/409b ss 8/c093
+[  447.418373] I cpu4 w49178: f100=fffffe5f 4002=200084 401c=0
+[  447.418374] I cpu4 f49179 r30 c0 q3fb0000 ip fffe150e sp 817c60 fl 6 ax 87 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418378] I cpu4 w49179: f100=fffffe69 4002=200084 401c=0
+[  447.418379] I cpu4 f49180 r30 c0 q3f90000 ip fffe1517 sp 817c60 fl 46 ax 0 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418382] I cpu4 w49180: f100=fffe150f 4002=200084 401c=0
+[  447.418384] I cpu4 f49181 r30 c0 q3f80000 ip fffe151e sp 817c60 fl 46 ax 1 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418387] I cpu4 w49181: f100=fffe1518 4002=200084 401c=0
+[  447.418389] I cpu4 f49182 r30 c0 q3fb0000 ip fffe1525 sp 817c60 fl 46 ax 7 r9 0 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418392] I cpu4 w49182: f100=fffe151f 4002=200084 401c=0
+[  447.418394] I cpu4 f49183 r30 c0 q3fd0008 ip fffe1675 sp 817c60 fl 6 ax 41 r9 1000020 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418397] I cpu4 w49183: f100=fffe1526 4002=200084 401c=0
+[  447.418399] I cpu4 f49184 r30 c0 q3f80000 ip fffe1680 sp 817c60 fl 2 ax 41 r9 1000020 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418402] I cpu4 w49184: f100=fffe1676 4002=200084 401c=0
+[  447.418404] I cpu4 f49185 r30 c0 q3fd0008 ip fffe1675 sp 817c60 fl 2 ax 70 r9 1000020 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418407] I cpu4 w49185: f100=fffe1681 4002=200084 401c=0
+[  447.418409] I cpu4 f49186 r30 c0 q3f80000 ip fffe1680 sp 817c60 fl 2 ax 70 r9 1000020 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418412] I cpu4 w49186: f100=fffe1676 4002=200084 401c=0
+[  447.418414] I cpu4 f49187 r30 c0 q3fd0008 ip fffe1675 sp 817c60 fl 2 ax 70 r9 1000020 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418418] I cpu4 w49187: f100=fffe1681 4002=200084 401c=0
+[  447.418420] I cpu4 f49188 r30 c0 q3f80000 ip fffe1680 sp 817c60 fl 2 ax 70 r9 1000020 cr2 7fd5fe86101d gs 0 kg 0 cs 18/209b ss 8/c093
+[  447.418424] I cpu4 w49188: f100=fffe1676 4002=200084 401c=0
+[  447.418425] I cpu4 flight: the last state of each vCPU (5 lines each: regs; r8-r15; gs/fs/kernel gs/idt/exception bitmap; tr/gdt/syscall msrs; cr, controls, TSC offset)
+[  447.783518] I cpu4 flight: 100 exits ending 1600 before the newest of 50688 recorded, oldest first (seq reason qual rip rsp rflags rax r9 cr2 gs kgs cs sel/ar ss sel/ar cpl)
+[  447.783530] I cpu4 f48989 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783535] I cpu4 w48989: f100=ffffffffab2c3921 401c=0
+[  447.783537] I cpu4 f48990 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783541] I cpu4 w48990: f100=ffffffffab2c391e 401c=0
+[  447.783542] I cpu4 f48991 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783546] I cpu4 w48991: f100=ffffffffab2c3921 401c=0
+[  447.783548] I cpu4 f48992 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783552] I cpu4 w48992: f100=ffffffffab2c391e 401c=0
+[  447.783553] I cpu4 f48993 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783557] I cpu4 w48993: f100=ffffffffab2c3921 401c=0
+[  447.783558] I cpu4 f48994 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783563] I cpu4 w48994: f100=ffffffffab2c391e 401c=0
+[  447.783564] I cpu4 f48995 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783568] I cpu4 w48995: f100=ffffffffab2c3921 401c=0
+[  447.783570] I cpu4 f48996 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783573] I cpu4 w48996: f100=ffffffffab2c2375 401c=0
+[  447.783575] I cpu4 f48997 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783579] I cpu4 w48997: f100=ffffffffab2c237f 401c=0
+[  447.783580] I cpu4 f48998 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783584] I cpu4 w48998: f100=ffffffffab2c2395 401c=0
+[  447.783585] I cpu4 f48999 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783589] I cpu4 w48999: f100=ffffffffab2c239a 401c=0
+[  447.783591] I cpu4 f49000 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783602] I cpu4 w49000: f100=ffffffffab2c391e 401c=0
+[  447.783604] I cpu4 f49001 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783607] I cpu4 w49001: f100=ffffffffab2c3921 401c=0
+[  447.783609] I cpu4 f49002 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783613] I cpu4 w49002: f100=ffffffffab2c391e 401c=0
+[  447.783614] I cpu4 f49003 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783618] I cpu4 w49003: f100=ffffffffab2c3921 401c=0
+[  447.783620] I cpu4 f49004 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783623] I cpu4 w49004: f100=ffffffffab2c391e 401c=0
+[  447.783625] I cpu4 f49005 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783628] I cpu4 w49005: f100=ffffffffab2c3921 401c=0
+[  447.783630] I cpu4 f49006 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783634] I cpu4 w49006: f100=ffffffffab2c391e 401c=0
+[  447.783635] I cpu4 f49007 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783639] I cpu4 w49007: f100=ffffffffab2c3921 401c=0
+[  447.783640] I cpu4 f49008 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783644] I cpu4 w49008: f100=ffffffffab2c2375 401c=0
+[  447.783646] I cpu4 f49009 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783649] I cpu4 w49009: f100=ffffffffab2c237f 401c=0
+[  447.783651] I cpu4 f49010 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783655] I cpu4 w49010: f100=ffffffffab2c2395 401c=0
+[  447.783656] I cpu4 f49011 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783660] I cpu4 w49011: f100=ffffffffab2c239a 401c=0
+[  447.783661] I cpu4 f49012 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783665] I cpu4 w49012: f100=ffffffffab2c391e 401c=0
+[  447.783667] I cpu4 f49013 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783671] I cpu4 w49013: f100=ffffffffab2c3921 401c=0
+[  447.783673] I cpu4 f49014 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783676] I cpu4 w49014: f100=ffffffffab2c391e 401c=0
+[  447.783678] I cpu4 f49015 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783682] I cpu4 w49015: f100=ffffffffab2c3921 401c=0
+[  447.783683] I cpu4 f49016 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783687] I cpu4 w49016: f100=ffffffffab2c391e 401c=0
+[  447.783689] I cpu4 f49017 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783693] I cpu4 w49017: f100=ffffffffab2c3921 401c=0
+[  447.783694] I cpu4 f49018 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783698] I cpu4 w49018: f100=ffffffffab2c391e 401c=0
+[  447.783699] I cpu4 f49019 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783703] I cpu4 w49019: f100=ffffffffab2c3921 401c=0
+[  447.783705] I cpu4 f49020 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783708] I cpu4 w49020: f100=ffffffffab2c2375 401c=0
+[  447.783710] I cpu4 f49021 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783714] I cpu4 w49021: f100=ffffffffab2c237f 401c=0
+[  447.783715] I cpu4 f49022 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783719] I cpu4 w49022: f100=ffffffffab2c2395 401c=0
+[  447.783721] I cpu4 f49023 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783724] I cpu4 w49023: f100=ffffffffab2c239a 401c=0
+[  447.783726] I cpu4 f49024 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783730] I cpu4 w49024: f100=ffffffffab2c391e 401c=0
+[  447.783731] I cpu4 f49025 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783736] I cpu4 w49025: f100=ffffffffab2c3921 401c=0
+[  447.783738] I cpu4 f49026 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783742] I cpu4 w49026: f100=ffffffffab2c391e 401c=0
+[  447.783743] I cpu4 f49027 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783747] I cpu4 w49027: f100=ffffffffab2c3921 401c=0
+[  447.783749] I cpu4 f49028 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783752] I cpu4 w49028: f100=ffffffffab2c391e 401c=0
+[  447.783754] I cpu4 f49029 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783758] I cpu4 w49029: f100=ffffffffab2c3921 401c=0
+[  447.783759] I cpu4 f49030 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783763] I cpu4 w49030: f100=ffffffffab2c391e 401c=0
+[  447.783764] I cpu4 f49031 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783768] I cpu4 w49031: f100=ffffffffab2c3921 401c=0
+[  447.783770] I cpu4 f49032 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783774] I cpu4 w49032: f100=ffffffffab2c2375 401c=0
+[  447.783775] I cpu4 f49033 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783779] I cpu4 w49033: f100=ffffffffab2c237f 401c=0
+[  447.783780] I cpu4 f49034 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783784] I cpu4 w49034: f100=ffffffffab2c2395 401c=0
+[  447.783786] I cpu4 f49035 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783790] I cpu4 w49035: f100=ffffffffab2c239a 401c=0
+[  447.783791] I cpu4 f49036 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783795] I cpu4 w49036: f100=ffffffffab2c391e 401c=0
+[  447.783796] I cpu4 f49037 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783800] I cpu4 w49037: f100=ffffffffab2c3921 401c=0
+[  447.783803] I cpu4 f49038 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783806] I cpu4 w49038: f100=ffffffffab2c391e 401c=0
+[  447.783808] I cpu4 f49039 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783812] I cpu4 w49039: f100=ffffffffab2c3921 401c=0
+[  447.783813] I cpu4 f49040 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783817] I cpu4 w49040: f100=ffffffffab2c391e 401c=0
+[  447.783819] I cpu4 f49041 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783822] I cpu4 w49041: f100=ffffffffab2c3921 401c=0
+[  447.783824] I cpu4 f49042 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783828] I cpu4 w49042: f100=ffffffffab2c391e 401c=0
+[  447.783829] I cpu4 f49043 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783833] I cpu4 w49043: f100=ffffffffab2c3921 401c=0
+[  447.783835] I cpu4 f49044 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783839] I cpu4 w49044: f100=ffffffffab2c2375 401c=0
+[  447.783840] I cpu4 f49045 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783844] I cpu4 w49045: f100=ffffffffab2c237f 401c=0
+[  447.783846] I cpu4 f49046 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783850] I cpu4 w49046: f100=ffffffffab2c2395 401c=0
+[  447.783851] I cpu4 f49047 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783855] I cpu4 w49047: f100=ffffffffab2c239a 401c=0
+[  447.783856] I cpu4 f49048 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783861] I cpu4 w49048: f100=ffffffffab2c391e 401c=0
+[  447.783862] I cpu4 f49049 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783866] I cpu4 w49049: f100=ffffffffab2c3921 401c=0
+[  447.783867] I cpu4 f49050 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783873] I cpu4 w49050: f100=ffffffffab2c391e 401c=0
+[  447.783874] I cpu4 f49051 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783878] I cpu4 w49051: f100=ffffffffab2c3921 401c=0
+[  447.783879] I cpu4 f49052 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783883] I cpu4 w49052: f100=ffffffffab2c391e 401c=0
+[  447.783885] I cpu4 f49053 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783888] I cpu4 w49053: f100=ffffffffab2c3921 401c=0
+[  447.783890] I cpu4 f49054 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783894] I cpu4 w49054: f100=ffffffffab2c391e 401c=0
+[  447.783895] I cpu4 f49055 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783899] I cpu4 w49055: f100=ffffffffab2c3921 401c=0
+[  447.783900] I cpu4 f49056 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783904] I cpu4 w49056: f100=ffffffffab2c2375 401c=0
+[  447.783906] I cpu4 f49057 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783909] I cpu4 w49057: f100=ffffffffab2c237f 401c=0
+[  447.783911] I cpu4 f49058 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783915] I cpu4 w49058: f100=ffffffffab2c2395 401c=0
+[  447.783917] I cpu4 f49059 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783920] I cpu4 w49059: f100=ffffffffab2c239a 401c=0
+[  447.783922] I cpu4 f49060 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783926] I cpu4 w49060: f100=ffffffffab2c391e 401c=0
+[  447.783927] I cpu4 f49061 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783931] I cpu4 w49061: f100=ffffffffab2c3921 401c=0
+[  447.783933] I cpu4 f49062 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783938] I cpu4 w49062: f100=ffffffffab2c391e 401c=0
+[  447.783940] I cpu4 f49063 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783944] I cpu4 w49063: f100=ffffffffab2c3921 401c=0
+[  447.783945] I cpu4 f49064 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783949] I cpu4 w49064: f100=ffffffffab2c391e 401c=0
+[  447.783950] I cpu4 f49065 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783954] I cpu4 w49065: f100=ffffffffab2c3921 401c=0
+[  447.783956] I cpu4 f49066 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783960] I cpu4 w49066: f100=ffffffffab2c391e 401c=0
+[  447.783961] I cpu4 f49067 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783965] I cpu4 w49067: f100=ffffffffab2c3921 401c=0
+[  447.783966] I cpu4 f49068 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783970] I cpu4 w49068: f100=ffffffffab2c2375 401c=0
+[  447.783972] I cpu4 f49069 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783975] I cpu4 w49069: f100=ffffffffab2c237f 401c=0
+[  447.783977] I cpu4 f49070 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783981] I cpu4 w49070: f100=ffffffffab2c2395 401c=0
+[  447.783982] I cpu4 f49071 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783986] I cpu4 w49071: f100=ffffffffab2c239a 401c=0
+[  447.783987] I cpu4 f49072 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783991] I cpu4 w49072: f100=ffffffffab2c391e 401c=0
+[  447.783993] I cpu4 f49073 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.783996] I cpu4 w49073: f100=ffffffffab2c3921 401c=0
+[  447.783998] I cpu4 f49074 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.784004] I cpu4 w49074: f100=ffffffffab2c391e 401c=0
+[  447.784006] I cpu4 f49075 r48 c0 q181 ip ffffffffab2bf65e sp ffffa78a8209bd18 fl 6 ax 2 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.784011] I cpu4 w49075: f100=ffffffffab2c3921 401c=0
+[  447.784013] I cpu4 f49076 r1 c0 q0 ip ffffffffab2bf665 sp ffffa78a8209bd18 fl 6 ax fd r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.784017] I cpu4 w49076: f100=ffffffffab2bf665 4002=200084 401c=0
+[  447.784020] I cpu4 f49077 r48 c0 q182 ip ffffffffab2bf670 sp ffffa78a8209bd18 fl 2 ax fd r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  447.784023] I cpu4 w49077: 4002=200084 401c=0
+[  447.784025] I cpu4 f49078 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4fa0 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784028] I cpu4 w49078: f100=ffffffffabe4837f 4016=800000ec 401c=0
+[  447.784030] I cpu4 f49079 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4f78 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784034] I cpu4 w49079: f100=ffffffffab2ca516 401c=0
+[  447.784035] I cpu4 f49080 r1 c0 q0 ip ffffffffab2ca516 sp ffffa78a800e4f78 fl 46 ax 112469f0 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784039] I cpu4 w49080: f100=ffffffffab2ca516 4002=200084 401c=0
+[  447.784041] I cpu4 f49081 r48 c0 q182 ip ffffffffab2c5e26 sp ffffa78a800e4fd8 fl 46 ax 0 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784044] I cpu4 w49081: 4002=200084 401c=0
+[  447.784046] I cpu4 f49082 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4f38 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784049] I cpu4 w49082: f100=ffffffffab2c5e2d 4002=200084 401c=0
+[  447.784051] I cpu4 f49083 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4ed8 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784055] I cpu4 w49083: f100=ffffffffab2ca516 4002=200084 401c=0
+[  447.784057] I cpu4 f49084 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4e78 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784060] I cpu4 w49084: f100=ffffffffab2ca516 4002=200084 401c=0
+[  447.784062] I cpu4 f49085 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4e78 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784066] I cpu4 w49085: f100=ffffffffab2ca516 4002=200084 401c=0
+[  447.784068] I cpu4 f49086 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4f38 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784072] I cpu4 w49086: f100=ffffffffab2ca516 4002=200084 401c=0
+[  447.784074] I cpu4 f49087 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a800e4f58 fl 16 ax ffffffffab2bd260 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784077] I cpu4 w49087: f100=ffffffffab2ca516 4002=200084 401c=0
+[  447.784081] I cpu4 f49088 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4fb0 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  447.784085] I cpu4 w49088: f100=ffffffffab2c5dcc 4002=200084 401c=0
+[  447.784087] I cpu4 flight: the last state of each vCPU (5 lines each: regs; r8-r15; gs/fs/kernel gs/idt/exception bitmap; tr/gdt/syscall msrs; cr, controls, TSC offset)
+[  448.152874] I cpu8 flight: 100 exits ending 1700 before the newest of 50688 recorded, oldest first (seq reason qual rip rsp rflags rax r9 cr2 gs kgs cs sel/ar ss sel/ar cpl)
+[  448.152895] I cpu8 f48889 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152902] I cpu8 w48889: f100=ffffffffab2c391e 401c=0
+[  448.152904] I cpu8 f48890 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152910] I cpu8 w48890: f100=ffffffffab2c3921 401c=0
+[  448.152912] I cpu8 f48891 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152918] I cpu8 w48891: f100=ffffffffab2c391e 401c=0
+[  448.152920] I cpu8 f48892 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152926] I cpu8 w48892: f100=ffffffffab2c3921 401c=0
+[  448.152928] I cpu8 f48893 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152933] I cpu8 w48893: f100=ffffffffab2c391e 401c=0
+[  448.152936] I cpu8 f48894 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152941] I cpu8 w48894: f100=ffffffffab2c3921 401c=0
+[  448.152943] I cpu8 f48895 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152948] I cpu8 w48895: f100=ffffffffab2c391e 401c=0
+[  448.152951] I cpu8 f48896 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152969] I cpu8 w48896: f100=ffffffffab2c3921 401c=0
+[  448.152972] I cpu8 f48897 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152977] I cpu8 w48897: f100=ffffffffab2c2375 401c=0
+[  448.152979] I cpu8 f48898 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152984] I cpu8 w48898: f100=ffffffffab2c237f 401c=0
+[  448.152987] I cpu8 f48899 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152992] I cpu8 w48899: f100=ffffffffab2c2395 401c=0
+[  448.152994] I cpu8 f48900 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.152999] I cpu8 w48900: f100=ffffffffab2c239a 401c=0
+[  448.153002] I cpu8 f48901 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153007] I cpu8 w48901: f100=ffffffffab2c391e 401c=0
+[  448.153009] I cpu8 f48902 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153015] I cpu8 w48902: f100=ffffffffab2c3921 401c=0
+[  448.153017] I cpu8 f48903 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153022] I cpu8 w48903: f100=ffffffffab2c391e 401c=0
+[  448.153025] I cpu8 f48904 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153030] I cpu8 w48904: f100=ffffffffab2c3921 401c=0
+[  448.153032] I cpu8 f48905 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153038] I cpu8 w48905: f100=ffffffffab2c391e 401c=0
+[  448.153040] I cpu8 f48906 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153045] I cpu8 w48906: f100=ffffffffab2c3921 401c=0
+[  448.153048] I cpu8 f48907 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153053] I cpu8 w48907: f100=ffffffffab2c391e 401c=0
+[  448.153055] I cpu8 f48908 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153060] I cpu8 w48908: f100=ffffffffab2c3921 401c=0
+[  448.153064] I cpu8 f48909 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153071] I cpu8 w48909: f100=ffffffffab2c2375 401c=0
+[  448.153073] I cpu8 f48910 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153078] I cpu8 w48910: f100=ffffffffab2c237f 401c=0
+[  448.153081] I cpu8 f48911 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153086] I cpu8 w48911: f100=ffffffffab2c2395 401c=0
+[  448.153089] I cpu8 f48912 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153094] I cpu8 w48912: f100=ffffffffab2c239a 401c=0
+[  448.153097] I cpu8 f48913 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153103] I cpu8 w48913: f100=ffffffffab2c391e 401c=0
+[  448.153105] I cpu8 f48914 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153110] I cpu8 w48914: f100=ffffffffab2c3921 401c=0
+[  448.153112] I cpu8 f48915 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153118] I cpu8 w48915: f100=ffffffffab2c391e 401c=0
+[  448.153120] I cpu8 f48916 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153126] I cpu8 w48916: f100=ffffffffab2c3921 401c=0
+[  448.153128] I cpu8 f48917 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153133] I cpu8 w48917: f100=ffffffffab2c391e 401c=0
+[  448.153136] I cpu8 f48918 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153141] I cpu8 w48918: f100=ffffffffab2c3921 401c=0
+[  448.153144] I cpu8 f48919 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153149] I cpu8 w48919: f100=ffffffffab2c391e 401c=0
+[  448.153153] I cpu8 f48920 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153158] I cpu8 w48920: f100=ffffffffab2c3921 401c=0
+[  448.153161] I cpu8 f48921 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153169] I cpu8 w48921: f100=ffffffffab2c2375 401c=0
+[  448.153171] I cpu8 f48922 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153177] I cpu8 w48922: f100=ffffffffab2c237f 401c=0
+[  448.153179] I cpu8 f48923 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153185] I cpu8 w48923: f100=ffffffffab2c2395 401c=0
+[  448.153187] I cpu8 f48924 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153192] I cpu8 w48924: f100=ffffffffab2c239a 401c=0
+[  448.153195] I cpu8 f48925 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153200] I cpu8 w48925: f100=ffffffffab2c391e 401c=0
+[  448.153202] I cpu8 f48926 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153207] I cpu8 w48926: f100=ffffffffab2c3921 401c=0
+[  448.153210] I cpu8 f48927 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153215] I cpu8 w48927: f100=ffffffffab2c391e 401c=0
+[  448.153217] I cpu8 f48928 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153222] I cpu8 w48928: f100=ffffffffab2c3921 401c=0
+[  448.153225] I cpu8 f48929 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153230] I cpu8 w48929: f100=ffffffffab2c391e 401c=0
+[  448.153233] I cpu8 f48930 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153238] I cpu8 w48930: f100=ffffffffab2c3921 401c=0
+[  448.153240] I cpu8 f48931 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153245] I cpu8 w48931: f100=ffffffffab2c391e 401c=0
+[  448.153248] I cpu8 f48932 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153253] I cpu8 w48932: f100=ffffffffab2c3921 401c=0
+[  448.153256] I cpu8 f48933 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153262] I cpu8 w48933: f100=ffffffffab2c2375 401c=0
+[  448.153265] I cpu8 f48934 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153270] I cpu8 w48934: f100=ffffffffab2c237f 401c=0
+[  448.153272] I cpu8 f48935 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153278] I cpu8 w48935: f100=ffffffffab2c2395 401c=0
+[  448.153280] I cpu8 f48936 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153285] I cpu8 w48936: f100=ffffffffab2c239a 401c=0
+[  448.153288] I cpu8 f48937 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153293] I cpu8 w48937: f100=ffffffffab2c391e 401c=0
+[  448.153295] I cpu8 f48938 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153301] I cpu8 w48938: f100=ffffffffab2c3921 401c=0
+[  448.153303] I cpu8 f48939 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153309] I cpu8 w48939: f100=ffffffffab2c391e 401c=0
+[  448.153311] I cpu8 f48940 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153317] I cpu8 w48940: f100=ffffffffab2c3921 401c=0
+[  448.153319] I cpu8 f48941 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153325] I cpu8 w48941: f100=ffffffffab2c391e 401c=0
+[  448.153327] I cpu8 f48942 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153333] I cpu8 w48942: f100=ffffffffab2c3921 401c=0
+[  448.153335] I cpu8 f48943 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4fa0 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153341] I cpu8 w48943: f100=ffffffffabe4837f 4016=800000ec 401c=0
+[  448.153344] I cpu8 f48944 r1 c0 q0 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153349] I cpu8 w48944: f100=ffffffffab2c391e 4002=200084 401c=0
+[  448.153352] I cpu8 f48945 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153357] I cpu8 w48945: 4002=200084 401c=0
+[  448.153359] I cpu8 f48946 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4f78 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153367] I cpu8 w48946: f100=ffffffffab2ca516 401c=0
+[  448.153370] I cpu8 f48947 r7 c0 q0 ip ffffffffabe58c5c sp ffffa78a8209bce8 fl 206 ax 10000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153376] I cpu8 w48947: f100=ffffffffab2c3921 4002=200084 401c=0
+[  448.153378] I cpu8 f48948 r48 c0 q182 ip ffffffffab2c5e26 sp ffffa78a800e4fd8 fl 46 ax 0 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153383] I cpu8 w48948: f100=ffffffffab2ca516 401c=0
+[  448.153385] I cpu8 f48949 r48 c0 q182 ip ffffffffab2c5e26 sp ffffa78a80003fd8 fl 46 ax 0 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153391] I cpu8 w48949: 4002=200080 4016=800000ec 401c=0
+[  448.153393] I cpu8 f48950 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4f38 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153399] I cpu8 w48950: f100=ffffffffab2c5e2d 401c=0
+[  448.153401] I cpu8 f48951 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4ed8 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153407] I cpu8 w48951: f100=ffffffffab2ca516 401c=0
+[  448.153410] I cpu8 f48952 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4e78 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153415] I cpu8 w48952: f100=ffffffffab2ca516 401c=0
+[  448.153418] I cpu8 f48953 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4e78 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153424] I cpu8 w48953: f100=ffffffffab2ca516 401c=0
+[  448.153427] I cpu8 f48954 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a80003f58 fl 16 ax ffffffffab2bd260 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153432] I cpu8 w48954: f100=ffffffffab2c5e2d 401c=0
+[  448.153434] I cpu8 f48955 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4f38 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153440] I cpu8 w48955: f100=ffffffffab2ca516 401c=0
+[  448.153442] I cpu8 f48956 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153447] I cpu8 w48956: f100=ffffffffab2c5dcc 401c=0
+[  448.153450] I cpu8 f48957 r48 c0 q182 ip ffffffffab2c5dc6 sp ffffa78a800e4f58 fl 12 ax ffffffffab2bd260 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153455] I cpu8 w48957: f100=ffffffffab2ca516 401c=0
+[  448.153457] I cpu8 f48958 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153463] I cpu8 w48958: f100=ffffffffab2c2375 401c=0
+[  448.153468] I cpu8 f48959 r48 c0 q181 ip ffffffffab2ca510 sp ffffa78a800e4fb0 fl 46 ax ffffa78a80011000 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153473] I cpu8 w48959: f100=ffffffffab2c5dcc 401c=0
+[  448.153476] I cpu8 f48960 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153481] I cpu8 w48960: f100=ffffffffab2c237f 401c=0
+[  448.153484] I cpu8 f48961 r12 c0 q0 ip ffffffffabe4837e sp ffffa78a800afec0 fl 246 ax 0 r9 0 cr2 7f18bcd0201d gs ffff93d110e56000 kg 0 cs 10/209b ss 18/c093
+[  448.153489] I cpu8 w48961: f100=ffffffffab2ca516 401c=0
+[  448.153491] I cpu8 f48962 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153497] I cpu8 w48962: f100=ffffffffab2c2395 401c=0
+[  448.153499] I cpu8 f48963 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153504] I cpu8 w48963: f100=ffffffffab2c239a 401c=0
+[  448.153507] I cpu8 f48964 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153512] I cpu8 w48964: f100=ffffffffab2c391e 401c=0
+[  448.153514] I cpu8 f48965 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153520] I cpu8 w48965: f100=ffffffffab2c3921 401c=0
+[  448.153522] I cpu8 f48966 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153527] I cpu8 w48966: f100=ffffffffab2c391e 401c=0
+[  448.153529] I cpu8 f48967 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153535] I cpu8 w48967: f100=ffffffffab2c3921 401c=0
+[  448.153538] I cpu8 f48968 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153543] I cpu8 w48968: f100=ffffffffab2c391e 401c=0
+[  448.153546] I cpu8 f48969 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153551] I cpu8 w48969: f100=ffffffffab2c3921 401c=0
+[  448.153553] I cpu8 f48970 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153559] I cpu8 w48970: f100=ffffffffab2c391e 401c=0
+[  448.153561] I cpu8 f48971 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153569] I cpu8 w48971: f100=ffffffffab2c3921 401c=0
+[  448.153572] I cpu8 f48972 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153577] I cpu8 w48972: f100=ffffffffab2c2375 401c=0
+[  448.153579] I cpu8 f48973 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153584] I cpu8 w48973: f100=ffffffffab2c237f 401c=0
+[  448.153587] I cpu8 f48974 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153593] I cpu8 w48974: f100=ffffffffab2c2395 401c=0
+[  448.153595] I cpu8 f48975 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153601] I cpu8 w48975: f100=ffffffffab2c239a 401c=0
+[  448.153603] I cpu8 f48976 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153609] I cpu8 w48976: f100=ffffffffab2c391e 401c=0
+[  448.153611] I cpu8 f48977 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153617] I cpu8 w48977: f100=ffffffffab2c3921 401c=0
+[  448.153619] I cpu8 f48978 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153624] I cpu8 w48978: f100=ffffffffab2c391e 401c=0
+[  448.153627] I cpu8 f48979 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153632] I cpu8 w48979: f100=ffffffffab2c3921 401c=0
+[  448.153635] I cpu8 f48980 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153640] I cpu8 w48980: f100=ffffffffab2c391e 401c=0
+[  448.153643] I cpu8 f48981 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153648] I cpu8 w48981: f100=ffffffffab2c3921 401c=0
+[  448.153650] I cpu8 f48982 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153657] I cpu8 w48982: f100=ffffffffab2c391e 401c=0
+[  448.153659] I cpu8 f48983 r48 c0 q182 ip ffffffffab2c2373 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153666] I cpu8 w48983: f100=ffffffffab2c3921 401c=0
+[  448.153670] I cpu8 f48984 r48 c0 q182 ip ffffffffab2c237b sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153675] I cpu8 w48984: f100=ffffffffab2c2375 401c=0
+[  448.153678] I cpu8 f48985 r48 c0 q182 ip ffffffffab2c2393 sp ffffa78a8209bcd8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153683] I cpu8 w48985: f100=ffffffffab2c237f 401c=0
+[  448.153685] I cpu8 f48986 r48 c0 q182 ip ffffffffab2c2397 sp ffffa78a8209bcd8 fl 46 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153691] I cpu8 w48986: f100=ffffffffab2c2395 401c=0
+[  448.153693] I cpu8 f48987 r48 c0 q182 ip ffffffffab2c391c sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153698] I cpu8 w48987: f100=ffffffffab2c239a 401c=0
+[  448.153701] I cpu8 f48988 r48 c0 q181 ip ffffffffab2c391e sp ffffa78a8209bcc8 fl 86 ax ffffffffff5fc000 r9 0 cr2 7fd5fe86101d gs ffff93d110d56000 kg 0 cs 10/209b ss 18/c093
+[  448.153706] I cpu8 w48988: f100=ffffffffab2c391e 401c=0
+[  448.153708] I cpu8 flight: the last state of each vCPU (5 lines each: regs; r8-r15; gs/fs/kernel gs/idt/exception bitmap; tr/gdt/syscall msrs; cr, controls, TSC offset)
